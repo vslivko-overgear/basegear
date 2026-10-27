@@ -121,6 +121,21 @@ export const DEFAULT_PRESETS = {
     radius: "default",
     rtl: false,
   },
+  baseui: {
+    title: "baseui",
+    description: "Lucide / Inter, Overgear colors",
+    style: "baseui",
+    baseColor: "neutral",
+    theme: "baseui",
+    chartColor: "baseui",
+    iconLibrary: "lucide",
+    font: "inter",
+    fontHeading: "inherit",
+    menuAccent: "subtle",
+    menuColor: "default",
+    radius: "default",
+    rtl: false,
+  },
 } satisfies Record<
   PresetConfig["style"],
   PresetConfig & {

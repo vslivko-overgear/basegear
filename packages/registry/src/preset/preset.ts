@@ -38,6 +38,7 @@ export const PRESET_STYLES = [
   "luma",
   "sera",
   "rhea",
+  "baseui",
 ] as const
 
 export const PRESET_BASE_COLORS = [
@@ -77,6 +78,7 @@ export const PRESET_THEMES = [
   "olive",
   "mist",
   "taupe",
+  "baseui",
 ] as const
 
 export const PRESET_CHART_COLORS = PRESET_THEMES
