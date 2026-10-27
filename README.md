@@ -1,37 +1,43 @@
 # basegear
 
-[dalwoo-ru/base-ui](https://github.com/dalwoo-ru/base-ui) in Overgear colors and font. Everything else is base-ui as is:
-token names, components, their logic, the docs site and the shadcn/ui monorepo.
+[dalwoo-ru/base-ui](https://github.com/dalwoo-ru/base-ui) rebuilt as part of shadcn/ui, in Overgear colors.
+There is no separate baseui package and no theme bridge any more: baseui is a shadcn **style**, a **theme** and a set of
+**components** in the shadcn registry, written in TypeScript/TSX + Tailwind like every other shadcn component.
 
-What changed:
+## What baseui is here
 
-- `packages/baseui/tokens.css`: the light and dark color tokens take the Overgear palette (`@og/config`): navy neutrals
-  `#050622 / #1e2242 / #293054`, brand purple `#564fff` with its hover and focus shades, Overgear red, orange, yellow, green,
-  pink and cyan. `Background-Brand`, `Extensions-Background-InversePrimary` and `Extensions-Border-Selected` are the brand purple
-  in both themes, so the selected chip, switch and segment look like Overgear's.
-- Font: TT Interphases Pro (`packages/baseui/fonts/`), Overgear's font. It has Latin only, so Geist stays next to it for Cyrillic.
-- The docs site opens in the dark theme (Overgear is dark-first); the Theme Settings defaults are the Overgear font and purple.
-- `packages/baseui/shadcn-theme.css` and the `baseui` theme in `apps/v4/registry/themes.ts` carry the same colors and font for shadcn.
+| Part | Where | What it is |
+|---|---|---|
+| Style `baseui` | `apps/v4/registry/styles/style-baseui.css` | The baseui look for every `cn-*` class: filled controls without outlines, 32/40/48/56px heights, 12px radius, solid selected states, shadowed surfaces, dialogs as bottom sheets on small screens. Builds as `base-baseui`, `radix-baseui`, `aria-baseui`. |
+| Theme `baseui` | `apps/v4/registry/themes.ts` | Overgear colors on the shadcn variables (`--primary` `#564fff`, navy neutrals, Overgear red/orange/green), light and dark. |
+| Preset `baseui` | `packages/shadcn/src/preset/defaults.ts` | Style + theme + Lucide + Inter. Code: `b7qMHwHqa`. |
+| Components | `apps/v4/registry/bases/{base,radix,aria}/ui/` | baseui components shadcn did not have: `segmented-control`, `rating`, `status`, `banner`, `chip`, `number-input`, `navbar`, `bottom-bar`, `layout`, `link`. Docs in `apps/v4/content/docs/components/<base>/`. |
+| Blocks | `apps/v4/registry/bases/<base>/blocks/` | `messenger-01` and `product-01` (the Overgear product page), built from the registry components. |
 
-Run the design system docs: `cd packages/baseui && python3 -m http.server 8000`.
+## Run
 
----
-
-# base-ui
-
-A mix of [shadcn/ui](https://ui.shadcn.com) (v4.22.1 monorepo: registry, CLI, docs app, Base UI and Radix bases) and the **baseui** design system.
-
-- `apps/`, `packages/shadcn`, `packages/registry`, ... : shadcn/ui, unchanged except for the theme below.
-- `packages/baseui/`: the baseui design system (tokens, components on Base UI, docs site, examples). Run it with `python3 -m http.server` from that folder; see its README.
-- `packages/baseui/shadcn-theme.css`: maps shadcn semantic variables (`--background`, `--primary`, `--radius`, ...) onto baseui tokens, so shadcn components render with baseui colors, radius and Geist font.
-- `apps/v4/registry/themes.ts`: a `baseui` theme (light and dark) with the same values, available as a shadcn registry theme.
-
-Use baseui tokens with shadcn components:
-
-```css
-@import "@workspace/baseui/tokens.css";
-@import "@workspace/baseui/shadcn-theme.css";
+```sh
+pnpm install
+pnpm --filter=v4 registry:build --style all   # once: generates styles/<base>-<style>/ui
+pnpm --filter=v4 dev                          # http://localhost:4000
 ```
+
+- Component docs: `/docs/components/base/<name>`.
+- Any example or block in the baseui style and Overgear theme: `/preview/base/<name>?preset=b7qMHwHqa`.
+- `/create?preset=b7qMHwHqa` opens the design system builder with the baseui preset.
+
+## Font
+
+shadcn's font registry only takes Google Fonts, so the preset uses Inter. Overgear's TT Interphases Pro is a commercial font;
+in an app, load it with `next/font/local` and point `--font-sans` at it.
+
+## Adding a component the shadcn way
+
+1. `apps/v4/registry/bases/<base>/ui/<name>.tsx` for base, radix and aria: `data-slot` on every part, `cn-<name>-*` classes, `cva` variants.
+2. An entry in `apps/v4/registry/bases/<base>/ui/_registry.ts`.
+3. A `cn-<name>` section in every `apps/v4/registry/styles/style-*.css`.
+4. Demos in `apps/v4/examples/<base>/`, a preview card in `registry/bases/<base>/examples/`, docs in `content/docs/components/<base>/` (+ `meta.json`).
+5. `pnpm --filter=v4 registry:build`.
 
 ---
 
