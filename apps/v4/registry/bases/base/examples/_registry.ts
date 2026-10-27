@@ -1074,4 +1074,124 @@ export const examples: Registry["items"] = [
       },
     ],
   },
+  {
+    name: "segmented-control-example",
+    title: "Segmented Control",
+    type: "registry:example",
+    registryDependencies: ["segmented-control", "badge", "example"],
+    files: [
+      {
+        path: "examples/segmented-control-example.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "rating-example",
+    title: "Rating",
+    type: "registry:example",
+    registryDependencies: ["rating", "example"],
+    files: [
+      {
+        path: "examples/rating-example.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "status-example",
+    title: "Status",
+    type: "registry:example",
+    registryDependencies: ["status", "button", "example"],
+    files: [
+      {
+        path: "examples/status-example.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "banner-example",
+    title: "Banner",
+    type: "registry:example",
+    registryDependencies: ["banner", "example"],
+    files: [
+      {
+        path: "examples/banner-example.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "chip-example",
+    title: "Chip",
+    type: "registry:example",
+    registryDependencies: ["chip", "avatar", "example"],
+    files: [
+      {
+        path: "examples/chip-example.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "number-input-example",
+    title: "Number Input",
+    type: "registry:example",
+    registryDependencies: ["number-input", "field", "example"],
+    files: [
+      {
+        path: "examples/number-input-example.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "navbar-example",
+    title: "Navbar",
+    type: "registry:example",
+    registryDependencies: ["navbar", "button", "example"],
+    files: [
+      {
+        path: "examples/navbar-example.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "bottom-bar-example",
+    title: "Bottom Bar",
+    type: "registry:example",
+    registryDependencies: ["bottom-bar", "example"],
+    files: [
+      {
+        path: "examples/bottom-bar-example.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "layout-example",
+    title: "Layout",
+    type: "registry:example",
+    registryDependencies: ["layout", "example"],
+    files: [
+      {
+        path: "examples/layout-example.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "link-example",
+    title: "Link",
+    type: "registry:example",
+    registryDependencies: ["link", "example"],
+    files: [
+      {
+        path: "examples/link-example.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
 ]

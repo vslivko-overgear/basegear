@@ -1,0 +1,87 @@
+---
+title: Chip
+description: "A compact toggle for filters, tags and choices."
+base: radix
+component: true
+---
+
+<ComponentPreview styleName="radix-nova" name="chip-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add chip
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource
+  name="chip"
+  title="components/ui/chip.tsx"
+  styleName="radix-nova"
+/>
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { Chip, ChipCounter, ChipGroup } from "@/components/ui/chip"
+```
+
+```tsx
+<Chip defaultPressed>Raids</Chip>
+```
+
+## Chip Group
+
+`ChipGroup` keeps the pressed chips in one value. Pass `variant` or `size` to the group to set it for every chip.
+
+<ComponentPreview styleName="radix-nova" name="chip-group" />
+
+## API Reference
+
+### Chip
+
+A toggle built on the Radix toggle.
+
+| Prop      | Type                                      | Default     |
+| --------- | ----------------------------------------- | ----------- |
+| `variant` | `"default" \| "success" \| "destructive"` | `"default"` |
+| `size`    | `"default" \| "sm"`                       | `"default"` |
+
+### ChipGroup
+
+A group of chips built on the Radix toggle group.
+
+| Prop             | Type      | Default |
+| ---------------- | --------- | ------- |
+| `variant / size` | as `Chip` | -       |
+
+### ChipCounter
+
+A number after the label.
+
+| Prop        | Type     | Default |
+| ----------- | -------- | ------- |
+| `className` | `string` | -       |

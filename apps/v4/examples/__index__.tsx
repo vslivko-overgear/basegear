@@ -4,7 +4,7 @@
 import "server-only"
 
 export const ExamplesIndex: Record<string, Record<string, any>> = {
-  base: {
+  "base": {
     "accordion-basic": {
       name: "accordion-basic",
       filePath: "examples/base/accordion-basic.tsx",
@@ -196,6 +196,18 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
     "badge-variants": {
       name: "badge-variants",
       filePath: "examples/base/badge-variants.tsx",
+    },
+    "banner-demo": {
+      name: "banner-demo",
+      filePath: "examples/base/banner-demo.tsx",
+    },
+    "banner-variants": {
+      name: "banner-variants",
+      filePath: "examples/base/banner-variants.tsx",
+    },
+    "bottom-bar-demo": {
+      name: "bottom-bar-demo",
+      filePath: "examples/base/bottom-bar-demo.tsx",
     },
     "breadcrumb-basic": {
       name: "breadcrumb-basic",
@@ -552,6 +564,14 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
     "checkpoint-demo": {
       name: "checkpoint-demo",
       filePath: "examples/base/checkpoint-demo.tsx",
+    },
+    "chip-demo": {
+      name: "chip-demo",
+      filePath: "examples/base/chip-demo.tsx",
+    },
+    "chip-group": {
+      name: "chip-group",
+      filePath: "examples/base/chip-group.tsx",
     },
     "code-block-actions": {
       name: "code-block-actions",
@@ -1333,6 +1353,14 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       name: "label-rtl",
       filePath: "examples/base/label-rtl.tsx",
     },
+    "layout-demo": {
+      name: "layout-demo",
+      filePath: "examples/base/layout-demo.tsx",
+    },
+    "link-demo": {
+      name: "link-demo",
+      filePath: "examples/base/link-demo.tsx",
+    },
     "markdown-demo": {
       name: "markdown-demo",
       filePath: "examples/base/markdown-demo.tsx",
@@ -1501,6 +1529,10 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       name: "native-select-rtl",
       filePath: "examples/base/native-select-rtl.tsx",
     },
+    "navbar-demo": {
+      name: "navbar-demo",
+      filePath: "examples/base/navbar-demo.tsx",
+    },
     "navigation-menu-demo": {
       name: "navigation-menu-demo",
       filePath: "examples/base/navigation-menu-demo.tsx",
@@ -1508,6 +1540,10 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
     "navigation-menu-rtl": {
       name: "navigation-menu-rtl",
       filePath: "examples/base/navigation-menu-rtl.tsx",
+    },
+    "number-input-demo": {
+      name: "number-input-demo",
+      filePath: "examples/base/number-input-demo.tsx",
     },
     "outline-item-group": {
       name: "outline-item-group",
@@ -1681,6 +1717,14 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       name: "radio-group-rtl",
       filePath: "examples/base/radio-group-rtl.tsx",
     },
+    "rating-demo": {
+      name: "rating-demo",
+      filePath: "examples/base/rating-demo.tsx",
+    },
+    "rating-display": {
+      name: "rating-display",
+      filePath: "examples/base/rating-display.tsx",
+    },
     "reasoning-basic": {
       name: "reasoning-basic",
       filePath: "examples/base/reasoning-basic.tsx",
@@ -1748,6 +1792,14 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
     "scroll-fade-size": {
       name: "scroll-fade-size",
       filePath: "examples/base/scroll-fade-size.tsx",
+    },
+    "segmented-control-demo": {
+      name: "segmented-control-demo",
+      filePath: "examples/base/segmented-control-demo.tsx",
+    },
+    "segmented-control-icons": {
+      name: "segmented-control-icons",
+      filePath: "examples/base/segmented-control-icons.tsx",
     },
     "select-align-item": {
       name: "select-align-item",
@@ -2012,6 +2064,14 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
     "stack-trace-frames": {
       name: "stack-trace-frames",
       filePath: "examples/base/stack-trace-frames.tsx",
+    },
+    "status-demo": {
+      name: "status-demo",
+      filePath: "examples/base/status-demo.tsx",
+    },
+    "status-variants": {
+      name: "status-variants",
+      filePath: "examples/base/status-variants.tsx",
     },
     "subagent-basic": {
       name: "subagent-basic",
@@ -2394,7 +2454,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       filePath: "examples/base/typography-table.tsx",
     },
   },
-  aria: {
+  "aria": {
     "accordion-basic": {
       name: "accordion-basic",
       filePath: "examples/aria/accordion-basic.tsx",
@@ -2582,6 +2642,18 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
     "badge-variants": {
       name: "badge-variants",
       filePath: "examples/aria/badge-variants.tsx",
+    },
+    "banner-demo": {
+      name: "banner-demo",
+      filePath: "examples/aria/banner-demo.tsx",
+    },
+    "banner-variants": {
+      name: "banner-variants",
+      filePath: "examples/aria/banner-variants.tsx",
+    },
+    "bottom-bar-demo": {
+      name: "bottom-bar-demo",
+      filePath: "examples/aria/bottom-bar-demo.tsx",
     },
     "breadcrumb-basic": {
       name: "breadcrumb-basic",
@@ -2934,6 +3006,14 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
     "checkpoint-demo": {
       name: "checkpoint-demo",
       filePath: "examples/aria/checkpoint-demo.tsx",
+    },
+    "chip-demo": {
+      name: "chip-demo",
+      filePath: "examples/aria/chip-demo.tsx",
+    },
+    "chip-group": {
+      name: "chip-group",
+      filePath: "examples/aria/chip-group.tsx",
     },
     "code-block-actions": {
       name: "code-block-actions",
@@ -3707,6 +3787,14 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       name: "label-rtl",
       filePath: "examples/aria/label-rtl.tsx",
     },
+    "layout-demo": {
+      name: "layout-demo",
+      filePath: "examples/aria/layout-demo.tsx",
+    },
+    "link-demo": {
+      name: "link-demo",
+      filePath: "examples/aria/link-demo.tsx",
+    },
     "markdown-demo": {
       name: "markdown-demo",
       filePath: "examples/aria/markdown-demo.tsx",
@@ -3850,6 +3938,14 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
     "native-select-rtl": {
       name: "native-select-rtl",
       filePath: "examples/aria/native-select-rtl.tsx",
+    },
+    "navbar-demo": {
+      name: "navbar-demo",
+      filePath: "examples/aria/navbar-demo.tsx",
+    },
+    "number-input-demo": {
+      name: "number-input-demo",
+      filePath: "examples/aria/number-input-demo.tsx",
     },
     "outline-item-group": {
       name: "outline-item-group",
@@ -4023,6 +4119,14 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       name: "radio-group-rtl",
       filePath: "examples/aria/radio-group-rtl.tsx",
     },
+    "rating-demo": {
+      name: "rating-demo",
+      filePath: "examples/aria/rating-demo.tsx",
+    },
+    "rating-display": {
+      name: "rating-display",
+      filePath: "examples/aria/rating-display.tsx",
+    },
     "reasoning-basic": {
       name: "reasoning-basic",
       filePath: "examples/aria/reasoning-basic.tsx",
@@ -4090,6 +4194,14 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
     "scroll-fade-size": {
       name: "scroll-fade-size",
       filePath: "examples/aria/scroll-fade-size.tsx",
+    },
+    "segmented-control-demo": {
+      name: "segmented-control-demo",
+      filePath: "examples/aria/segmented-control-demo.tsx",
+    },
+    "segmented-control-icons": {
+      name: "segmented-control-icons",
+      filePath: "examples/aria/segmented-control-icons.tsx",
     },
     "select-autocomplete": {
       name: "select-autocomplete",
@@ -4370,6 +4482,14 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
     "stack-trace-frames": {
       name: "stack-trace-frames",
       filePath: "examples/aria/stack-trace-frames.tsx",
+    },
+    "status-demo": {
+      name: "status-demo",
+      filePath: "examples/aria/status-demo.tsx",
+    },
+    "status-variants": {
+      name: "status-variants",
+      filePath: "examples/aria/status-variants.tsx",
     },
     "subagent-basic": {
       name: "subagent-basic",
@@ -4736,7 +4856,7 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       filePath: "examples/aria/typography-table.tsx",
     },
   },
-  radix: {
+  "radix": {
     "accordion-basic": {
       name: "accordion-basic",
       filePath: "examples/radix/accordion-basic.tsx",
@@ -4924,6 +5044,18 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
     "badge-variants": {
       name: "badge-variants",
       filePath: "examples/radix/badge-variants.tsx",
+    },
+    "banner-demo": {
+      name: "banner-demo",
+      filePath: "examples/radix/banner-demo.tsx",
+    },
+    "banner-variants": {
+      name: "banner-variants",
+      filePath: "examples/radix/banner-variants.tsx",
+    },
+    "bottom-bar-demo": {
+      name: "bottom-bar-demo",
+      filePath: "examples/radix/bottom-bar-demo.tsx",
     },
     "breadcrumb-basic": {
       name: "breadcrumb-basic",
@@ -5276,6 +5408,14 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
     "checkpoint-demo": {
       name: "checkpoint-demo",
       filePath: "examples/radix/checkpoint-demo.tsx",
+    },
+    "chip-demo": {
+      name: "chip-demo",
+      filePath: "examples/radix/chip-demo.tsx",
+    },
+    "chip-group": {
+      name: "chip-group",
+      filePath: "examples/radix/chip-group.tsx",
     },
     "code-block-actions": {
       name: "code-block-actions",
@@ -6045,6 +6185,14 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       name: "label-rtl",
       filePath: "examples/radix/label-rtl.tsx",
     },
+    "layout-demo": {
+      name: "layout-demo",
+      filePath: "examples/radix/layout-demo.tsx",
+    },
+    "link-demo": {
+      name: "link-demo",
+      filePath: "examples/radix/link-demo.tsx",
+    },
     "markdown-demo": {
       name: "markdown-demo",
       filePath: "examples/radix/markdown-demo.tsx",
@@ -6209,6 +6357,10 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       name: "native-select-rtl",
       filePath: "examples/radix/native-select-rtl.tsx",
     },
+    "navbar-demo": {
+      name: "navbar-demo",
+      filePath: "examples/radix/navbar-demo.tsx",
+    },
     "navigation-menu-demo": {
       name: "navigation-menu-demo",
       filePath: "examples/radix/navigation-menu-demo.tsx",
@@ -6216,6 +6368,10 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
     "navigation-menu-rtl": {
       name: "navigation-menu-rtl",
       filePath: "examples/radix/navigation-menu-rtl.tsx",
+    },
+    "number-input-demo": {
+      name: "number-input-demo",
+      filePath: "examples/radix/number-input-demo.tsx",
     },
     "outline-item-group": {
       name: "outline-item-group",
@@ -6381,6 +6537,14 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       name: "radio-group-rtl",
       filePath: "examples/radix/radio-group-rtl.tsx",
     },
+    "rating-demo": {
+      name: "rating-demo",
+      filePath: "examples/radix/rating-demo.tsx",
+    },
+    "rating-display": {
+      name: "rating-display",
+      filePath: "examples/radix/rating-display.tsx",
+    },
     "reasoning-demo": {
       name: "reasoning-demo",
       filePath: "examples/radix/reasoning-demo.tsx",
@@ -6444,6 +6608,14 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
     "scroll-fade-size": {
       name: "scroll-fade-size",
       filePath: "examples/radix/scroll-fade-size.tsx",
+    },
+    "segmented-control-demo": {
+      name: "segmented-control-demo",
+      filePath: "examples/radix/segmented-control-demo.tsx",
+    },
+    "segmented-control-icons": {
+      name: "segmented-control-icons",
+      filePath: "examples/radix/segmented-control-icons.tsx",
     },
     "select-align-item": {
       name: "select-align-item",
@@ -6720,6 +6892,14 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
     "stack-trace-frames": {
       name: "stack-trace-frames",
       filePath: "examples/radix/stack-trace-frames.tsx",
+    },
+    "status-demo": {
+      name: "status-demo",
+      filePath: "examples/radix/status-demo.tsx",
+    },
+    "status-variants": {
+      name: "status-variants",
+      filePath: "examples/radix/status-variants.tsx",
     },
     "subagent-demo": {
       name: "subagent-demo",

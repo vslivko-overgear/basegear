@@ -1,0 +1,98 @@
+---
+title: Navbar
+description: "The bar at the top of a mobile screen: a back button, the title and up to two actions."
+base: radix
+component: true
+---
+
+<ComponentPreview styleName="radix-nova" name="navbar-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add navbar
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource
+  name="navbar"
+  title="components/ui/navbar.tsx"
+  styleName="radix-nova"
+/>
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import {
+  Navbar,
+  NavbarEnd,
+  NavbarHeading,
+  NavbarStart,
+  NavbarSubtitle,
+  NavbarTitle,
+} from "@/components/ui/navbar"
+```
+
+```tsx
+<Navbar>
+  <NavbarStart>
+    <Button variant="ghost" size="icon" aria-label="Back">
+      <ChevronLeftIcon />
+    </Button>
+  </NavbarStart>
+  <NavbarHeading>
+    <NavbarTitle>Order #4821</NavbarTitle>
+    <NavbarSubtitle>Mythic+ Dungeon Boost</NavbarSubtitle>
+  </NavbarHeading>
+  <NavbarEnd />
+</Navbar>
+```
+
+## API Reference
+
+### Navbar
+
+A three-column grid: the heading stays centered whatever is on the sides.
+
+| Prop        | Type     | Default |
+| ----------- | -------- | ------- |
+| `className` | `string` | -       |
+
+### NavbarStart / NavbarHeading / NavbarEnd
+
+The left side, the centered heading and the right side.
+
+| Prop        | Type     | Default |
+| ----------- | -------- | ------- |
+| `className` | `string` | -       |
+
+### NavbarTitle / NavbarSubtitle
+
+The title (`h1`) and a second line; both truncate.
+
+| Prop        | Type     | Default |
+| ----------- | -------- | ------- |
+| `className` | `string` | -       |

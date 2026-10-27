@@ -57,7 +57,9 @@
   {
     "name": "alert-dialog",
     "type": "registry:ui",
-    "registryDependencies": ["button"],
+    "registryDependencies": [
+      "button"
+    ],
     "files": [
       {
         "path": "ui/alert-dialog.tsx",
@@ -114,7 +116,9 @@
   {
     "name": "attachment",
     "type": "registry:ui",
-    "registryDependencies": ["button"],
+    "registryDependencies": [
+      "button"
+    ],
     "files": [
       {
         "path": "ui/attachment.tsx",
@@ -180,6 +184,58 @@
         "radix": {
           "docs": "https://ui.shadcn.com/docs/components/radix/badge",
           "examples": "https://ui.shadcn.com/code/apps/v4/registry/bases/radix/examples/badge-example.tsx"
+        }
+      }
+    }
+  },
+  {
+    "name": "banner",
+    "type": "registry:ui",
+    "files": [
+      {
+        "path": "ui/banner.tsx",
+        "type": "registry:ui"
+      }
+    ],
+    "meta": {
+      "links": {
+        "base": {
+          "docs": "https://ui.shadcn.com/docs/components/base/banner",
+          "examples": "https://ui.shadcn.com/code/apps/v4/registry/bases/base/examples/banner-example.tsx"
+        },
+        "aria": {
+          "docs": "https://ui.shadcn.com/docs/components/aria/banner",
+          "examples": "https://ui.shadcn.com/code/apps/v4/registry/bases/aria/examples/banner-example.tsx"
+        },
+        "radix": {
+          "docs": "https://ui.shadcn.com/docs/components/radix/banner",
+          "examples": "https://ui.shadcn.com/code/apps/v4/registry/bases/radix/examples/banner-example.tsx"
+        }
+      }
+    }
+  },
+  {
+    "name": "bottom-bar",
+    "type": "registry:ui",
+    "files": [
+      {
+        "path": "ui/bottom-bar.tsx",
+        "type": "registry:ui"
+      }
+    ],
+    "meta": {
+      "links": {
+        "base": {
+          "docs": "https://ui.shadcn.com/docs/components/base/bottom-bar",
+          "examples": "https://ui.shadcn.com/code/apps/v4/registry/bases/base/examples/bottom-bar-example.tsx"
+        },
+        "aria": {
+          "docs": "https://ui.shadcn.com/docs/components/aria/bottom-bar",
+          "examples": "https://ui.shadcn.com/code/apps/v4/registry/bases/aria/examples/bottom-bar-example.tsx"
+        },
+        "radix": {
+          "docs": "https://ui.shadcn.com/docs/components/radix/bottom-bar",
+          "examples": "https://ui.shadcn.com/code/apps/v4/registry/bases/radix/examples/bottom-bar-example.tsx"
         }
       }
     }
@@ -259,7 +315,9 @@
   {
     "name": "button-group",
     "type": "registry:ui",
-    "registryDependencies": ["separator"],
+    "registryDependencies": [
+      "separator"
+    ],
     "files": [
       {
         "path": "ui/button-group.tsx",
@@ -286,8 +344,13 @@
   {
     "name": "calendar",
     "type": "registry:ui",
-    "dependencies": ["react-day-picker@latest", "date-fns"],
-    "registryDependencies": ["button"],
+    "dependencies": [
+      "react-day-picker@latest",
+      "date-fns"
+    ],
+    "registryDependencies": [
+      "button"
+    ],
     "files": [
       {
         "path": "ui/calendar.tsx",
@@ -349,8 +412,12 @@
         "type": "registry:ui"
       }
     ],
-    "registryDependencies": ["button"],
-    "dependencies": ["embla-carousel-react"],
+    "registryDependencies": [
+      "button"
+    ],
+    "dependencies": [
+      "embla-carousel-react"
+    ],
     "meta": {
       "links": {
         "base": {
@@ -380,8 +447,12 @@
         "type": "registry:ui"
       }
     ],
-    "registryDependencies": ["card"],
-    "dependencies": ["recharts@3.8.0"],
+    "registryDependencies": [
+      "card"
+    ],
+    "dependencies": [
+      "recharts@3.8.0"
+    ],
     "meta": {
       "links": {
         "base": {
@@ -429,9 +500,41 @@
     }
   },
   {
+    "name": "chip",
+    "type": "registry:ui",
+    "dependencies": [
+      "@base-ui/react"
+    ],
+    "files": [
+      {
+        "path": "ui/chip.tsx",
+        "type": "registry:ui"
+      }
+    ],
+    "meta": {
+      "links": {
+        "base": {
+          "docs": "https://ui.shadcn.com/docs/components/base/chip",
+          "examples": "https://ui.shadcn.com/code/apps/v4/registry/bases/base/examples/chip-example.tsx"
+        },
+        "aria": {
+          "docs": "https://ui.shadcn.com/docs/components/aria/chip",
+          "examples": "https://ui.shadcn.com/code/apps/v4/registry/bases/aria/examples/chip-example.tsx"
+        },
+        "radix": {
+          "docs": "https://ui.shadcn.com/docs/components/radix/chip",
+          "examples": "https://ui.shadcn.com/code/apps/v4/registry/bases/radix/examples/chip-example.tsx"
+        }
+      }
+    }
+  },
+  {
     "name": "code-block",
     "type": "registry:ui",
-    "registryDependencies": ["button", "use-highlighted-code"],
+    "registryDependencies": [
+      "button",
+      "use-highlighted-code"
+    ],
     "files": [
       {
         "path": "ui/code-block.tsx",
@@ -487,8 +590,13 @@
   {
     "name": "combobox",
     "type": "registry:ui",
-    "registryDependencies": ["button", "input-group"],
-    "dependencies": ["@base-ui/react"],
+    "registryDependencies": [
+      "button",
+      "input-group"
+    ],
+    "dependencies": [
+      "@base-ui/react"
+    ],
     "files": [
       {
         "path": "ui/combobox.tsx",
@@ -518,8 +626,13 @@
   {
     "name": "command",
     "type": "registry:ui",
-    "dependencies": ["cmdk"],
-    "registryDependencies": ["dialog", "input-group"],
+    "dependencies": [
+      "cmdk"
+    ],
+    "registryDependencies": [
+      "dialog",
+      "input-group"
+    ],
     "files": [
       {
         "path": "ui/command.tsx",
@@ -578,7 +691,9 @@
   {
     "name": "dialog",
     "type": "registry:ui",
-    "registryDependencies": ["button"],
+    "registryDependencies": [
+      "button"
+    ],
     "files": [
       {
         "path": "ui/dialog.tsx",
@@ -608,7 +723,9 @@
   {
     "name": "direction",
     "type": "registry:ui",
-    "dependencies": ["@base-ui/react"],
+    "dependencies": [
+      "@base-ui/react"
+    ],
     "files": [
       {
         "path": "ui/direction.tsx",
@@ -635,7 +752,9 @@
   {
     "name": "drawer",
     "type": "registry:ui",
-    "dependencies": ["@base-ui/react"],
+    "dependencies": [
+      "@base-ui/react"
+    ],
     "files": [
       {
         "path": "ui/drawer.tsx",
@@ -720,7 +839,10 @@
   {
     "name": "field",
     "type": "registry:ui",
-    "registryDependencies": ["label", "separator"],
+    "registryDependencies": [
+      "label",
+      "separator"
+    ],
     "files": [
       {
         "path": "ui/field.tsx",
@@ -807,7 +929,11 @@
   {
     "name": "input-group",
     "type": "registry:ui",
-    "registryDependencies": ["button", "input", "textarea"],
+    "registryDependencies": [
+      "button",
+      "input",
+      "textarea"
+    ],
     "files": [
       {
         "path": "ui/input-group.tsx",
@@ -835,7 +961,9 @@
   {
     "name": "input-otp",
     "type": "registry:ui",
-    "dependencies": ["input-otp"],
+    "dependencies": [
+      "input-otp"
+    ],
     "files": [
       {
         "path": "ui/input-otp.tsx",
@@ -865,7 +993,9 @@
   {
     "name": "item",
     "type": "registry:ui",
-    "registryDependencies": ["separator"],
+    "registryDependencies": [
+      "separator"
+    ],
     "files": [
       {
         "path": "ui/item.tsx",
@@ -946,6 +1076,61 @@
     }
   },
   {
+    "name": "layout",
+    "type": "registry:ui",
+    "files": [
+      {
+        "path": "ui/layout.tsx",
+        "type": "registry:ui"
+      }
+    ],
+    "meta": {
+      "links": {
+        "base": {
+          "docs": "https://ui.shadcn.com/docs/components/base/layout",
+          "examples": "https://ui.shadcn.com/code/apps/v4/registry/bases/base/examples/layout-example.tsx"
+        },
+        "aria": {
+          "docs": "https://ui.shadcn.com/docs/components/aria/layout",
+          "examples": "https://ui.shadcn.com/code/apps/v4/registry/bases/aria/examples/layout-example.tsx"
+        },
+        "radix": {
+          "docs": "https://ui.shadcn.com/docs/components/radix/layout",
+          "examples": "https://ui.shadcn.com/code/apps/v4/registry/bases/radix/examples/layout-example.tsx"
+        }
+      }
+    }
+  },
+  {
+    "name": "link",
+    "type": "registry:ui",
+    "dependencies": [
+      "@base-ui/react"
+    ],
+    "files": [
+      {
+        "path": "ui/link.tsx",
+        "type": "registry:ui"
+      }
+    ],
+    "meta": {
+      "links": {
+        "base": {
+          "docs": "https://ui.shadcn.com/docs/components/base/link",
+          "examples": "https://ui.shadcn.com/code/apps/v4/registry/bases/base/examples/link-example.tsx"
+        },
+        "aria": {
+          "docs": "https://ui.shadcn.com/docs/components/aria/link",
+          "examples": "https://ui.shadcn.com/code/apps/v4/registry/bases/aria/examples/link-example.tsx"
+        },
+        "radix": {
+          "docs": "https://ui.shadcn.com/docs/components/radix/link",
+          "examples": "https://ui.shadcn.com/code/apps/v4/registry/bases/radix/examples/link-example.tsx"
+        }
+      }
+    }
+  },
+  {
     "name": "marker",
     "type": "registry:ui",
     "files": [
@@ -966,7 +1151,9 @@
   {
     "name": "menubar",
     "type": "registry:ui",
-    "registryDependencies": ["dropdown-menu"],
+    "registryDependencies": [
+      "dropdown-menu"
+    ],
     "files": [
       {
         "path": "ui/menubar.tsx",
@@ -1009,8 +1196,12 @@
   {
     "name": "message-scroller",
     "type": "registry:ui",
-    "dependencies": ["@shadcn/react"],
-    "registryDependencies": ["button"],
+    "dependencies": [
+      "@shadcn/react"
+    ],
+    "registryDependencies": [
+      "button"
+    ],
     "files": [
       {
         "path": "ui/message-scroller.tsx",
@@ -1053,6 +1244,32 @@
     }
   },
   {
+    "name": "navbar",
+    "type": "registry:ui",
+    "files": [
+      {
+        "path": "ui/navbar.tsx",
+        "type": "registry:ui"
+      }
+    ],
+    "meta": {
+      "links": {
+        "base": {
+          "docs": "https://ui.shadcn.com/docs/components/base/navbar",
+          "examples": "https://ui.shadcn.com/code/apps/v4/registry/bases/base/examples/navbar-example.tsx"
+        },
+        "aria": {
+          "docs": "https://ui.shadcn.com/docs/components/aria/navbar",
+          "examples": "https://ui.shadcn.com/code/apps/v4/registry/bases/aria/examples/navbar-example.tsx"
+        },
+        "radix": {
+          "docs": "https://ui.shadcn.com/docs/components/radix/navbar",
+          "examples": "https://ui.shadcn.com/code/apps/v4/registry/bases/radix/examples/navbar-example.tsx"
+        }
+      }
+    }
+  },
+  {
     "name": "navigation-menu",
     "type": "registry:ui",
     "files": [
@@ -1077,9 +1294,40 @@
     }
   },
   {
+    "name": "number-input",
+    "type": "registry:ui",
+    "registryDependencies": [
+      "input-group"
+    ],
+    "files": [
+      {
+        "path": "ui/number-input.tsx",
+        "type": "registry:ui"
+      }
+    ],
+    "meta": {
+      "links": {
+        "base": {
+          "docs": "https://ui.shadcn.com/docs/components/base/number-input",
+          "examples": "https://ui.shadcn.com/code/apps/v4/registry/bases/base/examples/number-input-example.tsx"
+        },
+        "aria": {
+          "docs": "https://ui.shadcn.com/docs/components/aria/number-input",
+          "examples": "https://ui.shadcn.com/code/apps/v4/registry/bases/aria/examples/number-input-example.tsx"
+        },
+        "radix": {
+          "docs": "https://ui.shadcn.com/docs/components/radix/number-input",
+          "examples": "https://ui.shadcn.com/code/apps/v4/registry/bases/radix/examples/number-input-example.tsx"
+        }
+      }
+    }
+  },
+  {
     "name": "pagination",
     "type": "registry:ui",
-    "registryDependencies": ["button"],
+    "registryDependencies": [
+      "button"
+    ],
     "files": [
       {
         "path": "ui/pagination.tsx",
@@ -1164,8 +1412,12 @@
   {
     "name": "questionnaire",
     "type": "registry:ui",
-    "dependencies": ["@shadcn/react"],
-    "registryDependencies": ["button"],
+    "dependencies": [
+      "@shadcn/react"
+    ],
+    "registryDependencies": [
+      "button"
+    ],
     "files": [
       {
         "path": "ui/questionnaire.tsx",
@@ -1219,9 +1471,37 @@
     }
   },
   {
+    "name": "rating",
+    "type": "registry:ui",
+    "files": [
+      {
+        "path": "ui/rating.tsx",
+        "type": "registry:ui"
+      }
+    ],
+    "meta": {
+      "links": {
+        "base": {
+          "docs": "https://ui.shadcn.com/docs/components/base/rating",
+          "examples": "https://ui.shadcn.com/code/apps/v4/registry/bases/base/examples/rating-example.tsx"
+        },
+        "aria": {
+          "docs": "https://ui.shadcn.com/docs/components/aria/rating",
+          "examples": "https://ui.shadcn.com/code/apps/v4/registry/bases/aria/examples/rating-example.tsx"
+        },
+        "radix": {
+          "docs": "https://ui.shadcn.com/docs/components/radix/rating",
+          "examples": "https://ui.shadcn.com/code/apps/v4/registry/bases/radix/examples/rating-example.tsx"
+        }
+      }
+    }
+  },
+  {
     "name": "resizable",
     "type": "registry:ui",
-    "dependencies": ["react-resizable-panels"],
+    "dependencies": [
+      "react-resizable-panels"
+    ],
     "files": [
       {
         "path": "ui/resizable.tsx",
@@ -1272,6 +1552,35 @@
           "docs": "https://ui.shadcn.com/docs/components/radix/scroll-area",
           "examples": "https://ui.shadcn.com/code/apps/v4/registry/bases/radix/examples/scroll-area-example.tsx",
           "api": "https://www.radix-ui.com/docs/primitives/components/scroll-area.md"
+        }
+      }
+    }
+  },
+  {
+    "name": "segmented-control",
+    "type": "registry:ui",
+    "dependencies": [
+      "@base-ui/react"
+    ],
+    "files": [
+      {
+        "path": "ui/segmented-control.tsx",
+        "type": "registry:ui"
+      }
+    ],
+    "meta": {
+      "links": {
+        "base": {
+          "docs": "https://ui.shadcn.com/docs/components/base/segmented-control",
+          "examples": "https://ui.shadcn.com/code/apps/v4/registry/bases/base/examples/segmented-control-example.tsx"
+        },
+        "aria": {
+          "docs": "https://ui.shadcn.com/docs/components/aria/segmented-control",
+          "examples": "https://ui.shadcn.com/code/apps/v4/registry/bases/aria/examples/segmented-control-example.tsx"
+        },
+        "radix": {
+          "docs": "https://ui.shadcn.com/docs/components/radix/segmented-control",
+          "examples": "https://ui.shadcn.com/code/apps/v4/registry/bases/radix/examples/segmented-control-example.tsx"
         }
       }
     }
@@ -1337,7 +1646,9 @@
   {
     "name": "sheet",
     "type": "registry:ui",
-    "registryDependencies": ["button"],
+    "registryDependencies": [
+      "button"
+    ],
     "files": [
       {
         "path": "ui/sheet.tsx",
@@ -1457,7 +1768,10 @@
   {
     "name": "sonner",
     "type": "registry:ui",
-    "dependencies": ["sonner", "next-themes"],
+    "dependencies": [
+      "sonner",
+      "next-themes"
+    ],
     "files": [
       {
         "path": "ui/sonner.tsx",
@@ -1506,6 +1820,32 @@
         "radix": {
           "docs": "https://ui.shadcn.com/docs/components/radix/spinner",
           "examples": "https://ui.shadcn.com/code/apps/v4/registry/bases/radix/examples/spinner-example.tsx"
+        }
+      }
+    }
+  },
+  {
+    "name": "status",
+    "type": "registry:ui",
+    "files": [
+      {
+        "path": "ui/status.tsx",
+        "type": "registry:ui"
+      }
+    ],
+    "meta": {
+      "links": {
+        "base": {
+          "docs": "https://ui.shadcn.com/docs/components/base/status",
+          "examples": "https://ui.shadcn.com/code/apps/v4/registry/bases/base/examples/status-example.tsx"
+        },
+        "aria": {
+          "docs": "https://ui.shadcn.com/docs/components/aria/status",
+          "examples": "https://ui.shadcn.com/code/apps/v4/registry/bases/aria/examples/status-example.tsx"
+        },
+        "radix": {
+          "docs": "https://ui.shadcn.com/docs/components/radix/status",
+          "examples": "https://ui.shadcn.com/code/apps/v4/registry/bases/radix/examples/status-example.tsx"
         }
       }
     }
@@ -1625,8 +1965,12 @@
   {
     "name": "toast",
     "type": "registry:ui",
-    "dependencies": ["@base-ui/react"],
-    "registryDependencies": ["button"],
+    "dependencies": [
+      "@base-ui/react"
+    ],
+    "registryDependencies": [
+      "button"
+    ],
     "files": [
       {
         "path": "ui/toast.tsx",
@@ -1675,7 +2019,9 @@
   {
     "name": "toggle-group",
     "type": "registry:ui",
-    "registryDependencies": ["toggle"],
+    "registryDependencies": [
+      "toggle"
+    ],
     "files": [
       {
         "path": "ui/toggle-group.tsx",
@@ -1735,7 +2081,9 @@
   {
     "name": "trace",
     "type": "registry:ui",
-    "registryDependencies": ["collapsible"],
+    "registryDependencies": [
+      "collapsible"
+    ],
     "files": [
       {
         "path": "ui/trace.tsx",

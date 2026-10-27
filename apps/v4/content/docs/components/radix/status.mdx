@@ -1,0 +1,99 @@
+---
+title: Status
+description: "Tells the user the state of a view: nothing to show, information, success, a warning or an error."
+base: radix
+component: true
+---
+
+<ComponentPreview styleName="radix-nova" name="status-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add status
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource
+  name="status"
+  title="components/ui/status.tsx"
+  styleName="radix-nova"
+/>
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import {
+  Status,
+  StatusActions,
+  StatusDescription,
+  StatusMedia,
+  StatusTitle,
+} from "@/components/ui/status"
+```
+
+```tsx
+<Status variant="success">
+  <StatusMedia>
+    <CircleCheckIcon />
+  </StatusMedia>
+  <StatusTitle>All done</StatusTitle>
+  <StatusDescription>The order is completed.</StatusDescription>
+</Status>
+```
+
+## Variants
+
+The `variant` sets the color of the media circle.
+
+<ComponentPreview styleName="radix-nova" name="status-variants" />
+
+## API Reference
+
+### Status
+
+The root.
+
+| Prop        | Type                                                             | Default     |
+| ----------- | ---------------------------------------------------------------- | ----------- |
+| `variant`   | `"default" \| "info" \| "success" \| "warning" \| "destructive"` | `"default"` |
+| `className` | `string`                                                         | -           |
+
+### StatusMedia
+
+The circle with the icon.
+
+| Prop        | Type     | Default |
+| ----------- | -------- | ------- |
+| `className` | `string` | -       |
+
+### StatusTitle / StatusDescription / StatusActions
+
+Title, text and a row of actions.
+
+| Prop        | Type     | Default |
+| ----------- | -------- | ------- |
+| `className` | `string` | -       |

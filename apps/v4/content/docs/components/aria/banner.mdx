@@ -1,0 +1,89 @@
+---
+title: Banner
+description: "An inline message with a status, filled with its color."
+base: aria
+component: true
+---
+
+<ComponentPreview styleName="aria-nova" name="banner-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add banner
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource
+  name="banner"
+  title="components/ui/banner.tsx"
+  styleName="aria-nova"
+/>
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import {
+  Banner,
+  BannerClose,
+  BannerDescription,
+  BannerTitle,
+} from "@/components/ui/banner"
+```
+
+```tsx
+<Banner variant="success">
+  <CircleCheckIcon />
+  <BannerTitle>Payment received</BannerTitle>
+  <BannerDescription>The booster will start soon.</BannerDescription>
+  <BannerClose onClick={dismiss} />
+</Banner>
+```
+
+## Variants
+
+`info` and `success` are announced politely (`role="status"`), `warning` and `destructive` as alerts (`role="alert"`).
+
+<ComponentPreview styleName="aria-nova" name="banner-variants" />
+
+## API Reference
+
+### Banner
+
+The root. An icon as the first child is placed in its own column.
+
+| Prop        | Type                                                | Default  |
+| ----------- | --------------------------------------------------- | -------- |
+| `variant`   | `"info" \| "success" \| "warning" \| "destructive"` | `"info"` |
+| `className` | `string`                                            | -        |
+
+### BannerClose
+
+A close button in the corner. Renders an X icon unless you pass children.
+
+| Prop         | Type     | Default   |
+| ------------ | -------- | --------- |
+| `aria-label` | `string` | `"Close"` |

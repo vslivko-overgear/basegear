@@ -1,0 +1,94 @@
+---
+title: Layout
+description: "Containers that arrange content with consistent spacing: Stack, Grid, Center and Section."
+base: base
+component: true
+---
+
+<ComponentPreview styleName="base-nova" name="layout-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add layout
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource
+  name="layout"
+  title="components/ui/layout.tsx"
+  styleName="base-nova"
+/>
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { Center, Grid, Section, Stack } from "@/components/ui/layout"
+```
+
+```tsx
+<Stack direction="row" gap={2} align="center">...</Stack>
+<Grid columns={3} gap={4}>...</Grid>
+```
+
+## API Reference
+
+### Stack
+
+A flex container.
+
+| Prop        | Type                                                      | Default    |
+| ----------- | --------------------------------------------------------- | ---------- |
+| `direction` | `"column" \| "row"`                                       | `"column"` |
+| `gap`       | `number` (spacing steps)                                  | `4`        |
+| `align`     | `"start" \| "center" \| "end" \| "stretch" \| "baseline"` | -          |
+| `justify`   | `"start" \| "center" \| "end" \| "between" \| "around"`   | -          |
+| `wrap`      | `boolean`                                                 | `false`    |
+
+### Grid
+
+A grid with equal columns.
+
+| Prop      | Type                            | Default |
+| --------- | ------------------------------- | ------- |
+| `columns` | `number \| string` (a template) | `2`     |
+| `gap`     | `number` (spacing steps)        | `4`     |
+
+### Center
+
+Centers its content.
+
+| Prop        | Type     | Default |
+| ----------- | -------- | ------- |
+| `className` | `string` | -       |
+
+### Section
+
+A padded, centered block. Set the width with `max-w-*`.
+
+| Prop        | Type     | Default |
+| ----------- | -------- | ------- |
+| `className` | `string` | -       |

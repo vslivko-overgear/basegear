@@ -1,0 +1,95 @@
+---
+title: Bottom Bar
+description: "The tab bar at the bottom of a mobile screen for switching between top-level sections."
+base: radix
+component: true
+---
+
+<ComponentPreview styleName="radix-nova" name="bottom-bar-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add bottom-bar
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource
+  name="bottom-bar"
+  title="components/ui/bottom-bar.tsx"
+  styleName="radix-nova"
+/>
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import {
+  BottomBar,
+  BottomBarBadge,
+  BottomBarIcon,
+  BottomBarItem,
+  BottomBarLabel,
+} from "@/components/ui/bottom-bar"
+```
+
+```tsx
+<BottomBar defaultValue="home">
+  <BottomBarItem value="home">
+    <BottomBarIcon>
+      <HomeIcon />
+    </BottomBarIcon>
+    <BottomBarLabel>Home</BottomBarLabel>
+  </BottomBarItem>
+</BottomBar>
+```
+
+## API Reference
+
+### BottomBar
+
+A `nav`. Keep 2 to 6 items.
+
+| Prop                   | Type                      | Default             |
+| ---------------------- | ------------------------- | ------------------- |
+| `value / defaultValue` | `string`                  | -                   |
+| `onValueChange`        | `(value: string) => void` | -                   |
+| `aria-label`           | `string`                  | `"Main navigation"` |
+
+### BottomBarItem
+
+A destination. The active one gets `aria-current="page"` and `data-active`.
+
+| Prop    | Type     | Default |
+| ------- | -------- | ------- |
+| `value` | `string` | -       |
+
+### BottomBarIcon / BottomBarLabel / BottomBarBadge
+
+The icon, the label under it and a counter on the icon. Without a label, give the item an `aria-label`.
+
+| Prop        | Type     | Default |
+| ----------- | -------- | ------- |
+| `className` | `string` | -       |

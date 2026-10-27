@@ -1150,4 +1150,178 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       },
     ],
   },
+  {
+    name: "segmented-control",
+    type: "registry:ui",
+    dependencies: ["@base-ui/react"],
+    files: [
+      {
+        path: "ui/segmented-control.tsx",
+        type: "registry:ui",
+      },
+    ],
+    meta: {
+      links: {
+        docs: "https://ui.shadcn.com/docs/components/base/segmented-control",
+        examples:
+          "https://ui.shadcn.com/code/apps/v4/registry/bases/base/examples/segmented-control-example.tsx",
+      },
+    },
+  },
+  {
+    name: "rating",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/rating.tsx",
+        type: "registry:ui",
+      },
+    ],
+    meta: {
+      links: {
+        docs: "https://ui.shadcn.com/docs/components/base/rating",
+        examples:
+          "https://ui.shadcn.com/code/apps/v4/registry/bases/base/examples/rating-example.tsx",
+      },
+    },
+  },
+  {
+    name: "status",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/status.tsx",
+        type: "registry:ui",
+      },
+    ],
+    meta: {
+      links: {
+        docs: "https://ui.shadcn.com/docs/components/base/status",
+        examples:
+          "https://ui.shadcn.com/code/apps/v4/registry/bases/base/examples/status-example.tsx",
+      },
+    },
+  },
+  {
+    name: "banner",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/banner.tsx",
+        type: "registry:ui",
+      },
+    ],
+    meta: {
+      links: {
+        docs: "https://ui.shadcn.com/docs/components/base/banner",
+        examples:
+          "https://ui.shadcn.com/code/apps/v4/registry/bases/base/examples/banner-example.tsx",
+      },
+    },
+  },
+  {
+    name: "chip",
+    type: "registry:ui",
+    dependencies: ["@base-ui/react"],
+    files: [
+      {
+        path: "ui/chip.tsx",
+        type: "registry:ui",
+      },
+    ],
+    meta: {
+      links: {
+        docs: "https://ui.shadcn.com/docs/components/base/chip",
+        examples:
+          "https://ui.shadcn.com/code/apps/v4/registry/bases/base/examples/chip-example.tsx",
+      },
+    },
+  },
+  {
+    name: "number-input",
+    type: "registry:ui",
+    registryDependencies: ["input-group"],
+    files: [
+      {
+        path: "ui/number-input.tsx",
+        type: "registry:ui",
+      },
+    ],
+    meta: {
+      links: {
+        docs: "https://ui.shadcn.com/docs/components/base/number-input",
+        examples:
+          "https://ui.shadcn.com/code/apps/v4/registry/bases/base/examples/number-input-example.tsx",
+      },
+    },
+  },
+  {
+    name: "navbar",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/navbar.tsx",
+        type: "registry:ui",
+      },
+    ],
+    meta: {
+      links: {
+        docs: "https://ui.shadcn.com/docs/components/base/navbar",
+        examples:
+          "https://ui.shadcn.com/code/apps/v4/registry/bases/base/examples/navbar-example.tsx",
+      },
+    },
+  },
+  {
+    name: "bottom-bar",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/bottom-bar.tsx",
+        type: "registry:ui",
+      },
+    ],
+    meta: {
+      links: {
+        docs: "https://ui.shadcn.com/docs/components/base/bottom-bar",
+        examples:
+          "https://ui.shadcn.com/code/apps/v4/registry/bases/base/examples/bottom-bar-example.tsx",
+      },
+    },
+  },
+  {
+    name: "layout",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/layout.tsx",
+        type: "registry:ui",
+      },
+    ],
+    meta: {
+      links: {
+        docs: "https://ui.shadcn.com/docs/components/base/layout",
+        examples:
+          "https://ui.shadcn.com/code/apps/v4/registry/bases/base/examples/layout-example.tsx",
+      },
+    },
+  },
+  {
+    name: "link",
+    type: "registry:ui",
+    dependencies: ["@base-ui/react"],
+    files: [
+      {
+        path: "ui/link.tsx",
+        type: "registry:ui",
+      },
+    ],
+    meta: {
+      links: {
+        docs: "https://ui.shadcn.com/docs/components/base/link",
+        examples:
+          "https://ui.shadcn.com/code/apps/v4/registry/bases/base/examples/link-example.tsx",
+      },
+    },
+  },
 ]
