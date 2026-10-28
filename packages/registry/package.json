@@ -95,7 +95,7 @@
     "@types/prompts": "^2.4.9",
     "@types/stringify-object": "^4.0.5",
     "esbuild": "^0.27.7",
-    "msw": "^2.10.4",
+    "msw": "^3.0.3",
     "rimraf": "^6.0.1",
     "ts-morph": "^26.0.0",
     "tsup": "^8.5.0",
