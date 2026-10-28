@@ -15,28 +15,39 @@ baseui is a shadcn style, a theme, a preset and a set of components in the shadc
 | Blocks | `apps/v4/registry/bases/radix/blocks/` | `messenger-01` and `product-01` (the Overgear product page), built from the registry components. |
 | CLI | `packages/shadcn` | `npx shadcn add <name>` against this registry. |
 
-## Showcase
+## The site is the showcase
 
-`/showcase` is the design system's own site, after baseui's docs: a catalog (Theming, Foundations, Components in
-groups), a page per component with a Playground and its Settings panel, props tables and examples with code, desktop/mobile
-and light/dark switches. It is built from the `radix-baseui` components themselves, in the baseui theme.
+The whole site (`apps/v4`) is the design system's showcase, after baseui's docs: a catalog (Theming, Foundations,
+Components and Blocks in groups), a page per component with a Playground and its Settings panel, props tables and examples
+with code, desktop/mobile and light/dark switches. It is built from the `radix-baseui` components themselves, in the baseui
+theme. The shadcn landing, docs, `/blocks`, `/create` and their routes are gone.
+
+| Route | Page |
+|---|---|
+| `/` | Home: every page of the catalog |
+| `/components/<name>` | Playground, props, examples |
+| `/foundations/<name>`, `/theming/theme-settings` | Foundations and Theme Settings |
+| `/blocks/<name>` | A block in a frame, with its install command |
+| `/view/<name>` | The block alone (what the frame shows) |
+| `/r/styles/radix-baseui/<name>.json` | The registry the shadcn CLI installs from |
 
 | Part | Where |
 |---|---|
 | Frame: header, catalog, Settings panel, sheets | `apps/v4/showcase/shell.tsx` |
+| Routes | `apps/v4/app/(showcase)`, blocks alone in `apps/v4/app/(block-view)` |
 | Catalog groups | `apps/v4/showcase/catalog.ts` |
 | Playgrounds (args, controls, render, code) | `apps/v4/showcase/stories/<component>.tsx` |
 | Foundations and Theme Settings pages | `apps/v4/showcase/foundations/` |
-| Examples | the docs demos (`apps/v4/examples/radix/`), in the order of `content/docs/components/radix/<component>.mdx` |
+| Examples, titles, descriptions | the demos in `apps/v4/examples/radix/`, in the order of `apps/v4/content/docs/components/radix/<component>.mdx` (kept as data for the showcase) |
 | Props tables | `apps/v4/showcase/props.json`, from the TypeScript source: `pnpm --filter=v4 showcase:props` after changing a component |
 
 ## Removed from upstream shadcn
 
 The Base UI and React Aria bases, the other eight styles (and their 27 base/style builds), the legacy `new-york-v4`
 registry with its blocks, charts and examples, AI Elements, the Charts, Colors, Typeset and `/examples` sections, RTL,
-the changelog, the forms and AI helper guides, the starter `templates/`, `packages/tests` and the upstream release,
-registry-monitoring and signed-commit workflows. The site picks Lucide only. The build renders 165 pages instead of 843
-and peaks at about 6 GB of memory, so it fits Vercel's standard build machine.
+the changelog, the forms and AI helper guides, the whole shadcn docs site (landing, docs, `/blocks`, `/create`, fumadocs), the starter `templates/`, `packages/tests` and the upstream release,
+registry-monitoring and signed-commit workflows. The site picks Lucide only. The build renders 147 pages instead of 843
+and peaks at about 3.6 GB of memory.
 
 ## Run
 
@@ -46,9 +57,8 @@ pnpm --filter=v4 registry:build   # generates styles/radix-baseui/ui and public/
 pnpm --filter=v4 dev              # http://localhost:4000
 ```
 
-- Component docs: `/docs/components/radix/<name>`.
-- Any example or block in the baseui style and Overgear theme: `/preview/radix/<name>?preset=b7qMHwHqa`.
-- `/create?preset=b7qMHwHqa` opens the design system builder with the baseui preset.
+- The showcase: http://localhost:4000, a component at `/components/<name>`, a block at `/blocks/<name>`.
+- Install from it: `npx shadcn@latest add <site URL>/r/styles/radix-baseui/<name>.json`.
 
 ## Deploy on Vercel
 
@@ -65,8 +75,8 @@ in an app, load it with `next/font/local` and point `--font-sans` at it.
 1. `apps/v4/registry/bases/radix/ui/<name>.tsx`: `data-slot` on every part, `cn-<name>-*` classes, `cva` variants.
 2. An entry in `apps/v4/registry/bases/radix/ui/_registry.ts`.
 3. A `cn-<name>` section in `apps/v4/registry/styles/style-baseui.css`.
-4. Demos in `apps/v4/examples/radix/`, a preview card in `registry/bases/radix/examples/`, docs in `content/docs/components/radix/` (+ `meta.json`).
-5. `pnpm --filter=v4 registry:build`.
+4. Demos in `apps/v4/examples/radix/`, a page in `apps/v4/content/docs/components/radix/` (+ `meta.json`) for its title, description and example order, a group in `apps/v4/showcase/catalog.ts`, optionally a Playground in `apps/v4/showcase/stories/`.
+5. `pnpm --filter=v4 registry:build` and `pnpm --filter=v4 showcase:props`.
 
 ---
 

@@ -103,9 +103,10 @@ const SECTION_TITLES = {
   theming: "Theming",
   foundations: "Foundations",
   components: "Components",
+  blocks: "Blocks",
 } as const
 export const hrefOf = (page: CatalogPage) =>
-  `/showcase/${page.section}/${page.slug}`
+  `/${page.section}/${page.slug}`
 
 function NavRow({
   page,
@@ -279,7 +280,7 @@ export function ShowcaseShell({
                 <MenuIcon />
               </Button>
               <Link
-                href="/showcase"
+                href="/"
                 className="flex items-center gap-2 text-lg font-bold tracking-tight"
               >
                 <span className="grid size-8 place-items-center rounded-xl bg-primary text-sm text-primary-foreground">

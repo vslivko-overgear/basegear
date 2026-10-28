@@ -7,30 +7,7 @@
       "enum": [
         "default",
         "new-york",
-        "radix-vega",
-        "radix-nova",
-        "radix-maia",
-        "radix-lyra",
-        "radix-mira",
-        "radix-luma",
-        "radix-sera",
-        "radix-rhea",
-        "base-vega",
-        "base-nova",
-        "base-maia",
-        "base-lyra",
-        "base-mira",
-        "base-luma",
-        "base-sera",
-        "base-rhea",
-        "aria-vega",
-        "aria-nova",
-        "aria-maia",
-        "aria-lyra",
-        "aria-mira",
-        "aria-luma",
-        "aria-sera",
-        "aria-rhea"
+        "radix-baseui"
       ]
     },
     "tailwind": {
@@ -52,7 +29,12 @@
           "type": "string"
         }
       },
-      "required": ["config", "css", "baseColor", "cssVariables"]
+      "required": [
+        "config",
+        "css",
+        "baseColor",
+        "cssVariables"
+      ]
     },
     "rsc": {
       "type": "boolean"
@@ -82,7 +64,10 @@
           "type": "string"
         }
       },
-      "required": ["utils", "components"]
+      "required": [
+        "utils",
+        "components"
+      ]
     },
     "menuColor": {
       "type": "string",
@@ -95,7 +80,10 @@
     },
     "menuAccent": {
       "type": "string",
-      "enum": ["subtle", "bold"]
+      "enum": [
+        "subtle",
+        "bold"
+      ]
     },
     "rtl": {
       "type": "boolean"
@@ -129,7 +117,9 @@
                   }
                 }
               },
-              "required": ["url"]
+              "required": [
+                "url"
+              ]
             }
           ]
         }
@@ -137,5 +127,10 @@
       "additionalProperties": false
     }
   },
-  "required": ["style", "tailwind", "rsc", "aliases"]
+  "required": [
+    "style",
+    "tailwind",
+    "rsc",
+    "aliases"
+  ]
 }

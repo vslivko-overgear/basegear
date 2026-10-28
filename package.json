@@ -16,12 +16,6 @@
     "build": "turbo run build",
     "build:packages": "turbo run build --filter=./packages/*",
     "registry:build": "pnpm --filter=v4 registry:build && pnpm lint:fix && pnpm format:write -- --loglevel silent",
-    "registry:capture": "pnpm --filter=v4 registry:capture",
-    "registry:health": "turbo run registry:health --filter=v4",
-    "registry:health:prepare": "turbo run registry:health:prepare --filter=v4",
-    "registry:health:check": "turbo run registry:health:check --filter=v4",
-    "registry:health:publish": "turbo run registry:health:publish --filter=v4",
-    "explore:capture": "pnpm --filter=v4 explore:capture",
     "dev": "turbo run dev",
     "shadcn:dev": "turbo run dev --filter=shadcn...",
     "shadcn": "pnpm --filter=shadcn start:dev",
@@ -42,9 +36,7 @@
     "pub:rc": "cd packages/shadcn && pnpm pub:rc",
     "pub:release": "cd packages/shadcn && pnpm pub:release",
     "test:dev": "turbo run test --force --only",
-    "test": "pnpm --filter=v4 registry:build && start-server-and-test v4:dev http://localhost:4000 test:dev",
-    "validate:registries": "pnpm --filter=v4 validate:registries",
-    "test:apps": "pnpm --filter=v4 test:apps"
+    "test": "pnpm --filter=v4 registry:build && start-server-and-test v4:dev http://localhost:4000 test:dev"
   },
   "packageManager": "pnpm@10.33.4",
   "dependencies": {

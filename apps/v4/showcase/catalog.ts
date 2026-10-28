@@ -2,11 +2,12 @@
 // Component pages are the Radix docs pages of the registry (content/docs/components/radix).
 
 export type CatalogPage = {
-  section: "theming" | "foundations" | "components"
+  section: "theming" | "foundations" | "components" | "blocks"
   slug: string
   title: string
   group?: string
   icon?: string
+  description?: string
 }
 
 export const FOUNDATIONS: CatalogPage[] = [

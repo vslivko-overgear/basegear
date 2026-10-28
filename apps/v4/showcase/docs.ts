@@ -8,6 +8,7 @@ import {
   THEMING,
   type CatalogPage,
 } from "@/showcase/catalog"
+import { blocks } from "@/registry/bases/radix/blocks/_registry"
 
 const DOCS_DIR = path.join(process.cwd(), "content/docs/components/radix")
 
@@ -47,7 +48,7 @@ export async function getCatalog(): Promise<CatalogPage[]> {
       })
     }
   }
-  return [...THEMING, ...FOUNDATIONS, ...components]
+  return [...THEMING, ...FOUNDATIONS, ...components, ...getBlockPages()]
 }
 
 /** A component page: its docs title and description, and every ComponentPreview as an example under its heading. */
@@ -115,3 +116,30 @@ export async function getComponentProps(slug: string) {
   >
   return props[slug] ?? {}
 }
+
+const BLOCK_GROUPS: Record<string, string> = {
+  apps: "Apps",
+  authentication: "Authentication",
+  dashboard: "Dashboard",
+  sidebar: "Sidebar",
+}
+
+/** Registry blocks, grouped by their first category; Apps (the baseui ones) first. */
+export function getBlockPages(): CatalogPage[] {
+  const order = Object.keys(BLOCK_GROUPS)
+  return blocks
+    .filter((block) => block.type === "registry:block")
+    .map((block) => {
+      const category = block.categories?.[0] ?? "other"
+      return {
+        section: "blocks" as const,
+        slug: block.name,
+        title: block.name.replace(/-0?(\d+)$/, " $1").replace(/^./, (c) => c.toUpperCase()).replace(/-/g, " "),
+        group: BLOCK_GROUPS[category] ?? "More",
+        description: block.description ?? "",
+      }
+    })
+    .sort((a, b) => order.indexOf(blockKey(a.group)) - order.indexOf(blockKey(b.group)))
+}
+
+const blockKey = (group: string) => Object.keys(BLOCK_GROUPS).find((k) => BLOCK_GROUPS[k] === group) ?? group

@@ -1,19 +1,11 @@
 import type { MetadataRoute } from "next"
 
-import { registryCategories } from "@/lib/categories"
 import { siteConfig } from "@/lib/config"
-import { source } from "@/lib/source"
+import { getCatalog } from "@/showcase/docs"
 
-const staticRoutes = ["/", "/blocks", "/create"]
-
-export default function sitemap(): MetadataRoute.Sitemap {
-  const urls = [
-    ...staticRoutes,
-    ...source.getPages().map((page) => page.url),
-    ...registryCategories.map((category) => `/blocks/${category.slug}`),
-  ]
-
-  return [...new Set(urls)].map((path) => ({
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const pages = await getCatalog()
+  return ["/", ...pages.map((page) => `/${page.section}/${page.slug}`)].map((path) => ({
     url: new URL(path, siteConfig.url).toString(),
   }))
 }

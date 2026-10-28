@@ -1,35 +1,22 @@
 import type { Metadata } from "next"
 import { cn } from "cn"
-import { NuqsAdapter } from "nuqs/adapters/next/app"
 
 import { META_THEME_COLORS, siteConfig } from "@/lib/config"
-import { DOCS_SIDEBAR_SCROLL_RESTORE_SCRIPT } from "@/lib/docs-sidebar-scroll"
 import { fontVariables } from "@/lib/fonts"
-import { ActiveThemeProvider } from "@/components/active-theme"
 import { Analytics } from "@/components/analytics"
-import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/registry/bases/radix/ui/sonner"
-import { TooltipProvider as RadixTooltipProvider } from "@/registry/bases/radix/ui/tooltip"
+import { TooltipProvider } from "@/registry/bases/radix/ui/tooltip"
 
 import "@/app/globals.css"
-import "@/app/docs-typeset.css"
 
 export const metadata: Metadata = {
   title: {
     default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`,
+    template: `%s — ${siteConfig.name}`,
   },
   metadataBase: new URL(siteConfig.url),
   description: siteConfig.description,
-  keywords: ["Next.js", "React", "Tailwind CSS", "Components", "shadcn"],
-  authors: [
-    {
-      name: "shadcn",
-      url: "https://shadcn.com",
-    },
-  ],
-  creator: "shadcn",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -37,32 +24,11 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     siteName: siteConfig.name,
-    images: [
-      {
-        url: `${siteConfig.url}/opengraph-image.png`,
-        width: 1200,
-        height: 630,
-        alt: siteConfig.name,
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: siteConfig.name,
-    description: siteConfig.description,
-    images: [`${siteConfig.url}/opengraph-image.png`],
-    creator: "@shadcn",
   },
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon-16x16.png",
     apple: "/apple-touch-icon.png",
-  },
-  manifest: `${siteConfig.url}/site.webmanifest`,
-  alternates: {
-    types: {
-      "application/rss+xml": `${siteConfig.url}/rss.xml`,
-    },
   },
 }
 
@@ -72,49 +38,17 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className={cn(
-        fontVariables,
-        "[--header-height:calc(var(--spacing)*14)] lg:[--header-height:calc(var(--spacing)*16)]"
-      )}
-    >
+    <html lang="en" suppressHydrationWarning className={fontVariables}>
       <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: DOCS_SIDEBAR_SCROLL_RESTORE_SCRIPT,
-          }}
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              try {
-                if (localStorage.theme === 'dark' || ((!('theme' in localStorage) || localStorage.theme === 'system') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                  document.querySelector('meta[name="theme-color"]').setAttribute('content', '${META_THEME_COLORS.dark}')
-                }
-              } catch (_) {}
-            `,
-          }}
-        />
         <meta name="theme-color" content={META_THEME_COLORS.light} />
       </head>
-      <body
-        className={cn(
-          "group/body overscroll-none antialiased [--footer-height:calc(var(--spacing)*14)] xl:[--footer-height:calc(var(--spacing)*24)]"
-        )}
-      >
+      <body className={cn("overscroll-none antialiased")}>
         <ThemeProvider>
-          <ActiveThemeProvider>
-            <NuqsAdapter>
-              <RadixTooltipProvider delayDuration={0}>
-                {children}
-                <Toaster position="top-center" />
-              </RadixTooltipProvider>
-            </NuqsAdapter>
-            <TailwindIndicator />
-            <Analytics />
-          </ActiveThemeProvider>
+          <TooltipProvider delayDuration={0}>
+            {children}
+            <Toaster position="top-center" />
+          </TooltipProvider>
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>

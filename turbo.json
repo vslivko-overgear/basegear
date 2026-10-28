@@ -1,9 +1,13 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalEnv": ["NODE_ENV"],
+  "globalEnv": [
+    "NODE_ENV"
+  ],
   "tasks": {
     "build": {
-      "dependsOn": ["^build"],
+      "dependsOn": [
+        "^build"
+      ],
       "env": [
         "NEXT_PUBLIC_APP_URL",
         "UPSTASH_REDIS_REST_URL",
@@ -25,11 +29,18 @@
       ]
     },
     "preview": {
-      "env": ["NEXT_PUBLIC_APP_URL"],
-      "outputs": ["dist/**", ".next/**"]
+      "env": [
+        "NEXT_PUBLIC_APP_URL"
+      ],
+      "outputs": [
+        "dist/**",
+        ".next/**"
+      ]
     },
     "start": {
-      "dependsOn": ["^build"]
+      "dependsOn": [
+        "^build"
+      ]
     },
     "lint": {
       "cache": false,
@@ -47,7 +58,9 @@
       "outputs": []
     },
     "typecheck": {
-      "dependsOn": ["^build"]
+      "dependsOn": [
+        "^build"
+      ]
     },
     "dev": {
       "cache": false,
@@ -57,50 +70,13 @@
       "cache": false
     },
     "test": {
-      "dependsOn": ["^build"],
+      "dependsOn": [
+        "^build"
+      ],
       "cache": false,
       "outputs": []
     },
     "registry:build": {
-      "outputs": []
-    },
-    "registry:health": {
-      "dependsOn": ["^build"],
-      "cache": false,
-      "env": ["MONITOR_MODE"],
-      "passThroughEnv": [
-        "BLOB_READ_WRITE_TOKEN",
-        "VERCEL_OIDC_TOKEN",
-        "BLOB_STORE_ID",
-        "GITHUB_STEP_SUMMARY"
-      ],
-      "outputs": []
-    },
-    "registry:health:prepare": {
-      "dependsOn": ["^build"],
-      "cache": false,
-      "passThroughEnv": [
-        "BLOB_READ_WRITE_TOKEN",
-        "VERCEL_OIDC_TOKEN",
-        "BLOB_STORE_ID"
-      ],
-      "outputs": []
-    },
-    "registry:health:check": {
-      "dependsOn": ["^build"],
-      "cache": false,
-      "env": ["MONITOR_MODE"],
-      "outputs": []
-    },
-    "registry:health:publish": {
-      "dependsOn": ["^build"],
-      "cache": false,
-      "passThroughEnv": [
-        "BLOB_READ_WRITE_TOKEN",
-        "VERCEL_OIDC_TOKEN",
-        "BLOB_STORE_ID",
-        "GITHUB_STEP_SUMMARY"
-      ],
       "outputs": []
     }
   }

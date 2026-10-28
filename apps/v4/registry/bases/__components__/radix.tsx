@@ -1282,30 +1282,6 @@ export const Components: Record<string, any> = {
       ) || "example"
     return { default: mod.default || mod[exportName] }
   }),
-  preview: React.lazy(async () => {
-    const mod = await import("@/registry/bases/radix/blocks/preview/index")
-    const exportName =
-      Object.keys(mod).find(
-        (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-      ) || "preview"
-    return { default: mod.default || mod[exportName] }
-  }),
-  "preview-02": React.lazy(async () => {
-    const mod = await import("@/registry/bases/radix/blocks/preview-02/index")
-    const exportName =
-      Object.keys(mod).find(
-        (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-      ) || "preview-02"
-    return { default: mod.default || mod[exportName] }
-  }),
-  "preview-03": React.lazy(async () => {
-    const mod = await import("@/registry/bases/radix/blocks/preview-03/index")
-    const exportName =
-      Object.keys(mod).find(
-        (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-      ) || "preview-03"
-    return { default: mod.default || mod[exportName] }
-  }),
   "login-01": React.lazy(async () => {
     const mod = await import("@/registry/bases/radix/blocks/login-01/page")
     const exportName =

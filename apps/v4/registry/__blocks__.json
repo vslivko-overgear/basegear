@@ -35,15 +35,6 @@
     "categories": ["apps"]
   },
   {
-    "name": "preview"
-  },
-  {
-    "name": "preview-02"
-  },
-  {
-    "name": "preview-03"
-  },
-  {
     "name": "product-01",
     "description": "A boost-service product page with an order form, live price, reviews and FAQ.",
     "categories": ["apps"]

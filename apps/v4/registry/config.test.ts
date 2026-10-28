@@ -62,7 +62,7 @@ describe("buildRegistryBase", () => {
   it("defaults chartColor to neutral when omitted", () => {
     const result = designSystemConfigSchema.parse({
       base: "radix",
-      style: "nova",
+      style: "baseui",
       iconLibrary: "lucide",
       theme: "neutral",
       font: "inter",
@@ -78,7 +78,7 @@ describe("buildRegistryBase", () => {
   it("defaults pointer to false when omitted", () => {
     const result = designSystemConfigSchema.parse({
       base: "radix",
-      style: "nova",
+      style: "baseui",
       iconLibrary: "lucide",
       theme: "neutral",
       font: "inter",
@@ -112,8 +112,8 @@ describe("buildRegistryBase", () => {
 
   it("defaults chartColor to the selected theme when omitted", () => {
     const result = designSystemConfigSchema.parse({
-      base: "base",
-      style: "sera",
+      base: "radix",
+      style: "baseui",
       iconLibrary: "lucide",
       baseColor: "taupe",
       theme: "taupe",
@@ -149,7 +149,7 @@ describe("buildRegistryBase", () => {
   it("rejects chartColor values that are unavailable for the selected base color", () => {
     const result = designSystemConfigSchema.safeParse({
       base: "radix",
-      style: "nova",
+      style: "baseui",
       iconLibrary: "lucide",
       baseColor: "neutral",
       theme: "neutral",
@@ -286,7 +286,8 @@ describe("buildPartialRegistryBase", () => {
 
     expect(result.config?.tailwind?.baseColor).toBe("neutral")
     expect(result.registryDependencies).toEqual(["font-figtree"])
-    expect(result.cssVars?.light?.radius).toBe("0.625rem")
+    // The default theme is baseui, whose radius is 0.75rem.
+    expect(result.cssVars?.light?.radius).toBe("0.75rem")
     expect(result.cssVars?.light).toBeDefined()
     expect(result.cssVars?.theme?.["--font-heading"]).toBe("var(--font-sans)")
   })
