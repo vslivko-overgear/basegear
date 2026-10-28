@@ -1,10 +1,31 @@
 import { Badge } from "@/styles/radix-baseui/ui/badge"
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/styles/radix-baseui/ui/table"
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/styles/radix-baseui/ui/table"
 
-type Prop = { name: string; type: string; required: boolean; defaultValue: string | null; description: string }
+type Prop = {
+  name: string
+  type: string
+  required: boolean
+  defaultValue: string | null
+  description: string
+}
 
 // Props come from showcase/props.json: TypeScript types and JSDoc of the registry source.
-function PartTable({ name, props, main }: { name: string; props: Prop[]; main: boolean }) {
+function PartTable({
+  name,
+  props,
+  main,
+}: {
+  name: string
+  props: Prop[]
+  main: boolean
+}) {
   const described = props.some((prop) => prop.description)
   return (
     <div className={main ? "mt-4" : "mt-8"}>
@@ -16,7 +37,9 @@ function PartTable({ name, props, main }: { name: string; props: Prop[]; main: b
               <TableHead>Prop</TableHead>
               <TableHead>Type</TableHead>
               <TableHead>Default</TableHead>
-              {described && <TableHead className="w-2/5">Description</TableHead>}
+              {described && (
+                <TableHead className="w-2/5">Description</TableHead>
+              )}
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -27,11 +50,16 @@ function PartTable({ name, props, main }: { name: string; props: Prop[]; main: b
                   {prop.required && <span className="text-destructive">*</span>}
                 </TableCell>
                 <TableCell>
-                  <Badge variant="secondary" className="h-auto max-w-72 font-mono text-[12px] font-normal break-words whitespace-normal">
+                  <Badge
+                    variant="secondary"
+                    className="h-auto max-w-72 font-mono text-[12px] font-normal break-words whitespace-normal"
+                  >
                     {prop.type}
                   </Badge>
                 </TableCell>
-                <TableCell className="font-mono text-[13px]">{prop.defaultValue ?? "—"}</TableCell>
+                <TableCell className="font-mono text-[13px]">
+                  {prop.defaultValue ?? "—"}
+                </TableCell>
                 {described && (
                   <TableCell className="text-sm whitespace-normal text-muted-foreground">
                     {prop.description.split("\n")[0] || "—"}

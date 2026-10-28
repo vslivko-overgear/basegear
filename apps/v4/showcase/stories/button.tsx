@@ -1,15 +1,31 @@
 "use client"
 
+import type { Story } from "@/showcase/types"
 import { ArrowRightIcon } from "lucide-react"
 
 import { Button } from "@/styles/radix-baseui/ui/button"
-import type { Story } from "@/showcase/types"
 
 export const button: Story = {
-  args: { children: "Button", variant: "default", size: "default", disabled: false, icon: false },
+  args: {
+    children: "Button",
+    variant: "default",
+    size: "default",
+    disabled: false,
+    icon: false,
+  },
   argTypes: {
     children: { control: "text", label: "label" },
-    variant: { control: "radio", options: ["default", "secondary", "outline", "ghost", "destructive", "link"] },
+    variant: {
+      control: "radio",
+      options: [
+        "default",
+        "secondary",
+        "outline",
+        "ghost",
+        "destructive",
+        "link",
+      ],
+    },
     size: { control: "radio", options: ["xs", "sm", "default", "lg"] },
     disabled: { control: "boolean" },
     icon: { control: "boolean", label: "end icon" },

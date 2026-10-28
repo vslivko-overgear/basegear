@@ -58,7 +58,10 @@ function Swatch({ token, note }: { token: string; note: string }) {
   const value = useToken(`--${token}`)
   return (
     <figure className="flex flex-col gap-2">
-      <div className="h-20 rounded-2xl ring-1 ring-foreground/10 ring-inset" style={{ background: `var(--${token})` }} />
+      <div
+        className="h-20 rounded-2xl ring-1 ring-foreground/10 ring-inset"
+        style={{ background: `var(--${token})` }}
+      />
       <figcaption className="flex flex-col gap-0.5 text-xs">
         <span className="font-mono text-[13px] font-semibold">{token}</span>
         <span className="text-muted-foreground">{note}</span>

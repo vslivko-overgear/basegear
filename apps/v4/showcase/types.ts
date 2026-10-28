@@ -5,7 +5,13 @@ export type ArgType =
   | { control: "text"; label?: string }
   | { control: "boolean"; label?: string }
   | { control: "radio"; options: readonly string[]; label?: string }
-  | { control: "range"; min: number; max: number; step?: number; label?: string }
+  | {
+      control: "range"
+      min: number
+      max: number
+      step?: number
+      label?: string
+    }
 
 // Story args hold any props of the component they render.
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

@@ -9,6 +9,10 @@ const declarations = (vars: Record<string, string> | undefined) =>
     .map(([name, value]) => `--${name}:${value};`)
     .join("")
 
+// The preset's font is Inter; Theme Settings swaps it through --showcase-font.
+const FONT_CSS =
+  "[data-showcase]{--font-sans:var(--showcase-font,var(--font-showcase-inter),ui-sans-serif,system-ui,sans-serif)}"
+
 export const SHOWCASE_THEME_CSS = theme
-  ? `:root:has([data-showcase]){${declarations(theme.cssVars?.light)}}:root.dark:has([data-showcase]){${declarations(theme.cssVars?.dark)}}`
-  : ""
+  ? `:root:has([data-showcase]){${declarations(theme.cssVars?.light)}}:root.dark:has([data-showcase]){${declarations(theme.cssVars?.dark)}}${FONT_CSS}`
+  : FONT_CSS

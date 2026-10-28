@@ -1,12 +1,12 @@
 "use client"
 
 import * as React from "react"
-import { CheckIcon, CopyIcon } from "lucide-react"
-
-import { Button } from "@/styles/radix-baseui/ui/button"
 import { useSettingsPanel } from "@/showcase/shell"
 import { STORIES } from "@/showcase/stories"
 import type { Args } from "@/showcase/types"
+import { CheckIcon, CopyIcon } from "lucide-react"
+
+import { Button } from "@/styles/radix-baseui/ui/button"
 
 /* ------------------------------------------------------------------- code */
 
@@ -35,7 +35,12 @@ function Code({ code, html }: { code: string; html?: string }) {
   return (
     <div className="mt-3 flex flex-col gap-2">
       <div className="flex gap-2">
-        <Button variant="secondary" size="sm" onClick={() => setOpen(!open)} aria-expanded={open}>
+        <Button
+          variant="secondary"
+          size="sm"
+          onClick={() => setOpen(!open)}
+          aria-expanded={open}
+        >
           {open ? "Hide code" : "Show code"}
         </Button>
         {open && <CopyCode code={code} />}
@@ -79,7 +84,11 @@ export function ExampleBlock({
   children: React.ReactNode
 }) {
   return (
-    <section id={id} data-anchor={title} className="scroll-mt-24 border-t pt-8 first:border-t-0 first:pt-0">
+    <section
+      id={id}
+      data-anchor={title}
+      className="scroll-mt-24 border-t pt-8 first:border-t-0 first:pt-0"
+    >
       <h3 className="text-xl font-semibold">{title}</h3>
       <Canvas>{children}</Canvas>
       <Code code={source} html={html} />
@@ -100,10 +109,18 @@ function defaultCode(name: string, args: Args, defaults: Args) {
     .map(([key, value]) => (value === true ? key : `${key}=${jsxValue(value)}`))
     .join(" ")
   const open = props ? `<${name} ${props}` : `<${name}`
-  return typeof children === "string" ? `${open}>${children}</${name}>` : `${open} />`
+  return typeof children === "string"
+    ? `${open}>${children}</${name}>`
+    : `${open} />`
 }
 
-export function Playground({ slug, component }: { slug: string; component: string }) {
+export function Playground({
+  slug,
+  component,
+}: {
+  slug: string
+  component: string
+}) {
   const story = STORIES[slug]
   const [args, setArgs] = React.useState<Args>(() => ({ ...story?.args }))
   const setSettings = useSettingsPanel()
@@ -113,16 +130,23 @@ export function Playground({ slug, component }: { slug: string; component: strin
     setSettings({
       argTypes: story.argTypes,
       args,
-      onChange: (name, value) => setArgs((current) => ({ ...current, [name]: value })),
+      onChange: (name, value) =>
+        setArgs((current) => ({ ...current, [name]: value })),
       onReset: () => setArgs({ ...story.args }),
     })
   }, [story, args, setSettings])
   React.useEffect(() => () => setSettings(null), [setSettings])
 
   if (!story) return null
-  const code = story.code ? story.code(args) : defaultCode(component, args, story.args)
+  const code = story.code
+    ? story.code(args)
+    : defaultCode(component, args, story.args)
   return (
-    <section id="playground" data-anchor="Playground" className="mt-10 scroll-mt-24">
+    <section
+      id="playground"
+      data-anchor="Playground"
+      className="mt-10 scroll-mt-24"
+    >
       <h2 className="text-2xl font-bold tracking-tight">Playground</h2>
       <Canvas>{story.render(args)}</Canvas>
       <Code code={code} />

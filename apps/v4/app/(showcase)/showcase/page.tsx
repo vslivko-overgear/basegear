@@ -1,10 +1,11 @@
 import Link from "next/link"
-
-import { Card, CardHeader, CardTitle } from "@/styles/radix-baseui/ui/card"
 import { getCatalog } from "@/showcase/docs"
 import { PageHeader } from "@/showcase/page-header"
 
-const hrefOf = (p: { section: string; slug: string }) => `/showcase/${p.section}/${p.slug}`
+import { Card, CardHeader, CardTitle } from "@/styles/radix-baseui/ui/card"
+
+const hrefOf = (p: { section: string; slug: string }) =>
+  `/showcase/${p.section}/${p.slug}`
 
 export default async function ShowcaseHome() {
   const pages = await getCatalog()
@@ -25,18 +26,30 @@ export default async function ShowcaseHome() {
         const groups = [...new Set(list.map((p) => p.group))]
         return (
           <section key={section.key} className="mt-12">
-            <h2 className="text-2xl font-bold tracking-tight">{section.title}</h2>
+            <h2 className="text-2xl font-bold tracking-tight">
+              {section.title}
+            </h2>
             {groups.map((group) => (
               <div key={group ?? section.key}>
-                {group && <h3 className="mt-6 mb-3 text-sm font-semibold text-muted-foreground">{group}</h3>}
+                {group && (
+                  <h3 className="mt-6 mb-3 text-sm font-semibold text-muted-foreground">
+                    {group}
+                  </h3>
+                )}
                 <div className="mt-4 grid grid-cols-[repeat(auto-fill,minmax(180px,1fr))] gap-3">
                   {list
                     .filter((p) => p.group === group)
                     .map((p) => (
-                      <Link key={p.slug} href={hrefOf(p)} className="rounded-xl outline-none focus-visible:ring-2 focus-visible:ring-ring">
+                      <Link
+                        key={p.slug}
+                        href={hrefOf(p)}
+                        className="rounded-xl outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                      >
                         <Card className="h-full transition-colors hover:bg-muted">
                           <CardHeader>
-                            <CardTitle className="text-base">{p.title}</CardTitle>
+                            <CardTitle className="text-base">
+                              {p.title}
+                            </CardTitle>
                           </CardHeader>
                         </Card>
                       </Link>

@@ -1,12 +1,13 @@
 "use client"
 
+import type { Args, ArgType } from "@/showcase/types"
+
 import { Button } from "@/styles/radix-baseui/ui/button"
 import { Chip, ChipGroup } from "@/styles/radix-baseui/ui/chip"
 import { Input } from "@/styles/radix-baseui/ui/input"
 import { Label } from "@/styles/radix-baseui/ui/label"
 import { Slider } from "@/styles/radix-baseui/ui/slider"
 import { Switch } from "@/styles/radix-baseui/ui/switch"
-import type { ArgType, Args } from "@/showcase/types"
 
 function Control({
   name,
@@ -57,7 +58,8 @@ function Control({
     return (
       <div className="flex flex-col gap-3">
         <span className="text-sm font-semibold">
-          {label}: <span className="text-muted-foreground tabular-nums">{current}</span>
+          {label}:{" "}
+          <span className="text-muted-foreground tabular-nums">{current}</span>
         </span>
         <Slider
           aria-label={label}
@@ -74,7 +76,11 @@ function Control({
   return (
     <div className="flex flex-col gap-2">
       <Label htmlFor={id}>{label}</Label>
-      <Input id={id} value={String(value ?? "")} onChange={(event) => onChange(event.target.value)} />
+      <Input
+        id={id}
+        value={String(value ?? "")}
+        onChange={(event) => onChange(event.target.value)}
+      />
     </div>
   )
 }
@@ -95,7 +101,13 @@ export function Controls({
     <div className="flex flex-col gap-5">
       <div className="pt-2 text-xl font-semibold">Settings</div>
       {Object.entries(argTypes).map(([name, spec]) => (
-        <Control key={name} name={name} spec={spec} value={args[name]} onChange={(value) => onChange(name, value)} />
+        <Control
+          key={name}
+          name={name}
+          spec={spec}
+          value={args[name]}
+          onChange={(value) => onChange(name, value)}
+        />
       ))}
       <Button variant="secondary" className="mt-2 w-full" onClick={onReset}>
         Reset

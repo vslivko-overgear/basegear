@@ -5,6 +5,9 @@
 import * as React from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import type { CatalogPage } from "@/showcase/catalog"
+import { Controls } from "@/showcase/controls"
+import type { Args, ArgType } from "@/showcase/types"
 import {
   ChevronDownIcon,
   CirclePlayIcon,
@@ -25,14 +28,27 @@ import {
 import { useTheme } from "next-themes"
 
 import { Button } from "@/styles/radix-baseui/ui/button"
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/styles/radix-baseui/ui/collapsible"
-import { InputGroup, InputGroupAddon, InputGroupInput } from "@/styles/radix-baseui/ui/input-group"
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/styles/radix-baseui/ui/collapsible"
+import {
+  InputGroup,
+  InputGroupAddon,
+  InputGroupInput,
+} from "@/styles/radix-baseui/ui/input-group"
 import { ScrollArea } from "@/styles/radix-baseui/ui/scroll-area"
-import { SegmentedControl, SegmentedControlItem } from "@/styles/radix-baseui/ui/segmented-control"
-import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/styles/radix-baseui/ui/sheet"
-import type { CatalogPage } from "@/showcase/catalog"
-import { Controls } from "@/showcase/controls"
-import type { ArgType, Args } from "@/showcase/types"
+import {
+  SegmentedControl,
+  SegmentedControlItem,
+} from "@/styles/radix-baseui/ui/segmented-control"
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+} from "@/styles/radix-baseui/ui/sheet"
 
 /* ------------------------------------------------------------- settings */
 
@@ -43,7 +59,9 @@ type Settings = {
   onReset: () => void
 }
 
-const SettingsContext = React.createContext<(settings: Settings | null) => void>(() => {})
+const SettingsContext = React.createContext<
+  (settings: Settings | null) => void
+>(() => {})
 export const useSettingsPanel = () => React.useContext(SettingsContext)
 
 /* ---------------------------------------------------------- theme overrides */
@@ -60,7 +78,9 @@ export const useThemeOverrides = () => React.useContext(ThemeOverridesContext)
 
 function readOverrides(): ThemeOverrides {
   try {
-    return JSON.parse(localStorage.getItem(OVERRIDES_KEY) ?? "{}") as ThemeOverrides
+    return JSON.parse(
+      localStorage.getItem(OVERRIDES_KEY) ?? "{}"
+    ) as ThemeOverrides
   } catch {
     return {}
   }
@@ -79,10 +99,23 @@ const ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
   SlidersHorizontal: SlidersHorizontalIcon,
 }
 
-const SECTION_TITLES = { theming: "Theming", foundations: "Foundations", components: "Components" } as const
-export const hrefOf = (page: CatalogPage) => `/showcase/${page.section}/${page.slug}`
+const SECTION_TITLES = {
+  theming: "Theming",
+  foundations: "Foundations",
+  components: "Components",
+} as const
+export const hrefOf = (page: CatalogPage) =>
+  `/showcase/${page.section}/${page.slug}`
 
-function NavRow({ page, active, sub }: { page: CatalogPage; active: boolean; sub?: boolean }) {
+function NavRow({
+  page,
+  active,
+  sub,
+}: {
+  page: CatalogPage
+  active: boolean
+  sub?: boolean
+}) {
   const Icon = page.icon ? ICONS[page.icon] : undefined
   return (
     <Link
@@ -102,7 +135,8 @@ function Catalog({ pages }: { pages: CatalogPage[] }) {
   const pathname = usePathname()
   const [query, setQuery] = React.useState("")
   const q = query.trim().toLowerCase()
-  const match = (p: CatalogPage) => !q || p.title.toLowerCase().includes(q) || p.slug.includes(q)
+  const match = (p: CatalogPage) =>
+    !q || p.title.toLowerCase().includes(q) || p.slug.includes(q)
   const activeGroup = pages.find((p) => hrefOf(p) === pathname)?.group
   const [open, setOpen] = React.useState<string | undefined>(activeGroup)
   React.useEffect(() => setOpen(activeGroup), [activeGroup])
@@ -113,42 +147,67 @@ function Catalog({ pages }: { pages: CatalogPage[] }) {
         <InputGroupAddon>
           <SearchIcon />
         </InputGroupAddon>
-        <InputGroupInput placeholder="Search" value={query} onChange={(e) => setQuery(e.target.value)} aria-label="Search" />
+        <InputGroupInput
+          placeholder="Search"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          aria-label="Search"
+        />
       </InputGroup>
       <nav aria-label="Catalog" className="flex flex-col">
-        {(Object.keys(SECTION_TITLES) as (keyof typeof SECTION_TITLES)[]).map((section) => {
-          const list = pages.filter((p) => p.section === section && match(p))
-          if (!list.length) return null
-          const groups = [...new Set(list.map((p) => p.group))]
-          return (
-            <div key={section} className="flex flex-col gap-0.5 border-b py-3 last:border-b-0">
-              <div className="px-3 pb-2 text-xs text-muted-foreground">{SECTION_TITLES[section]}</div>
-              {groups.map((group) =>
-                group ? (
-                  <Collapsible
-                    key={group}
-                    open={Boolean(q) || open === group}
-                    onOpenChange={(isOpen) => setOpen(isOpen ? group : undefined)}
-                  >
-                    <CollapsibleTrigger className="flex min-h-9 w-full items-center justify-between rounded-lg px-3 text-sm text-foreground/80 outline-none hover:bg-muted hover:text-foreground focus-visible:ring-2 focus-visible:ring-ring [&[data-state=open]>svg]:rotate-180">
-                      {group}
-                      <ChevronDownIcon className="size-4 text-muted-foreground transition-transform" />
-                    </CollapsibleTrigger>
-                    <CollapsibleContent className="flex flex-col gap-0.5">
-                      {list
-                        .filter((p) => p.group === group)
-                        .map((p) => (
-                          <NavRow key={p.slug} page={p} active={hrefOf(p) === pathname} sub />
-                        ))}
-                    </CollapsibleContent>
-                  </Collapsible>
-                ) : (
-                  list.map((p) => <NavRow key={p.slug} page={p} active={hrefOf(p) === pathname} />)
-                )
-              )}
-            </div>
-          )
-        })}
+        {(Object.keys(SECTION_TITLES) as (keyof typeof SECTION_TITLES)[]).map(
+          (section) => {
+            const list = pages.filter((p) => p.section === section && match(p))
+            if (!list.length) return null
+            const groups = [...new Set(list.map((p) => p.group))]
+            return (
+              <div
+                key={section}
+                className="flex flex-col gap-0.5 border-b py-3 last:border-b-0"
+              >
+                <div className="px-3 pb-2 text-xs text-muted-foreground">
+                  {SECTION_TITLES[section]}
+                </div>
+                {groups.map((group) =>
+                  group ? (
+                    <Collapsible
+                      key={group}
+                      open={Boolean(q) || open === group}
+                      onOpenChange={(isOpen) =>
+                        setOpen(isOpen ? group : undefined)
+                      }
+                    >
+                      <CollapsibleTrigger className="flex min-h-9 w-full items-center justify-between rounded-lg px-3 text-sm text-foreground/80 outline-none hover:bg-muted hover:text-foreground focus-visible:ring-2 focus-visible:ring-ring [&[data-state=open]>svg]:rotate-180">
+                        {group}
+                        <ChevronDownIcon className="size-4 text-muted-foreground transition-transform" />
+                      </CollapsibleTrigger>
+                      <CollapsibleContent className="flex flex-col gap-0.5">
+                        {list
+                          .filter((p) => p.group === group)
+                          .map((p) => (
+                            <NavRow
+                              key={p.slug}
+                              page={p}
+                              active={hrefOf(p) === pathname}
+                              sub
+                            />
+                          ))}
+                      </CollapsibleContent>
+                    </Collapsible>
+                  ) : (
+                    list.map((p) => (
+                      <NavRow
+                        key={p.slug}
+                        page={p}
+                        active={hrefOf(p) === pathname}
+                      />
+                    ))
+                  )
+                )}
+              </div>
+            )
+          }
+        )}
       </nav>
     </div>
   )
@@ -159,10 +218,18 @@ function Catalog({ pages }: { pages: CatalogPage[] }) {
 const ViewportContext = React.createContext<"desktop" | "mobile">("desktop")
 export const useViewport = () => React.useContext(ViewportContext)
 
-export function ShowcaseShell({ pages, children }: { pages: CatalogPage[]; children: React.ReactNode }) {
+export function ShowcaseShell({
+  pages,
+  children,
+}: {
+  pages: CatalogPage[]
+  children: React.ReactNode
+}) {
   const pathname = usePathname()
   const { resolvedTheme, setTheme } = useTheme()
-  const [viewport, setViewport] = React.useState<"desktop" | "mobile">("desktop")
+  const [viewport, setViewport] = React.useState<"desktop" | "mobile">(
+    "desktop"
+  )
   const [settings, setSettings] = React.useState<Settings | null>(null)
   const [menuOpen, setMenuOpen] = React.useState(false)
   const [settingsOpen, setSettingsOpen] = React.useState(false)
@@ -176,8 +243,11 @@ export function ShowcaseShell({ pages, children }: { pages: CatalogPage[]; child
   // Overrides go on <html> so portals get them too; they leave with the showcase.
   React.useEffect(() => {
     const root = document.documentElement
-    Object.entries(overrides).forEach(([name, value]) => root.style.setProperty(name, value))
-    return () => Object.keys(overrides).forEach((name) => root.style.removeProperty(name))
+    Object.entries(overrides).forEach(([name, value]) =>
+      root.style.setProperty(name, value)
+    )
+    return () =>
+      Object.keys(overrides).forEach((name) => root.style.removeProperty(name))
   }, [overrides])
   React.useEffect(() => setMenuOpen(false), [pathname])
 
@@ -199,18 +269,31 @@ export function ShowcaseShell({ pages, children }: { pages: CatalogPage[]; child
             className="min-h-svh bg-background font-sans text-foreground antialiased"
           >
             <header className="sticky top-0 z-30 flex h-16 items-center gap-3 border-b bg-background/85 px-4 backdrop-blur md:px-6">
-              <Button variant="ghost" size="icon" className="md:hidden" aria-label="Open catalog" onClick={() => setMenuOpen(true)}>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="md:hidden"
+                aria-label="Open catalog"
+                onClick={() => setMenuOpen(true)}
+              >
                 <MenuIcon />
               </Button>
-              <Link href="/showcase" className="flex items-center gap-2 text-lg font-bold tracking-tight">
-                <span className="grid size-8 place-items-center rounded-xl bg-primary text-sm text-primary-foreground">bg</span>
+              <Link
+                href="/showcase"
+                className="flex items-center gap-2 text-lg font-bold tracking-tight"
+              >
+                <span className="grid size-8 place-items-center rounded-xl bg-primary text-sm text-primary-foreground">
+                  bg
+                </span>
                 basegear
               </Link>
               <div className="ml-auto flex items-center gap-3">
                 <SegmentedControl
                   className="hidden md:flex"
                   value={viewport}
-                  onValueChange={(value) => setViewport(value as "desktop" | "mobile")}
+                  onValueChange={(value) =>
+                    setViewport(value as "desktop" | "mobile")
+                  }
                   aria-label="Preview width"
                 >
                   <SegmentedControlItem value="desktop" aria-label="Desktop">
@@ -221,7 +304,13 @@ export function ShowcaseShell({ pages, children }: { pages: CatalogPage[]; child
                   </SegmentedControlItem>
                 </SegmentedControl>
                 <SegmentedControl
-                  value={mounted ? (resolvedTheme === "dark" ? "dark" : "light") : undefined}
+                  value={
+                    mounted
+                      ? resolvedTheme === "dark"
+                        ? "dark"
+                        : "light"
+                      : undefined
+                  }
                   onValueChange={setTheme}
                   aria-label="Theme"
                 >
@@ -252,13 +341,16 @@ export function ShowcaseShell({ pages, children }: { pages: CatalogPage[]; child
                 data-viewport={viewport}
                 className="min-w-0 data-[viewport=mobile]:bg-muted data-[viewport=mobile]:pt-4"
               >
-                <div className="mx-auto w-full max-w-[1040px] px-4 pt-6 pb-20 md:px-8 in-data-[viewport=mobile]:min-h-[calc(100svh-5rem)] in-data-[viewport=mobile]:max-w-[375px] in-data-[viewport=mobile]:rounded-t-3xl in-data-[viewport=mobile]:bg-background in-data-[viewport=mobile]:px-4">
+                <div className="mx-auto w-full max-w-[1040px] px-4 pt-6 pb-20 in-data-[viewport=mobile]:min-h-[calc(100svh-5rem)] in-data-[viewport=mobile]:max-w-[375px] in-data-[viewport=mobile]:rounded-t-3xl in-data-[viewport=mobile]:bg-background in-data-[viewport=mobile]:px-4 md:px-8">
                   {children}
                 </div>
               </main>
 
               {settings && (
-                <aside aria-label="Settings" className="sticky top-16 hidden h-[calc(100svh-4rem)] border-l xl:block">
+                <aside
+                  aria-label="Settings"
+                  className="sticky top-16 hidden h-[calc(100svh-4rem)] border-l xl:block"
+                >
                   <ScrollArea className="h-full">
                     <div className="p-5">
                       <Controls {...settings} />
@@ -269,7 +361,10 @@ export function ShowcaseShell({ pages, children }: { pages: CatalogPage[]; child
             </div>
 
             {settings && (
-              <Button className="fixed right-4 bottom-4 z-20 shadow-lg xl:hidden" onClick={() => setSettingsOpen(true)}>
+              <Button
+                className="fixed right-4 bottom-4 z-20 shadow-lg xl:hidden"
+                onClick={() => setSettingsOpen(true)}
+              >
                 <SlidersHorizontalIcon />
                 Settings
               </Button>
@@ -287,13 +382,18 @@ export function ShowcaseShell({ pages, children }: { pages: CatalogPage[]; child
                 </ScrollArea>
               </SheetContent>
             </Sheet>
-            <Sheet open={settingsOpen && Boolean(settings)} onOpenChange={setSettingsOpen}>
+            <Sheet
+              open={settingsOpen && Boolean(settings)}
+              onOpenChange={setSettingsOpen}
+            >
               <SheetContent side="bottom" className="max-h-[80svh] p-0">
                 <SheetHeader className="sr-only">
                   <SheetTitle>Settings</SheetTitle>
                 </SheetHeader>
                 <ScrollArea className="max-h-[80svh]">
-                  <div className="p-5">{settings && <Controls {...settings} />}</div>
+                  <div className="p-5">
+                    {settings && <Controls {...settings} />}
+                  </div>
                 </ScrollArea>
               </SheetContent>
             </Sheet>

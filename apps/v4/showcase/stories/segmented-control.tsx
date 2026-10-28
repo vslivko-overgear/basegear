@@ -1,7 +1,12 @@
 "use client"
 
-import { SegmentedControl, SegmentedControlCounter, SegmentedControlItem } from "@/styles/radix-baseui/ui/segmented-control"
 import type { Story } from "@/showcase/types"
+
+import {
+  SegmentedControl,
+  SegmentedControlCounter,
+  SegmentedControlItem,
+} from "@/styles/radix-baseui/ui/segmented-control"
 
 const ITEMS = [
   { value: "list", label: "List", count: 12 },
@@ -17,11 +22,18 @@ export const segmentedControl: Story = {
     disabled: { control: "boolean" },
   },
   render: ({ size, counters, disabled }) => (
-    <SegmentedControl defaultValue="list" size={size} disabled={disabled} aria-label="View">
+    <SegmentedControl
+      defaultValue="list"
+      size={size}
+      disabled={disabled}
+      aria-label="View"
+    >
       {ITEMS.map((item) => (
         <SegmentedControlItem key={item.value} value={item.value}>
           {item.label}
-          {counters && <SegmentedControlCounter>{item.count}</SegmentedControlCounter>}
+          {counters && (
+            <SegmentedControlCounter>{item.count}</SegmentedControlCounter>
+          )}
         </SegmentedControlItem>
       ))}
     </SegmentedControl>
