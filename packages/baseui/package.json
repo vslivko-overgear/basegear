@@ -1,8 +1,0 @@
-{
-  "name": "@workspace/baseui",
-  "version": "0.0.1",
-  "private": true,
-  "description": "baseui design system: tokens, components and docs site. Ships a shadcn theme bridge (shadcn-theme.css).",
-  "type": "module",
-  "files": ["tokens.css", "shadcn-theme.css", "src", "lib", "fonts"]
-}
