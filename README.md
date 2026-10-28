@@ -15,6 +15,21 @@ baseui is a shadcn style, a theme, a preset and a set of components in the shadc
 | Blocks | `apps/v4/registry/bases/radix/blocks/` | `messenger-01` and `product-01` (the Overgear product page), built from the registry components. |
 | CLI | `packages/shadcn` | `npx shadcn add <name>` against this registry. |
 
+## Showcase
+
+`/showcase` is the design system's own site, after baseui's docs: a catalog (Theming, Foundations, Components in
+groups), a page per component with a Playground and its Settings panel, props tables and examples with code, desktop/mobile
+and light/dark switches. It is built from the `radix-baseui` components themselves, in the baseui theme.
+
+| Part | Where |
+|---|---|
+| Frame: header, catalog, Settings panel, sheets | `apps/v4/showcase/shell.tsx` |
+| Catalog groups | `apps/v4/showcase/catalog.ts` |
+| Playgrounds (args, controls, render, code) | `apps/v4/showcase/stories/<component>.tsx` |
+| Foundations and Theme Settings pages | `apps/v4/showcase/foundations/` |
+| Examples | the docs demos (`apps/v4/examples/radix/`), in the order of `content/docs/components/radix/<component>.mdx` |
+| Props tables | `apps/v4/showcase/props.json`, from the TypeScript source: `pnpm --filter=v4 showcase:props` after changing a component |
+
 ## Removed from upstream shadcn
 
 The Base UI and React Aria bases, the other eight styles (and their 27 base/style builds), the legacy `new-york-v4`

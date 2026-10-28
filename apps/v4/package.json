@@ -24,7 +24,8 @@
     "registry:health:publish": "tsx --tsconfig ./tsconfig.scripts.json ./scripts/monitor-registries.mts --phase publish",
     "validate:registries": "tsx --tsconfig ./tsconfig.scripts.json ./scripts/validate-registries.mts",
     "test:apps": "bun run ./scripts/build-test-app.mts",
-    "postinstall": "fumadocs-mdx"
+    "postinstall": "fumadocs-mdx",
+    "showcase:props": "tsx --tsconfig ./tsconfig.scripts.json ./scripts/build-showcase-props.mts"
   },
   "dependencies": {
     "@ai-sdk/react": "4.0.0-canary.162",
