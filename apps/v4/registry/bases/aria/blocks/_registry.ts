@@ -918,4 +918,153 @@ export const blocks: Registry["items"] = [
     ],
     categories: ["sidebar", "dashboard"],
   },
+  {
+    name: "messenger-01",
+    title: "Messenger 01",
+    type: "registry:block",
+    description:
+      "A messenger with chat list, conversation, calls, contacts and settings.",
+    registryDependencies: [
+      "avatar",
+      "badge",
+      "banner",
+      "bottom-bar",
+      "bubble",
+      "button",
+      "card",
+      "checkbox",
+      "chip",
+      "dialog",
+      "input",
+      "input-group",
+      "item",
+      "layout",
+      "message",
+      "navbar",
+      "segmented-control",
+      "sheet",
+      "status",
+      "switch",
+    ],
+    files: [
+      {
+        path: "blocks/messenger-01/page.tsx",
+        type: "registry:page",
+        target: "app/messenger/page.tsx",
+      },
+      {
+        path: "blocks/messenger-01/components/messenger.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "blocks/messenger-01/components/chat-list.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "blocks/messenger-01/components/chat-view.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "blocks/messenger-01/components/sections.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "blocks/messenger-01/components/dialogs.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "blocks/messenger-01/components/person-avatar.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "blocks/messenger-01/components/icons.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "blocks/messenger-01/components/pressable.ts",
+        type: "registry:component",
+      },
+      {
+        path: "blocks/messenger-01/components/data.ts",
+        type: "registry:component",
+      },
+    ],
+    categories: ["apps"],
+    meta: {
+      iframeHeight: "860px",
+    },
+  },
+  {
+    name: "product-01",
+    title: "Product 01",
+    type: "registry:block",
+    description:
+      "A boost-service product page with an order form, live price, reviews and FAQ.",
+    registryDependencies: [
+      "accordion",
+      "badge",
+      "banner",
+      "breadcrumb",
+      "button",
+      "card",
+      "checkbox",
+      "chip",
+      "collapsible",
+      "input-group",
+      "label",
+      "layout",
+      "link",
+      "number-input",
+      "rating",
+      "segmented-control",
+      "select",
+      "separator",
+      "sheet",
+      "slider",
+      "tooltip",
+    ],
+    files: [
+      {
+        path: "blocks/product-01/page.tsx",
+        type: "registry:page",
+        target: "app/product/page.tsx",
+      },
+      {
+        path: "blocks/product-01/components/site-header.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "blocks/product-01/components/site-footer.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "blocks/product-01/components/order-form.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "blocks/product-01/components/order-summary.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "blocks/product-01/components/product-info.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "blocks/product-01/components/use-order.ts",
+        type: "registry:component",
+      },
+      {
+        path: "blocks/product-01/components/icons.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "blocks/product-01/components/data.ts",
+        type: "registry:component",
+      },
+    ],
+    categories: ["apps"],
+    meta: {
+      iframeHeight: "1000px",
+    },
+  },
 ]

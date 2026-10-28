@@ -896,6 +896,16 @@ export const Components: Record<string, any> = {
         const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || "sidebar-16"
         return { default: mod.default || mod[exportName] }
       }),
+  "messenger-01": React.lazy(async () => {
+        const mod = await import("@/registry/bases/aria/blocks/messenger-01/page")
+        const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || "messenger-01"
+        return { default: mod.default || mod[exportName] }
+      }),
+  "product-01": React.lazy(async () => {
+        const mod = await import("@/registry/bases/aria/blocks/product-01/page")
+        const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || "product-01"
+        return { default: mod.default || mod[exportName] }
+      }),
   "use-mobile": React.lazy(async () => {
         const mod = await import("@/registry/bases/aria/hooks/use-mobile")
         const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || "use-mobile"

@@ -75,6 +75,13 @@ type BlockViewerContext = {
   setIframeKey?: React.Dispatch<React.SetStateAction<number>>
 }
 
+// Blocks that exist only in the base registries have no legacy /view page; they render through /preview/base.
+function blockViewUrl(styleName: Style["name"], name: string) {
+  return styleName === "base-nova"
+    ? `/preview/base/${name}`
+    : `/view/${styleName}/${name}`
+}
+
 const BlockViewerContext = React.createContext<BlockViewerContext | null>(null)
 
 function useBlockViewer() {
@@ -192,7 +199,7 @@ function BlockViewerToolbar({ styleName }: { styleName: Style["name"] }) {
               asChild
               title="Open in New Tab"
             >
-              <Link href={`/view/${styleName}/${item.name}`} target="_blank">
+              <Link href={blockViewUrl(styleName, item.name)} target="_blank">
                 <span className="sr-only">Open in New Tab</span>
                 <Fullscreen />
               </Link>
@@ -245,7 +252,7 @@ function BlockViewerIframe({
   return (
     <iframe
       key={iframeKey}
-      src={`/view/${styleName}/${item.name}`}
+      src={blockViewUrl(styleName, item.name)}
       height={item.meta?.iframeHeight ?? 930}
       loading="lazy"
       className={cn(

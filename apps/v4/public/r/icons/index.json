@@ -373,6 +373,13 @@
     "phosphor": "BellIcon",
     "remixicon": "RiNotification3Line"
   },
+  "BellOffIcon": {
+    "lucide": "BellOffIcon",
+    "tabler": "IconBellOff",
+    "hugeicons": "NotificationOff03Icon",
+    "phosphor": "BellSlashIcon",
+    "remixicon": "RiNotificationOffLine"
+  },
   "BlocksIcon": {
     "lucide": "BlocksIcon",
     "tabler": "IconCube",
@@ -470,6 +477,13 @@
     "hugeicons": "Chart03Icon",
     "phosphor": "ChartPieIcon",
     "remixicon": "RiPieChartLine"
+  },
+  "CheckCheckIcon": {
+    "lucide": "CheckCheckIcon",
+    "tabler": "IconChecks",
+    "hugeicons": "TickDouble02Icon",
+    "phosphor": "ChecksIcon",
+    "remixicon": "RiCheckDoubleLine"
   },
   "CheckCircle2Icon": {
     "lucide": "CheckCircle2Icon",
@@ -582,6 +596,13 @@
     "hugeicons": "CoffeeIcon",
     "phosphor": "CoffeeIcon",
     "remixicon": "RiCupLine"
+  },
+  "CoinsIcon": {
+    "lucide": "CoinsIcon",
+    "tabler": "IconCoins",
+    "hugeicons": "Coins01Icon",
+    "phosphor": "CoinsIcon",
+    "remixicon": "RiCoinsLine"
   },
   "Columns3Icon": {
     "lucide": "Columns3Icon",
@@ -792,6 +813,13 @@
     "hugeicons": "Globe02Icon",
     "phosphor": "GlobeIcon",
     "remixicon": "RiGlobalLine"
+  },
+  "HeadphonesIcon": {
+    "lucide": "HeadphonesIcon",
+    "tabler": "IconHeadphones",
+    "hugeicons": "HeadphonesIcon",
+    "phosphor": "HeadphonesIcon",
+    "remixicon": "RiHeadphoneLine"
   },
   "HeartIcon": {
     "lucide": "HeartIcon",
@@ -1020,9 +1048,9 @@
   "PaperclipIcon": {
     "lucide": "PaperclipIcon",
     "tabler": "IconPaperclip",
-    "hugeicons": "AttachmentIcon",
+    "hugeicons": "Attachment01Icon",
     "phosphor": "PaperclipIcon",
-    "remixicon": "RiAttachmentLine"
+    "remixicon": "RiAttachment2"
   },
   "PencilIcon": {
     "lucide": "PencilIcon",
@@ -1031,12 +1059,47 @@
     "phosphor": "PencilIcon",
     "remixicon": "RiPencilLine"
   },
+  "PhoneIcon": {
+    "lucide": "PhoneIcon",
+    "tabler": "IconPhone",
+    "hugeicons": "Call02Icon",
+    "phosphor": "PhoneIcon",
+    "remixicon": "RiPhoneLine"
+  },
+  "PhoneIncomingIcon": {
+    "lucide": "PhoneIncomingIcon",
+    "tabler": "IconPhoneIncoming",
+    "hugeicons": "CallIncoming01Icon",
+    "phosphor": "PhoneIncomingIcon",
+    "remixicon": "RiPhoneLine"
+  },
+  "PhoneMissedIcon": {
+    "lucide": "PhoneMissedIcon",
+    "tabler": "IconPhoneX",
+    "hugeicons": "CallBlocked02Icon",
+    "phosphor": "PhoneXIcon",
+    "remixicon": "RiPhoneLine"
+  },
+  "PhoneOutgoingIcon": {
+    "lucide": "PhoneOutgoingIcon",
+    "tabler": "IconPhoneOutgoing",
+    "hugeicons": "CallOutgoing01Icon",
+    "phosphor": "PhoneOutgoingIcon",
+    "remixicon": "RiPhoneLine"
+  },
   "PieChartIcon": {
     "lucide": "PieChartIcon",
     "tabler": "IconChartPie",
     "hugeicons": "PieChartIcon",
     "phosphor": "ChartPieIcon",
     "remixicon": "RiPieChartLine"
+  },
+  "PinIcon": {
+    "lucide": "PinIcon",
+    "tabler": "IconPin",
+    "hugeicons": "PinIcon",
+    "phosphor": "PushPinIcon",
+    "remixicon": "RiPushpinLine"
   },
   "PlusCircleIcon": {
     "lucide": "PlusCircleIcon",
@@ -1129,6 +1192,13 @@
     "phosphor": "ShareIcon",
     "remixicon": "RiShareLine"
   },
+  "ShieldCheckIcon": {
+    "lucide": "ShieldCheckIcon",
+    "tabler": "IconShieldCheck",
+    "hugeicons": "SecurityCheckIcon",
+    "phosphor": "ShieldCheckIcon",
+    "remixicon": "RiShieldCheckLine"
+  },
   "ShieldIcon": {
     "lucide": "ShieldIcon",
     "tabler": "IconShield",
@@ -1157,12 +1227,26 @@
     "phosphor": "SparkleIcon",
     "remixicon": "RiSparklingLine"
   },
+  "SquareCheckIcon": {
+    "lucide": "SquareCheckIcon",
+    "tabler": "IconSquareCheck",
+    "hugeicons": "CheckmarkSquare02Icon",
+    "phosphor": "CheckSquareIcon",
+    "remixicon": "RiCheckboxLine"
+  },
   "SquareIcon": {
     "lucide": "SquareIcon",
     "tabler": "IconPlayerStop",
     "hugeicons": "StopCircleIcon",
     "phosphor": "StopCircleIcon",
     "remixicon": "RiStopCircleLine"
+  },
+  "SquarePenIcon": {
+    "lucide": "SquarePenIcon",
+    "tabler": "IconEdit",
+    "hugeicons": "PencilEdit02Icon",
+    "phosphor": "NotePencilIcon",
+    "remixicon": "RiEditBoxLine"
   },
   "StarIcon": {
     "lucide": "StarIcon",
@@ -1191,6 +1275,13 @@
     "hugeicons": "TableIcon",
     "phosphor": "TableIcon",
     "remixicon": "RiTableLine"
+  },
+  "TagIcon": {
+    "lucide": "TagIcon",
+    "tabler": "IconTag",
+    "hugeicons": "Tag01Icon",
+    "phosphor": "TagIcon",
+    "remixicon": "RiPriceTag3Line"
   },
   "TargetIcon": {
     "lucide": "TargetIcon",
@@ -1267,7 +1358,7 @@
     "tabler": "IconAlertTriangle",
     "hugeicons": "Alert02Icon",
     "phosphor": "WarningIcon",
-    "remixicon": "RiErrorWarningLine"
+    "remixicon": "RiAlertLine"
   },
   "TvIcon": {
     "lucide": "TvIcon",
