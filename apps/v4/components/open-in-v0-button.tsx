@@ -1,7 +1,7 @@
 import { cn } from "cn"
 
 import { Icons } from "@/components/icons"
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/styles/radix-baseui/ui/button"
 
 // v0 uses the default style.
 const V0_STYLE = "new-york-v4"

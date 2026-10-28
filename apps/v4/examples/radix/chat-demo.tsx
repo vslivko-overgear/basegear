@@ -20,30 +20,33 @@ import { motion, useReducedMotion } from "motion/react"
 import { createChat, getMessageText } from "@/lib/ai"
 import { MESSAGE_ANIMATIONS } from "@/lib/message-animations"
 import { Markdown } from "@/components/markdown"
-import { Bubble, BubbleContent } from "@/styles/radix-rhea/ui/bubble"
-import { Button } from "@/styles/radix-rhea/ui/button"
-import { CodeBlock, CodeBlockContent } from "@/styles/radix-rhea/ui/code-block"
+import { Bubble, BubbleContent } from "@/styles/radix-baseui/ui/bubble"
+import { Button } from "@/styles/radix-baseui/ui/button"
+import {
+  CodeBlock,
+  CodeBlockContent,
+} from "@/styles/radix-baseui/ui/code-block"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/styles/radix-rhea/ui/dropdown-menu"
+} from "@/styles/radix-baseui/ui/dropdown-menu"
 import {
   Empty,
   EmptyDescription,
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@/styles/radix-rhea/ui/empty"
+} from "@/styles/radix-baseui/ui/empty"
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
   InputGroupTextarea,
-} from "@/styles/radix-rhea/ui/input-group"
-import { Message, MessageContent } from "@/styles/radix-rhea/ui/message"
+} from "@/styles/radix-baseui/ui/input-group"
+import { Message, MessageContent } from "@/styles/radix-baseui/ui/message"
 import {
   MessageScroller,
   MessageScrollerButton,
@@ -51,12 +54,12 @@ import {
   MessageScrollerItem,
   MessageScrollerProvider,
   MessageScrollerViewport,
-} from "@/styles/radix-rhea/ui/message-scroller"
+} from "@/styles/radix-baseui/ui/message-scroller"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/styles/radix-rhea/ui/tooltip"
+} from "@/styles/radix-baseui/ui/tooltip"
 import {
   Trace,
   TraceCollapsible,
@@ -65,7 +68,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/radix-rhea/ui/trace"
+} from "@/styles/radix-baseui/ui/trace"
 
 type ChatMessage = UIMessage<
   unknown,

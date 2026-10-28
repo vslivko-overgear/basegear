@@ -6,7 +6,7 @@ component: true
 ---
 
 <ComponentPreview
-  styleName="radix-rhea"
+  styleName="radix-baseui"
   name="trace-demo"
   previewClassName="h-auto"
 />
@@ -19,21 +19,21 @@ Use `Trace` for the steps an agent takes, like calling a tool, running a subagen
 
 ## Built with Trace
 
-Every pattern below is a composition of `Trace` parts. See [AI Elements](/docs/ai-elements) for examples and code.
+Every pattern below is a composition of `Trace` parts. See AI Elements for examples and code.
 
 | Pattern                                                      | Shows                                                            |
 | ------------------------------------------------------------ | ---------------------------------------------------------------- |
-| [Chain of Thought](/docs/ai-elements/radix/chain-of-thought) | A summary that expands into the steps behind it.                 |
-| [Plan](/docs/ai-elements/radix/plan)                         | The steps the agent plans to take, and how far it has got.       |
-| [Queue](/docs/ai-elements/radix/queue)                       | The agent's todo list, split into what is left and what is done. |
-| [Reasoning](/docs/ai-elements/radix/reasoning)               | The agent's thinking as it streams.                              |
-| [Sources](/docs/ai-elements/radix/sources)                   | The links the agent used for a reply.                            |
-| [Stack Trace](/docs/ai-elements/radix/stack-trace)           | A failed tool call and its stack frames.                         |
-| [Subagent](/docs/ai-elements/radix/subagent)                 | A subagent run, with its tool calls and result.                  |
-| [Task](/docs/ai-elements/radix/task)                         | The steps the agent takes, as it takes them.                     |
-| [Terminal](/docs/ai-elements/radix/terminal)                 | A command the agent runs, with its output as it streams.         |
-| [Test Results](/docs/ai-elements/radix/test-results)         | A test run by the agent, with its suites and failures.           |
-| [Tool](/docs/ai-elements/radix/tool)                         | A tool call the agent makes, from input to output.               |
+| Chain of Thought | A summary that expands into the steps behind it.                 |
+| Plan                         | The steps the agent plans to take, and how far it has got.       |
+| Queue                       | The agent's todo list, split into what is left and what is done. |
+| Reasoning               | The agent's thinking as it streams.                              |
+| Sources                   | The links the agent used for a reply.                            |
+| Stack Trace           | A failed tool call and its stack frames.                         |
+| Subagent                 | A subagent run, with its tool calls and result.                  |
+| Task                         | The steps the agent takes, as it takes them.                     |
+| Terminal                 | A command the agent runs, with its output as it streams.         |
+| Test Results         | A test run by the agent, with its suites and failures.           |
+| Tool                         | A tool call the agent makes, from input to output.               |
 
 ## Installation
 
@@ -66,7 +66,7 @@ npx shadcn@latest add collapsible
 <ComponentSource
   name="trace"
   title="components/ui/trace.tsx"
-  styleName="radix-rhea"
+  styleName="radix-baseui"
 />
 
 <Step>Update the import paths to match your project setup.</Step>
@@ -166,7 +166,7 @@ Trace
 Use a `TraceLine` on its own for a step with no detail to show. It reads as plain text.
 
 <ComponentPreview
-  styleName="radix-rhea"
+  styleName="radix-baseui"
   name="trace-static"
   previewClassName="h-auto"
 />
@@ -176,7 +176,7 @@ Use a `TraceLine` on its own for a step with no detail to show. It reads as plai
 Set `status` on `TraceLine` when a step is running, has failed or hasn't started yet.
 
 <ComponentPreview
-  styleName="radix-rhea"
+  styleName="radix-baseui"
   name="trace-status"
   previewClassName="h-auto"
 />
@@ -193,7 +193,7 @@ Set `status` on `TraceLine` when a step is running, has failed or hasn't started
 Put secondary text such as a diff stat, a duration or a count in a `TraceDescription` after the `TraceTitle`. It does not truncate.
 
 <ComponentPreview
-  styleName="radix-rhea"
+  styleName="radix-baseui"
   name="trace-description"
   previewClassName="h-auto"
 />
@@ -203,7 +203,7 @@ Put secondary text such as a diff stat, a duration or a count in a `TraceDescrip
 Wrap the line in a `TraceCollapsible` to show more detail when it expands. Put the `TraceLine` inside `TraceCollapsibleTrigger` and the detail in `TraceCollapsibleContent`.
 
 <ComponentPreview
-  styleName="radix-rhea"
+  styleName="radix-baseui"
   name="trace-collapsible"
   previewClassName="h-auto"
 />
@@ -213,7 +213,7 @@ Wrap the line in a `TraceCollapsible` to show more detail when it expands. Put t
 Rows start closed. Use `defaultOpen` on `TraceCollapsible` to start open, or `open` with `onOpenChange` to control a row.
 
 <ComponentPreview
-  styleName="radix-rhea"
+  styleName="radix-baseui"
   name="trace-open"
   previewClassName="h-auto"
 />
@@ -239,7 +239,7 @@ const [open, setOpen] = React.useState<boolean>()
 Wrap the `TraceLine` in an anchor. For a new tab, use an arrow-up-right icon and sr-only "(opens in a new tab)".
 
 <ComponentPreview
-  styleName="radix-rhea"
+  styleName="radix-baseui"
   name="trace-link"
   previewClassName="h-auto"
 />
@@ -263,7 +263,7 @@ Wrap the `TraceLine` in an anchor. For a new tab, use an arrow-up-right icon and
 Wrap the `TraceLine` in the dialog's trigger. The dialog owns its open state, Escape and focus return.
 
 <ComponentPreview
-  styleName="radix-rhea"
+  styleName="radix-baseui"
   name="trace-dialog"
   previewClassName="h-auto"
 />
@@ -287,7 +287,7 @@ Wrap the `TraceLine` in the dialog's trigger. The dialog owns its open state, Es
 The same shape as the dialog. Drawer and Popover work the same way.
 
 <ComponentPreview
-  styleName="radix-rhea"
+  styleName="radix-baseui"
   name="trace-sheet"
   previewClassName="h-auto"
 />
@@ -297,7 +297,7 @@ The same shape as the dialog. Drawer and Popover work the same way.
 Put rows that sit next to each other in a `Trace`. It also styles any trigger or link that wraps a `TraceLine`.
 
 <ComponentPreview
-  styleName="radix-rhea"
+  styleName="radix-baseui"
   name="trace-group"
   previewClassName="h-auto"
 />
@@ -307,31 +307,31 @@ Put rows that sit next to each other in a `Trace`. It also styles any trigger or
 A collapsible row whose detail is a `Trace` of link rows.
 
 <ComponentPreview
-  styleName="radix-rhea"
+  styleName="radix-baseui"
   name="trace-sources"
   previewClassName="h-auto"
 />
 
-See [Sources](/docs/ai-elements/radix/sources) for more examples.
+See Sources for more examples.
 
 ## Chain of Thought
 
 A chain of thought is a collapsible row with step rows inside. Set the parent's status and title from its children.
 
 <ComponentPreview
-  styleName="radix-rhea"
+  styleName="radix-baseui"
   name="trace-steps"
   previewClassName="h-auto"
 />
 
-See [Chain of Thought](/docs/ai-elements/radix/chain-of-thought) and [Task](/docs/ai-elements/radix/task) for more examples.
+See Chain of Thought and Task for more examples.
 
 ## Commit
 
 A commit is a collapsible row with a line for each changed file. Say what changed in the title, Added, Edited or Deleted, and put the line counts in the description. Each file opens its diff in a [Sheet](#sheet).
 
 <ComponentPreview
-  styleName="radix-rhea"
+  styleName="radix-baseui"
   name="trace-commit"
   previewClassName="h-auto"
 />
@@ -341,7 +341,7 @@ A commit is a collapsible row with a line for each changed file. Say what change
 Three levels: the turn, a summary, and the rows. Text between steps sits between two `Trace` lists.
 
 <ComponentPreview
-  styleName="radix-rhea"
+  styleName="radix-baseui"
   name="trace-turn"
   previewClassName="h-auto"
 />
@@ -351,24 +351,24 @@ Three levels: the turn, a summary, and the rows. Text between steps sits between
 Render a `reasoning` part from the AI SDK. The row is a `TraceLine` until the first text arrives. See [Open State](#open-state).
 
 <ComponentPreview
-  styleName="radix-rhea"
+  styleName="radix-baseui"
   name="trace-thinking"
   previewClassName="h-auto"
 />
 
-See [Reasoning](/docs/ai-elements/radix/reasoning) for more examples.
+See Reasoning for more examples.
 
 ## Tool
 
-Render tool parts from the AI SDK. Map the tool part as in [Tool](/docs/ai-elements/radix/tool#states).
+Render tool parts from the AI SDK. Map the tool part as in Tool.
 
 <ComponentPreview
-  styleName="radix-rhea"
+  styleName="radix-baseui"
   name="trace-tool-calls"
   previewClassName="h-auto"
 />
 
-See [Tool](/docs/ai-elements/radix/tool) for more examples.
+See Tool for more examples.
 
 ## Accessibility
 

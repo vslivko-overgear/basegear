@@ -16,7 +16,7 @@ export async function ComponentSource({
   language,
   collapsible = true,
   className,
-  styleName = "base-nova",
+  styleName = "radix-baseui",
   maxLines,
 }: React.ComponentProps<"div"> & {
   name?: string

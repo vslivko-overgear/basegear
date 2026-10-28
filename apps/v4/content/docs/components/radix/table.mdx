@@ -6,7 +6,7 @@ component: true
 ---
 
 <ComponentPreview
-  styleName="radix-nova"
+  styleName="radix-baseui"
   name="table-demo"
   previewClassName="h-[30rem]"
 />
@@ -36,7 +36,7 @@ npx shadcn@latest add table
 <ComponentSource
   name="table"
   title="components/ui/table.tsx"
-  styleName="radix-nova"
+  styleName="radix-baseui"
 />
 
 <Step>Update the import paths to match your project setup.</Step>
@@ -114,13 +114,13 @@ Table
 
 Use the `<TableFooter />` component to add a footer to the table.
 
-<ComponentPreview styleName="radix-nova" name="table-footer" />
+<ComponentPreview styleName="radix-baseui" name="table-footer" />
 
 ## Actions
 
 A table showing actions for each row using a `<DropdownMenu />` component.
 
-<ComponentPreview styleName="radix-nova" name="table-actions" />
+<ComponentPreview styleName="radix-baseui" name="table-actions" />
 
 ## Data Table
 
@@ -128,15 +128,5 @@ You can use the `<Table />` component to build more complex data tables. Combine
 
 See the [Data Table](/docs/components/data-table) documentation for more information.
 
-You can also see an example of a data table in the [Tasks](/examples/tasks) demo.
+You can also see an example of a data table in the Tasks demo.
 
-## RTL
-
-To enable RTL support in shadcn/ui, see the [RTL configuration guide](/docs/rtl).
-
-<ComponentPreview
-  styleName="radix-nova"
-  name="table-rtl"
-  direction="rtl"
-  previewClassName="h-auto"
-/>

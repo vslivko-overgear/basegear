@@ -1,5 +1,5 @@
-import { Card, CardContent, CardHeader } from "@/styles/base-rhea/ui/card"
-import { Skeleton } from "@/styles/base-rhea/ui/skeleton"
+import { Card, CardContent, CardHeader } from "@/styles/radix-baseui/ui/card"
+import { Skeleton } from "@/styles/radix-baseui/ui/skeleton"
 
 export function QrConnect() {
   return (

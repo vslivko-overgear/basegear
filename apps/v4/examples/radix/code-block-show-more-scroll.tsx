@@ -4,7 +4,7 @@ import * as React from "react"
 import { ChevronDownIcon } from "lucide-react"
 
 import { useHighlightedCode } from "@/registry/bases/radix/hooks/use-highlighted-code"
-import { Button } from "@/styles/radix-rhea/ui/button"
+import { Button } from "@/styles/radix-baseui/ui/button"
 import {
   CodeBlock,
   CodeBlockActions,
@@ -14,7 +14,7 @@ import {
   CodeBlockHeader,
   CodeBlockLine,
   CodeBlockTitle,
-} from "@/styles/radix-rhea/ui/code-block"
+} from "@/styles/radix-baseui/ui/code-block"
 
 const code = `"use client"
 

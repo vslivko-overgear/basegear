@@ -1,4 +1,4 @@
-import { Badge } from "@/styles/base-rhea/ui/badge"
+import { Badge } from "@/styles/radix-baseui/ui/badge"
 import {
   Card,
   CardContent,
@@ -6,9 +6,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/styles/base-rhea/ui/card"
-import { Item, ItemContent } from "@/styles/base-rhea/ui/item"
-import { Separator } from "@/styles/base-rhea/ui/separator"
+} from "@/styles/radix-baseui/ui/card"
+import { Item, ItemContent } from "@/styles/radix-baseui/ui/item"
+import { Separator } from "@/styles/radix-baseui/ui/separator"
 
 const netRoyalties = 1248.75
 const processingFee = 37.46

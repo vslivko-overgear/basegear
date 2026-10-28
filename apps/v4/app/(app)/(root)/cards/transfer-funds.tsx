@@ -1,7 +1,7 @@
 import { Cancel01Icon } from "@hugeicons/core-free-icons"
 import { HugeiconsIcon } from "@hugeicons/react"
 
-import { Button } from "@/styles/base-rhea/ui/button"
+import { Button } from "@/styles/radix-baseui/ui/button"
 import {
   Card,
   CardAction,
@@ -10,15 +10,15 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/styles/base-rhea/ui/card"
-import { Field, FieldGroup, FieldLabel } from "@/styles/base-rhea/ui/field"
+} from "@/styles/radix-baseui/ui/card"
+import { Field, FieldGroup, FieldLabel } from "@/styles/radix-baseui/ui/field"
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
   InputGroupText,
-} from "@/styles/base-rhea/ui/input-group"
-import { Item, ItemContent } from "@/styles/base-rhea/ui/item"
+} from "@/styles/radix-baseui/ui/input-group"
+import { Item, ItemContent } from "@/styles/radix-baseui/ui/item"
 import {
   Select,
   SelectContent,
@@ -26,8 +26,8 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/styles/base-rhea/ui/select"
-import { Separator } from "@/styles/base-rhea/ui/separator"
+} from "@/styles/radix-baseui/ui/select"
+import { Separator } from "@/styles/radix-baseui/ui/separator"
 
 const FROM_ACCOUNTS = [
   { label: "Main Checking (··8402) — $12,450.00", value: "checking" },
@@ -73,7 +73,7 @@ export function TransferFunds() {
           </Field>
           <Field>
             <FieldLabel htmlFor="from-account">From Account</FieldLabel>
-            <Select items={FROM_ACCOUNTS} defaultValue="checking">
+            <Select defaultValue="checking">
               <SelectTrigger id="from-account" className="w-full">
                 <SelectValue />
               </SelectTrigger>
@@ -90,7 +90,7 @@ export function TransferFunds() {
           </Field>
           <Field>
             <FieldLabel htmlFor="to-account">To Account</FieldLabel>
-            <Select items={TO_ACCOUNTS} defaultValue="savings">
+            <Select defaultValue="savings">
               <SelectTrigger id="to-account" className="w-full">
                 <SelectValue />
               </SelectTrigger>

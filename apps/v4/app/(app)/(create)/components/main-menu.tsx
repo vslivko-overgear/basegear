@@ -5,7 +5,7 @@ import { Menu09Icon } from "@hugeicons/core-free-icons"
 import { HugeiconsIcon } from "@hugeicons/react"
 import { cn } from "cn"
 
-import { type Button } from "@/styles/base-nova/ui/button"
+import { type Button } from "@/styles/radix-baseui/ui/button"
 import {
   Picker,
   PickerContent,

@@ -10,7 +10,7 @@ import {
   StatusDescription,
   StatusMedia,
   StatusTitle,
-} from "@/styles/radix-nova/ui/status"
+} from "@/styles/radix-baseui/ui/status"
 
 export function StatusVariants() {
   return (

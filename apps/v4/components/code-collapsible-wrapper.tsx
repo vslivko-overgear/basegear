@@ -3,13 +3,13 @@
 import * as React from "react"
 import { cn } from "cn"
 
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/styles/radix-baseui/ui/button"
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/registry/new-york-v4/ui/collapsible"
-import { Separator } from "@/registry/new-york-v4/ui/separator"
+} from "@/styles/radix-baseui/ui/collapsible"
+import { Separator } from "@/styles/radix-baseui/ui/separator"
 
 export function CodeCollapsibleWrapper({
   className,

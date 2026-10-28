@@ -1,12 +1,12 @@
 "use client"
 
-import { Button } from "@/styles/radix-rhea/ui/button"
+import { Button } from "@/styles/radix-baseui/ui/button"
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/styles/radix-rhea/ui/hover-card"
-import { Progress } from "@/styles/radix-rhea/ui/progress"
+} from "@/styles/radix-baseui/ui/hover-card"
+import { Progress } from "@/styles/radix-baseui/ui/progress"
 
 const usage = {
   input: 8420,

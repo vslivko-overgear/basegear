@@ -36,7 +36,7 @@ const MAX_DRY_RUN_CONCURRENCY = 4
 
 // Registries cannot declare a default style yet, so resolve {style} urls
 // with the canonical first base and style combination.
-export const DEFAULT_STYLE = "radix-vega"
+export const DEFAULT_STYLE = "radix-baseui"
 
 export type RegistryMonitorMode = RegistryMonitorRun["mode"]
 

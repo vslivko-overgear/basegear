@@ -1,6 +1,6 @@
 import { cn } from "cn"
 
-import { Button } from "@/styles/base-nova/ui/button"
+import { Button } from "@/styles/radix-baseui/ui/button"
 
 export function OpenInV0Cta({ className }: React.ComponentProps<"div">) {
   return (

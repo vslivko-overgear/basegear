@@ -14,7 +14,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarProvider,
-} from "@/styles/radix-nova/ui/sidebar"
+} from "@/styles/radix-baseui/ui/sidebar"
 
 export default function AppSidebar() {
   return (

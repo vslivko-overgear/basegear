@@ -15,7 +15,7 @@ import {
   AttachmentGroup,
   AttachmentMedia,
   AttachmentTitle,
-} from "@/styles/radix-rhea/ui/attachment"
+} from "@/styles/radix-baseui/ui/attachment"
 
 type Item = {
   name: string

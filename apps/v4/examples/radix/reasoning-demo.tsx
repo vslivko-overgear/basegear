@@ -4,9 +4,9 @@ import * as React from "react"
 import { useChat } from "@ai-sdk/react"
 
 import { createChat, getMessageText } from "@/lib/ai"
-import { Bubble, BubbleContent } from "@/styles/radix-rhea/ui/bubble"
-import { Button } from "@/styles/radix-rhea/ui/button"
-import { Message, MessageContent } from "@/styles/radix-rhea/ui/message"
+import { Bubble, BubbleContent } from "@/styles/radix-baseui/ui/bubble"
+import { Button } from "@/styles/radix-baseui/ui/button"
+import { Message, MessageContent } from "@/styles/radix-baseui/ui/message"
 import {
   Trace,
   TraceCollapsible,
@@ -14,7 +14,7 @@ import {
   TraceCollapsibleTrigger,
   TraceLine,
   TraceTitle,
-} from "@/styles/radix-rhea/ui/trace"
+} from "@/styles/radix-baseui/ui/trace"
 
 const chat = createChat()
   .user("Why is the checkout deploy so slow?")

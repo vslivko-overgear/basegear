@@ -2,7 +2,7 @@ import {
   CodeBlock,
   CodeBlockContent,
   CodeBlockLine,
-} from "@/styles/radix-rhea/ui/code-block"
+} from "@/styles/radix-baseui/ui/code-block"
 
 const code = `export default {
   experimental: {

@@ -6,7 +6,7 @@ import { cn } from "cn"
 import { useTheme } from "next-themes"
 
 import { useMetaColor } from "@/hooks/use-meta-color"
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/styles/radix-baseui/ui/button"
 
 export const DARK_MODE_FORWARD_TYPE = "dark-mode-forward"
 

@@ -5,10 +5,10 @@ import { useChat } from "@ai-sdk/react"
 import type { UIMessage } from "ai"
 
 import { createChat, getMessageText } from "@/lib/ai"
-import { Bubble, BubbleContent } from "@/styles/radix-rhea/ui/bubble"
-import { Button } from "@/styles/radix-rhea/ui/button"
-import { Marker, MarkerContent } from "@/styles/radix-rhea/ui/marker"
-import { Message, MessageContent } from "@/styles/radix-rhea/ui/message"
+import { Bubble, BubbleContent } from "@/styles/radix-baseui/ui/bubble"
+import { Button } from "@/styles/radix-baseui/ui/button"
+import { Marker, MarkerContent } from "@/styles/radix-baseui/ui/marker"
+import { Message, MessageContent } from "@/styles/radix-baseui/ui/message"
 
 type ChatMessage = UIMessage<
   unknown,

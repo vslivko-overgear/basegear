@@ -1,7 +1,10 @@
 import { ChevronRightIcon, FileTextIcon, SearchIcon } from "lucide-react"
 
-import { Badge } from "@/styles/radix-rhea/ui/badge"
-import { CodeBlock, CodeBlockContent } from "@/styles/radix-rhea/ui/code-block"
+import { Badge } from "@/styles/radix-baseui/ui/badge"
+import {
+  CodeBlock,
+  CodeBlockContent,
+} from "@/styles/radix-baseui/ui/code-block"
 import {
   Trace,
   TraceCollapsible,
@@ -10,7 +13,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/radix-rhea/ui/trace"
+} from "@/styles/radix-baseui/ui/trace"
 
 export function TraceSteps() {
   return (

@@ -1,6 +1,6 @@
 import { HeartIcon } from "lucide-react"
 
-import { Chip, ChipCounter } from "@/styles/radix-nova/ui/chip"
+import { Chip, ChipCounter } from "@/styles/radix-baseui/ui/chip"
 
 export function ChipDemo() {
   return (

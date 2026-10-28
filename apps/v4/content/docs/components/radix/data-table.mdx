@@ -8,7 +8,7 @@ links:
 ---
 
 <ComponentPreview
-  styleName="radix-nova"
+  styleName="radix-baseui"
   name="data-table-demo"
   align="start"
   previewClassName="items-start h-auto px-4 md:px-8"
@@ -843,14 +843,14 @@ You can show the number of selected rows using the `table.getFilteredSelectedRow
 
 ## Reusable Components
 
-Here are some components you can use to build your data tables. This is from the [Tasks](/examples/tasks) demo, which shares its features object (and the matching `TasksTableFeatures` type) across every component via a `data-table-features.ts` module — the same pattern we set up in [Set up Table Features](#set-up-table-features).
+Here are some components you can use to build your data tables. This is from the Tasks demo, which shares its features object (and the matching `TasksTableFeatures` type) across every component via a `data-table-features.ts` module — the same pattern we set up in [Set up Table Features](#set-up-table-features).
 
 ### Column header
 
 Make any column header sortable and hideable.
 
 <ComponentSource
-  src="/app/(app)/examples/tasks/components/data-table-column-header.tsx"
+  src="/components/data-table/data-table-column-header.tsx"
   title="components/data-table-column-header.tsx"
 />
 
@@ -869,8 +869,8 @@ export const columns = columnHelper.columns([
 Add pagination controls to your table including page size and selection count.
 
 <ComponentSource
-  src="/app/(app)/examples/tasks/components/data-table-pagination.tsx"
-  styleName="radix-nova"
+  src="/components/data-table/data-table-pagination.tsx"
+  styleName="radix-baseui"
 />
 
 ```tsx
@@ -882,22 +882,11 @@ Add pagination controls to your table including page size and selection count.
 A component to toggle column visibility.
 
 <ComponentSource
-  src="/app/(app)/examples/tasks/components/data-table-view-options.tsx"
-  styleName="radix-nova"
+  src="/components/data-table/data-table-view-options.tsx"
+  styleName="radix-baseui"
 />
 
 ```tsx
 <DataTableViewOptions table={table} />
 ```
 
-## RTL
-
-To enable RTL support in shadcn/ui, see the [RTL configuration guide](/docs/rtl).
-
-<ComponentPreview
-  styleName="radix-nova"
-  name="data-table-rtl"
-  direction="rtl"
-  previewClassName="items-start h-auto px-4 md:px-8"
-  hideCode
-/>

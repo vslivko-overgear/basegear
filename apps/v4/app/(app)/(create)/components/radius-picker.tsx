@@ -25,7 +25,7 @@ export function RadiusPicker({
 }) {
   const [params, setParams] = useDesignSystemSearchParams()
   const { setOverride, clearOverride } = usePreviewOverride()
-  const isRadiusLocked = params.style === "lyra" || params.style === "sera"
+  const isRadiusLocked = false
   const selectedRadiusName = isRadiusLocked ? "none" : params.radius
 
   const currentRadius = RADII.find(
@@ -107,7 +107,6 @@ export function RadiusPicker({
                   key={radius.name}
                   value={radius.name}
                   closeOnClick={isMobile}
-                  disabled={params.style === "rhea" && radius.name === "large"}
                 >
                   {radius.label}
                 </PickerRadioItem>

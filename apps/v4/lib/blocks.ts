@@ -6,8 +6,10 @@ import {
   type RegistryItem,
 } from "shadcn/schema"
 
-import { registry as baseRegistry } from "@/registry/bases/base/registry"
-import { registry as radixRegistry } from "@/registry/bases/radix/registry"
+import {
+  registry as baseRegistry,
+  registry as radixRegistry,
+} from "@/registry/bases/radix/registry"
 
 export async function getAllBlockIds(
   types: RegistryItem["type"][] = ["registry:block", "registry:internal"],

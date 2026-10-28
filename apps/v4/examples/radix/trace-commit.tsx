@@ -9,7 +9,7 @@ import {
   CodeBlock,
   CodeBlockContent,
   CodeBlockLine,
-} from "@/styles/radix-rhea/ui/code-block"
+} from "@/styles/radix-baseui/ui/code-block"
 import {
   Sheet,
   SheetContent,
@@ -17,7 +17,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/styles/radix-rhea/ui/sheet"
+} from "@/styles/radix-baseui/ui/sheet"
 import {
   Trace,
   TraceCollapsible,
@@ -27,7 +27,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/radix-rhea/ui/trace"
+} from "@/styles/radix-baseui/ui/trace"
 
 const files = [
   {

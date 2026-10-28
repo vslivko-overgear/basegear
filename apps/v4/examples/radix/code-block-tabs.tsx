@@ -9,13 +9,13 @@ import {
   CodeBlockHeader,
   CodeBlockLine,
   CodeBlockTitle,
-} from "@/styles/radix-rhea/ui/code-block"
+} from "@/styles/radix-baseui/ui/code-block"
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/styles/radix-rhea/ui/tabs"
+} from "@/styles/radix-baseui/ui/tabs"
 
 const files = [
   {

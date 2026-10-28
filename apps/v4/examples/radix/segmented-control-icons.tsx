@@ -1,11 +1,11 @@
 import { LayoutGridIcon, ListIcon, MapIcon, TableIcon } from "lucide-react"
 
-import { Badge } from "@/styles/radix-nova/ui/badge"
+import { Badge } from "@/styles/radix-baseui/ui/badge"
 import {
   SegmentedControl,
   SegmentedControlCounter,
   SegmentedControlItem,
-} from "@/styles/radix-nova/ui/segmented-control"
+} from "@/styles/radix-baseui/ui/segmented-control"
 
 export function SegmentedControlIcons() {
   return (

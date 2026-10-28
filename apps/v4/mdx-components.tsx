@@ -20,21 +20,21 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/registry/new-york-v4/ui/accordion"
+} from "@/styles/radix-baseui/ui/accordion"
 import {
   Alert,
   AlertDescription,
   AlertTitle,
-} from "@/registry/new-york-v4/ui/alert"
-import { AspectRatio } from "@/registry/new-york-v4/ui/aspect-ratio"
-import { Button } from "@/registry/new-york-v4/ui/button"
-import { Kbd } from "@/registry/new-york-v4/ui/kbd"
+} from "@/styles/radix-baseui/ui/alert"
+import { AspectRatio } from "@/styles/radix-baseui/ui/aspect-ratio"
+import { Button } from "@/styles/radix-baseui/ui/button"
+import { Kbd } from "@/styles/radix-baseui/ui/kbd"
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/new-york-v4/ui/tabs"
+} from "@/styles/radix-baseui/ui/tabs"
 
 function getComponentsFolder() {
   const componentsFolder = source.pageTree.children.find(

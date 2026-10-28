@@ -16,7 +16,7 @@ import {
   vi,
 } from "vitest"
 
-import { createRegistryServer } from "../../../tests/src/utils/registry"
+import { createRegistryServer } from "../test-helpers/registry-server"
 import { setRegistryHeaders } from "./context"
 import {
   resolveRegistryItemsFromRegistries,

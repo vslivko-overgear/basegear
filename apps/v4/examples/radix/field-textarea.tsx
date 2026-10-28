@@ -4,8 +4,8 @@ import {
   FieldGroup,
   FieldLabel,
   FieldSet,
-} from "@/styles/radix-nova/ui/field"
-import { Textarea } from "@/styles/radix-nova/ui/textarea"
+} from "@/styles/radix-baseui/ui/field"
+import { Textarea } from "@/styles/radix-baseui/ui/textarea"
 
 export default function FieldTextarea() {
   return (

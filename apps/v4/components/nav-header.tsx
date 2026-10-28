@@ -8,7 +8,7 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-} from "@/registry/new-york-v4/ui/navigation-menu"
+} from "@/styles/radix-baseui/ui/navigation-menu"
 
 export function NavHeader() {
   const pathname = usePathname()
@@ -19,16 +19,6 @@ export function NavHeader() {
         <NavigationMenuItem>
           <NavigationMenuLink asChild data-active={pathname === "/"}>
             <Link href="/">Home</Link>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuLink asChild data-active={pathname === "/charts"}>
-            <Link href="/charts">Charts</Link>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuLink asChild data-active={pathname === "/forms"}>
-            <Link href="/forms">Forms</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>

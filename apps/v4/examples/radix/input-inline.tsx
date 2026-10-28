@@ -1,6 +1,6 @@
-import { Button } from "@/styles/radix-nova/ui/button"
-import { Field } from "@/styles/radix-nova/ui/field"
-import { Input } from "@/styles/radix-nova/ui/input"
+import { Button } from "@/styles/radix-baseui/ui/button"
+import { Field } from "@/styles/radix-baseui/ui/field"
+import { Input } from "@/styles/radix-baseui/ui/input"
 
 export function InputInline() {
   return (

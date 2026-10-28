@@ -1,10 +1,10 @@
-import { Bubble, BubbleContent } from "@/styles/radix-rhea/ui/bubble"
+import { Bubble, BubbleContent } from "@/styles/radix-baseui/ui/bubble"
 import {
   Message,
   MessageContent,
   MessageFooter,
   MessageHeader,
-} from "@/styles/radix-rhea/ui/message"
+} from "@/styles/radix-baseui/ui/message"
 
 export function MessageHeaderFooterDemo() {
   return (

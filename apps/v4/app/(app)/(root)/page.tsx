@@ -10,7 +10,7 @@ import {
   PageHeaderDescription,
   PageHeaderHeading,
 } from "@/components/page-header"
-import { Button } from "@/styles/radix-luma/ui/button"
+import { Button } from "@/styles/radix-baseui/ui/button"
 
 import { CardsDemo } from "./cards"
 

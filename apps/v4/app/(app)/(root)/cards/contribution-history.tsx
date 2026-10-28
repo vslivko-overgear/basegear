@@ -1,5 +1,5 @@
-import { Badge } from "@/styles/base-rhea/ui/badge"
-import { Button } from "@/styles/base-rhea/ui/button"
+import { Badge } from "@/styles/radix-baseui/ui/badge"
+import { Button } from "@/styles/radix-baseui/ui/button"
 import {
   Card,
   CardAction,
@@ -8,8 +8,12 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/styles/base-rhea/ui/card"
-import { Item, ItemContent, ItemDescription } from "@/styles/base-rhea/ui/item"
+} from "@/styles/radix-baseui/ui/card"
+import {
+  Item,
+  ItemContent,
+  ItemDescription,
+} from "@/styles/radix-baseui/ui/item"
 
 const chartData = [
   { month: "Dec", amount: 800 },

@@ -86,7 +86,7 @@ export function DesignSystemProvider({
     pointer,
     radius,
   } = searchParams
-  const effectiveRadius = style === "lyra" ? "none" : radius
+  const effectiveRadius = radius
   const selectedFont = React.useMemo(
     () => FONTS.find((fontOption) => fontOption.value === font),
     [font]
@@ -139,17 +139,6 @@ export function DesignSystemProvider({
   )
 
   useIframeMessageListener("design-system-params", handleDesignSystemMessage)
-
-  React.useEffect(() => {
-    if (style === "lyra" || (style === "sera" && radius !== "none")) {
-      setSearchParams({ radius: "none" })
-      return
-    }
-
-    if (style === "rhea" && radius === "large") {
-      setSearchParams({ radius: "default" })
-    }
-  }, [style, radius, setSearchParams])
 
   // Use useLayoutEffect for synchronous style updates to prevent flash.
   React.useLayoutEffect(() => {

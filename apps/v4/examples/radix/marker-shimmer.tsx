@@ -1,4 +1,4 @@
-import { Marker, MarkerContent } from "@/styles/radix-rhea/ui/marker"
+import { Marker, MarkerContent } from "@/styles/radix-baseui/ui/marker"
 
 export function MarkerShimmerDemo() {
   return (

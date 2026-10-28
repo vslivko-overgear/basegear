@@ -10,8 +10,8 @@ import {
 
 import { createChat, getMessageText } from "@/lib/ai"
 import { useHighlightedCode } from "@/registry/bases/radix/hooks/use-highlighted-code"
-import { Bubble, BubbleContent } from "@/styles/radix-rhea/ui/bubble"
-import { Button } from "@/styles/radix-rhea/ui/button"
+import { Bubble, BubbleContent } from "@/styles/radix-baseui/ui/bubble"
+import { Button } from "@/styles/radix-baseui/ui/button"
 import {
   CodeBlock,
   CodeBlockActions,
@@ -20,8 +20,8 @@ import {
   CodeBlockHeader,
   CodeBlockLine,
   CodeBlockTitle,
-} from "@/styles/radix-rhea/ui/code-block"
-import { Message, MessageContent } from "@/styles/radix-rhea/ui/message"
+} from "@/styles/radix-baseui/ui/code-block"
+import { Message, MessageContent } from "@/styles/radix-baseui/ui/message"
 
 const response = `Wrap the value in a \`useDebounce\` hook. It returns the latest value once it stops changing for \`delay\` milliseconds.
 

@@ -20,6 +20,7 @@ import {
 import { type PanelImperativeHandle } from "react-resizable-panels"
 import { type RegistryItem, type RegistryItemFile } from "shadcn/schema"
 
+import { BASEUI_PRESET } from "@/lib/config"
 import { trackEvent } from "@/lib/events"
 import {
   type createFileTreeForRegistryItemFiles,
@@ -29,18 +30,18 @@ import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard"
 import { getIconForLanguageExtension } from "@/components/icons"
 import { OpenInV0Button } from "@/components/open-in-v0-button"
 import { type Style } from "@/registry/_legacy-styles"
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/styles/radix-baseui/ui/button"
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/registry/new-york-v4/ui/collapsible"
+} from "@/styles/radix-baseui/ui/collapsible"
 import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/registry/new-york-v4/ui/resizable"
-import { Separator } from "@/registry/new-york-v4/ui/separator"
+} from "@/styles/radix-baseui/ui/resizable"
+import { Separator } from "@/styles/radix-baseui/ui/separator"
 import {
   Sidebar,
   SidebarGroup,
@@ -51,12 +52,12 @@ import {
   SidebarMenuItem,
   SidebarMenuSub,
   SidebarProvider,
-} from "@/registry/new-york-v4/ui/sidebar"
-import { Tabs, TabsList, TabsTrigger } from "@/registry/new-york-v4/ui/tabs"
+} from "@/styles/radix-baseui/ui/sidebar"
+import { Tabs, TabsList, TabsTrigger } from "@/styles/radix-baseui/ui/tabs"
 import {
   ToggleGroup,
   ToggleGroupItem,
-} from "@/registry/new-york-v4/ui/toggle-group"
+} from "@/styles/radix-baseui/ui/toggle-group"
 
 type BlockViewerContext = {
   item: RegistryItem
@@ -75,11 +76,9 @@ type BlockViewerContext = {
   setIframeKey?: React.Dispatch<React.SetStateAction<number>>
 }
 
-// Blocks that exist only in the base registries have no legacy /view page; they render through /preview/base.
-function blockViewUrl(styleName: Style["name"], name: string) {
-  return styleName === "base-nova"
-    ? `/preview/base/${name}`
-    : `/view/${styleName}/${name}`
+// Blocks render through the design-system preview so they get the baseui preset (Overgear theme).
+function blockViewUrl(name: string) {
+  return `/preview/radix/${name}?preset=${BASEUI_PRESET}`
 }
 
 const BlockViewerContext = React.createContext<BlockViewerContext | null>(null)
@@ -199,7 +198,7 @@ function BlockViewerToolbar({ styleName }: { styleName: Style["name"] }) {
               asChild
               title="Open in New Tab"
             >
-              <Link href={blockViewUrl(styleName, item.name)} target="_blank">
+              <Link href={blockViewUrl(item.name)} target="_blank">
                 <span className="sr-only">Open in New Tab</span>
                 <Fullscreen />
               </Link>
@@ -252,7 +251,7 @@ function BlockViewerIframe({
   return (
     <iframe
       key={iframeKey}
-      src={blockViewUrl(styleName, item.name)}
+      src={blockViewUrl(item.name)}
       height={item.meta?.iframeHeight ?? 930}
       loading="lazy"
       className={cn(

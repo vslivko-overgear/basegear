@@ -1,4 +1,4 @@
-import { Chip, ChipGroup } from "@/styles/radix-nova/ui/chip"
+import { Chip, ChipGroup } from "@/styles/radix-baseui/ui/chip"
 
 export function ChipGroupDemo() {
   return (

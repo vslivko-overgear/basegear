@@ -6,15 +6,15 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/new-york-v4/ui/avatar"
-import { Button } from "@/registry/new-york-v4/ui/button"
+} from "@/styles/radix-baseui/ui/avatar"
+import { Button } from "@/styles/radix-baseui/ui/button"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york-v4/ui/card"
+} from "@/styles/radix-baseui/ui/card"
 import {
   Command,
   CommandEmpty,
@@ -22,7 +22,7 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/new-york-v4/ui/command"
+} from "@/styles/radix-baseui/ui/command"
 import {
   Item,
   ItemActions,
@@ -30,12 +30,12 @@ import {
   ItemDescription,
   ItemGroup,
   ItemTitle,
-} from "@/registry/new-york-v4/ui/item"
+} from "@/styles/radix-baseui/ui/item"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/new-york-v4/ui/popover"
+} from "@/styles/radix-baseui/ui/popover"
 
 const teamMembers = [
   {

@@ -1,4 +1,4 @@
-import { RatingDisplay } from "@/styles/radix-nova/ui/rating"
+import { RatingDisplay } from "@/styles/radix-baseui/ui/rating"
 
 export function RatingDisplayDemo() {
   return (

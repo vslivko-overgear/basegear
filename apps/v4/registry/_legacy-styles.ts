@@ -1,26 +1,15 @@
+// The one style the docs, blocks and /view routes render with: baseui on Radix
+// (the base og-frontend-monorepo's ui-system uses).
 export const legacyStyles = [
   {
-    name: "new-york-v4",
-    title: "New York",
-  },
-  {
-    name: "base-nova",
-    title: "Base Nova",
-  },
-  {
-    name: "radix-nova",
-    title: "Radix Nova",
-  },
-  {
-    name: "aria-nova",
-    title: "React Aria Nova",
+    name: "radix-baseui",
+    title: "Radix baseui",
   },
 ] as const
 
 export type Style = (typeof legacyStyles)[number]
 
 export async function getActiveStyle() {
-  // In the future, this can read from cookies, session, etc.
   return legacyStyles[0]
 }
 

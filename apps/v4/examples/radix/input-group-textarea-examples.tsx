@@ -11,16 +11,16 @@ import {
   FieldDescription,
   FieldGroup,
   FieldLabel,
-} from "@/styles/radix-nova/ui/field"
-import { Input } from "@/styles/radix-nova/ui/input"
+} from "@/styles/radix-baseui/ui/field"
+import { Input } from "@/styles/radix-baseui/ui/input"
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
   InputGroupText,
   InputGroupTextarea,
-} from "@/styles/radix-nova/ui/input-group"
-import { Textarea } from "@/styles/radix-nova/ui/textarea"
+} from "@/styles/radix-baseui/ui/input-group"
+import { Textarea } from "@/styles/radix-baseui/ui/textarea"
 
 export function InputGroupTextareaExamples() {
   return (

@@ -3,12 +3,12 @@
 import * as React from "react"
 import { ChevronDownIcon } from "lucide-react"
 
-import { Bubble, BubbleContent } from "@/styles/radix-rhea/ui/bubble"
-import { Button } from "@/styles/radix-rhea/ui/button"
+import { Bubble, BubbleContent } from "@/styles/radix-baseui/ui/bubble"
+import { Button } from "@/styles/radix-baseui/ui/button"
 import {
   Collapsible,
   CollapsibleTrigger,
-} from "@/styles/radix-rhea/ui/collapsible"
+} from "@/styles/radix-baseui/ui/collapsible"
 
 const text = `The accessibility review found two focus states that were visually too subtle in dark mode.
 

@@ -1,7 +1,7 @@
 import { Cancel01Icon } from "@hugeicons/core-free-icons"
 import { HugeiconsIcon } from "@hugeicons/react"
 
-import { Button } from "@/styles/base-rhea/ui/button"
+import { Button } from "@/styles/radix-baseui/ui/button"
 import {
   Card,
   CardAction,
@@ -10,14 +10,14 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/styles/base-rhea/ui/card"
+} from "@/styles/radix-baseui/ui/card"
 import {
   Field,
   FieldDescription,
   FieldGroup,
   FieldLabel,
-} from "@/styles/base-rhea/ui/field"
-import { Progress } from "@/styles/base-rhea/ui/progress"
+} from "@/styles/radix-baseui/ui/field"
+import { Progress } from "@/styles/radix-baseui/ui/progress"
 import {
   Select,
   SelectContent,
@@ -25,8 +25,8 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/styles/base-rhea/ui/select"
-import { Textarea } from "@/styles/base-rhea/ui/textarea"
+} from "@/styles/radix-baseui/ui/select"
+import { Textarea } from "@/styles/radix-baseui/ui/textarea"
 
 const CURRENCIES = [
   { label: "USD — United States Dollar", value: "usd" },
@@ -60,7 +60,7 @@ export function PayoutThreshold() {
             <FieldLabel htmlFor="preferred-currency">
               Preferred Currency
             </FieldLabel>
-            <Select items={CURRENCIES} defaultValue="usd">
+            <Select defaultValue="usd">
               <SelectTrigger id="preferred-currency" className="w-full">
                 <SelectValue />
               </SelectTrigger>

@@ -6,7 +6,7 @@ component: true
 ---
 
 <ComponentPreview
-  styleName="radix-rhea"
+  styleName="radix-baseui"
   name="code-block-demo"
   previewClassName="h-auto"
 />
@@ -52,19 +52,19 @@ npx shadcn@latest add button
 <ComponentSource
   name="code-block"
   title="components/ui/code-block.tsx"
-  styleName="radix-rhea"
+  styleName="radix-baseui"
 />
 
 <ComponentSource
   src="/registry/bases/radix/hooks/use-highlighted-code.ts"
   title="hooks/use-highlighted-code.ts"
-  styleName="radix-rhea"
+  styleName="radix-baseui"
 />
 
 <ComponentSource
   src="/registry/bases/radix/lib/highlighter.tsx"
   title="lib/highlighter.tsx"
-  styleName="radix-rhea"
+  styleName="radix-baseui"
 />
 
 <Step>Update the import paths to match your project setup.</Step>
@@ -134,7 +134,7 @@ CodeBlock
 Pass a string to `CodeBlockContent`. It renders as one text node, so it stays cheap while output streams.
 
 <ComponentPreview
-  styleName="radix-rhea"
+  styleName="radix-baseui"
   name="code-block-basic"
   previewClassName="h-auto"
 />
@@ -144,7 +144,7 @@ Pass a string to `CodeBlockContent`. It renders as one text node, so it stays ch
 `CodeBlockHeader` holds a `CodeBlockTitle` and `CodeBlockActions`. `CodeBlockCopyButton` copies its `value`.
 
 <ComponentPreview
-  styleName="radix-rhea"
+  styleName="radix-baseui"
   name="code-block-header"
   previewClassName="h-auto"
 />
@@ -164,7 +164,7 @@ A long title truncates. To link the title to a file, wrap `CodeBlockTitle` in an
 `CodeBlockActions` holds any number of buttons. For a wrap toggle, keep the state yourself and pass it to `wrap`.
 
 <ComponentPreview
-  styleName="radix-rhea"
+  styleName="radix-baseui"
   name="code-block-actions"
   previewClassName="h-auto"
 />
@@ -192,7 +192,7 @@ const [wrap, setWrap] = React.useState(false)
 Without a header, put `CodeBlockActions` directly inside `CodeBlock`. The actions float at the top end and stay hidden until the block is hovered or focused. They always show on touch screens.
 
 <ComponentPreview
-  styleName="radix-rhea"
+  styleName="radix-baseui"
   name="code-block-floating-actions"
   previewClassName="h-auto"
 />
@@ -202,7 +202,7 @@ Without a header, put `CodeBlockActions` directly inside `CodeBlock`. The action
 Add `lineNumbers` to `CodeBlockContent`. A string child is split into lines, and the numbers are not copied with a selection.
 
 <ComponentPreview
-  styleName="radix-rhea"
+  styleName="radix-baseui"
   name="code-block-line-numbers"
   previewClassName="h-auto"
 />
@@ -212,7 +212,7 @@ Add `lineNumbers` to `CodeBlockContent`. A string child is split into lines, and
 Set `startLine` to number lines from a given line, for a snippet from the middle of a file. The gutter grows to fit the widest number.
 
 <ComponentPreview
-  styleName="radix-rhea"
+  styleName="radix-baseui"
   name="code-block-start-line"
   previewClassName="h-auto"
 />
@@ -222,7 +222,7 @@ Set `startLine` to number lines from a given line, for a snippet from the middle
 Long lines scroll by default. Add `wrap` to wrap them, which suits tool output and error messages. To let the reader toggle it, see [Actions](#actions).
 
 <ComponentPreview
-  styleName="radix-rhea"
+  styleName="radix-baseui"
   name="code-block-wrap"
   previewClassName="h-auto"
 />
@@ -232,7 +232,7 @@ Long lines scroll by default. Add `wrap` to wrap them, which suits tool output a
 Render each line as a `CodeBlockLine` and set `variant="highlighted"` on the lines to call out.
 
 <ComponentPreview
-  styleName="radix-rhea"
+  styleName="radix-baseui"
   name="code-block-highlighted-lines"
   previewClassName="h-auto"
 />
@@ -242,7 +242,7 @@ Render each line as a `CodeBlockLine` and set `variant="highlighted"` on the lin
 Set `variant="added"` or `variant="removed"` on a `CodeBlockLine`. Each one adds a `+` or `−` marker.
 
 <ComponentPreview
-  styleName="radix-rhea"
+  styleName="radix-baseui"
   name="code-block-diff"
   previewClassName="h-auto"
 />
@@ -252,7 +252,7 @@ Set `variant="added"` or `variant="removed"` on a `CodeBlockLine`. Each one adds
 Cap the height with a `max-h-*` class on `CodeBlockContent`. The content scrolls inside the block.
 
 <ComponentPreview
-  styleName="radix-rhea"
+  styleName="radix-baseui"
   name="code-block-height"
   previewClassName="h-auto"
 />
@@ -264,7 +264,7 @@ Cap the height with a `max-h-*` class on `CodeBlockContent`. The content scrolls
 `CodeBlockFooter` is a slot below the content. For Show More, cap the content while it is collapsed and put a ghost `xs` `Button` in the footer.
 
 <ComponentPreview
-  styleName="radix-rhea"
+  styleName="radix-baseui"
   name="code-block-show-more"
   previewClassName="h-auto"
 />
@@ -297,7 +297,7 @@ const id = React.useId()
 To keep a long block from taking over the page, raise the cap instead of removing it. The expanded content scrolls, and the edges fade as you scroll.
 
 <ComponentPreview
-  styleName="radix-rhea"
+  styleName="radix-baseui"
   name="code-block-show-more-scroll"
   previewClassName="h-auto"
 />
@@ -307,7 +307,7 @@ To keep a long block from taking over the page, raise the cap instead of removin
 Use `size="sm"` for tool and [Trace](#trace) output. It has tighter padding and `text-xs` text.
 
 <ComponentPreview
-  styleName="radix-rhea"
+  styleName="radix-baseui"
   name="code-block-size"
   previewClassName="h-auto"
 />
@@ -317,7 +317,7 @@ Use `size="sm"` for tool and [Trace](#trace) output. It has tighter padding and 
 Use `variant="destructive"` for errors and failed output.
 
 <ComponentPreview
-  styleName="radix-rhea"
+  styleName="radix-baseui"
   name="code-block-destructive"
   previewClassName="h-auto"
 />
@@ -327,7 +327,7 @@ Use `variant="destructive"` for errors and failed output.
 Put a `CodeBlock` with `size="sm"` in `TraceCollapsibleContent` for tool and terminal output. Add `wrap` and a `max-h-64` class to `CodeBlockContent` so long output wraps and scrolls inside the trace. The block sets its own text color, so `TraceCollapsibleContent` does not mute it.
 
 <ComponentPreview
-  styleName="radix-rhea"
+  styleName="radix-baseui"
   name="code-block-trace"
   previewClassName="h-auto"
 />
@@ -337,7 +337,7 @@ Put a `CodeBlock` with `size="sm"` in `TraceCollapsibleContent` for tool and ter
 Show several files with [Tabs](/docs/components/radix/tabs), one `CodeBlock` in each `TabsContent`.
 
 <ComponentPreview
-  styleName="radix-rhea"
+  styleName="radix-baseui"
   name="code-block-tabs"
   previewClassName="h-auto"
 />
@@ -347,7 +347,7 @@ Show several files with [Tabs](/docs/components/radix/tabs), one `CodeBlock` in 
 Put a `CodeBlock` between paragraphs inside a [Message](/docs/components/radix/message).
 
 <ComponentPreview
-  styleName="radix-rhea"
+  styleName="radix-baseui"
   name="code-block-chat"
   previewClassName="h-auto"
 />
@@ -357,27 +357,18 @@ Put a `CodeBlock` between paragraphs inside a [Message](/docs/components/radix/m
 A `CodeBlock` inside a [`typeset`](/docs/typeset) container keeps its own styles and gets the same space above as a paragraph.
 
 <ComponentPreview
-  styleName="radix-rhea"
+  styleName="radix-baseui"
   name="code-block-typeset"
   previewClassName="h-auto"
 />
 
-## RTL
-
-To enable RTL support in shadcn/ui, see the [RTL configuration guide](/docs/rtl). Code always reads left to right. The header follows the page direction.
-
-<ComponentPreview
-  styleName="radix-nova"
-  name="code-block-rtl"
-  direction="rtl"
-/>
 
 ## Syntax Highlighting
 
 `useHighlightedCode` highlights with [Shiki](https://shiki.style) and returns one React node per line for `CodeBlockLine`.
 
 <ComponentPreview
-  styleName="radix-rhea"
+  styleName="radix-baseui"
   name="code-block-highlighting"
   previewClassName="h-auto"
 />
@@ -401,7 +392,7 @@ Shiki uses its JavaScript regex engine, so there is no WASM to load.
 Each language loads the first time it is used. Edit the list in `lib/highlighter.tsx`. A language that is not in the list renders as plain text.
 
 <ComponentPreview
-  styleName="radix-rhea"
+  styleName="radix-baseui"
   name="code-block-languages"
   previewClassName="h-auto"
 />
@@ -413,7 +404,7 @@ The list ships with `bash`, `css`, `diff`, `html`, `javascript`, `json`, `jsx`, 
 Pass `"ansi"` as the language to render the colors in terminal output. Without it, escape codes show as text.
 
 <ComponentPreview
-  styleName="radix-rhea"
+  styleName="radix-baseui"
   name="code-block-ansi"
   previewClassName="h-auto"
 />
@@ -447,7 +438,7 @@ export async function ServerCode({ code }: { code: string }) {
 While the code streams, the hook tokenizes only the new lines, starting where the last line left off. Lines that did not change keep the same nodes, so React skips them.
 
 <ComponentPreview
-  styleName="radix-rhea"
+  styleName="radix-baseui"
   name="code-block-streaming"
   previewClassName="h-auto"
 />
@@ -457,7 +448,7 @@ While the code streams, the hook tokenizes only the new lines, starting where th
 Render the message with [Streamdown](https://streamdown.ai) and route fenced code to a `CodeBlock` with `components.code`. Streamdown sets `data-block` on fenced code only, so inline code stays inline.
 
 <ComponentPreview
-  styleName="radix-rhea"
+  styleName="radix-baseui"
   name="code-block-markdown"
   previewClassName="h-auto"
 />

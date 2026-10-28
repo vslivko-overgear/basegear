@@ -1,10 +1,10 @@
 import { IconPlus } from "@tabler/icons-react"
 
-import { Button } from "@/styles/radix-nova/ui/button"
+import { Button } from "@/styles/radix-baseui/ui/button"
 import {
   ButtonGroup,
   ButtonGroupSeparator,
-} from "@/styles/radix-nova/ui/button-group"
+} from "@/styles/radix-baseui/ui/button-group"
 
 export default function ButtonGroupSplit() {
   return (

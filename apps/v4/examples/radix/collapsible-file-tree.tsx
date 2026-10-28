@@ -1,13 +1,13 @@
 import { ChevronRightIcon, FileIcon, FolderIcon } from "lucide-react"
 
-import { Button } from "@/styles/radix-nova/ui/button"
-import { Card, CardContent, CardHeader } from "@/styles/radix-nova/ui/card"
+import { Button } from "@/styles/radix-baseui/ui/button"
+import { Card, CardContent, CardHeader } from "@/styles/radix-baseui/ui/card"
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/styles/radix-nova/ui/collapsible"
-import { Tabs, TabsList, TabsTrigger } from "@/styles/radix-nova/ui/tabs"
+} from "@/styles/radix-baseui/ui/collapsible"
+import { Tabs, TabsList, TabsTrigger } from "@/styles/radix-baseui/ui/tabs"
 
 type FileTreeItem = { name: string } | { name: string; items: FileTreeItem[] }
 
@@ -79,7 +79,7 @@ export function CollapsibleFileTree() {
               {fileItem.name}
             </Button>
           </CollapsibleTrigger>
-          <CollapsibleContent className="mt-1 ml-5 style-lyra:ml-4">
+          <CollapsibleContent className="style-lyra:ml-4 mt-1 ml-5">
             <div className="flex flex-col gap-1">
               {fileItem.items.map((child) => renderItem(child))}
             </div>

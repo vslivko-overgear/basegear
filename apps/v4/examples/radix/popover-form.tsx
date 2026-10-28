@@ -1,6 +1,6 @@
-import { Button } from "@/styles/radix-nova/ui/button"
-import { Field, FieldGroup, FieldLabel } from "@/styles/radix-nova/ui/field"
-import { Input } from "@/styles/radix-nova/ui/input"
+import { Button } from "@/styles/radix-baseui/ui/button"
+import { Field, FieldGroup, FieldLabel } from "@/styles/radix-baseui/ui/field"
+import { Input } from "@/styles/radix-baseui/ui/input"
 import {
   Popover,
   PopoverContent,
@@ -8,7 +8,7 @@ import {
   PopoverHeader,
   PopoverTitle,
   PopoverTrigger,
-} from "@/styles/radix-nova/ui/popover"
+} from "@/styles/radix-baseui/ui/popover"
 
 export function PopoverForm() {
   return (

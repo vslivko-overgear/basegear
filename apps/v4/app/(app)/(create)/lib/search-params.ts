@@ -224,6 +224,8 @@ function resolvePresetParams(
       return normalizeDesignSystemParams({
         ...decoded,
         ...presetOverrides,
+        // The site renders the baseui style only; presets of other shadcn styles open in it.
+        style: STYLES[0].name,
         base: rawParams.base,
         item: rawParams.item,
         preset: rawParams.preset,

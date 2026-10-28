@@ -3,7 +3,7 @@ import {
   CodeBlockActions,
   CodeBlockContent,
   CodeBlockCopyButton,
-} from "@/styles/radix-rhea/ui/code-block"
+} from "@/styles/radix-baseui/ui/code-block"
 
 const output = `$ pnpm add ai @ai-sdk/react zod
 Progress: resolved 412, reused 398, downloaded 14, added 14, done

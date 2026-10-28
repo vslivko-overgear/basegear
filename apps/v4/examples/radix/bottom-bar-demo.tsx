@@ -12,7 +12,7 @@ import {
   BottomBarIcon,
   BottomBarItem,
   BottomBarLabel,
-} from "@/styles/radix-nova/ui/bottom-bar"
+} from "@/styles/radix-baseui/ui/bottom-bar"
 
 export function BottomBarDemo() {
   return (

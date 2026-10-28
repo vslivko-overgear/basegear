@@ -1,7 +1,7 @@
 import {
   SegmentedControl,
   SegmentedControlItem,
-} from "@/styles/radix-nova/ui/segmented-control"
+} from "@/styles/radix-baseui/ui/segmented-control"
 
 export function SegmentedControlDemo() {
   return (

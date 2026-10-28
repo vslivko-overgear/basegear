@@ -5,7 +5,7 @@ import {
 } from "@hugeicons/core-free-icons"
 import { HugeiconsIcon } from "@hugeicons/react"
 
-import { Button } from "@/styles/base-rhea/ui/button"
+import { Button } from "@/styles/radix-baseui/ui/button"
 import {
   Card,
   CardContent,
@@ -13,16 +13,16 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/styles/base-rhea/ui/card"
-import { Field, FieldGroup, FieldLabel } from "@/styles/base-rhea/ui/field"
-import { Input } from "@/styles/base-rhea/ui/input"
+} from "@/styles/radix-baseui/ui/card"
+import { Field, FieldGroup, FieldLabel } from "@/styles/radix-baseui/ui/field"
+import { Input } from "@/styles/radix-baseui/ui/input"
 import {
   Item,
   ItemContent,
   ItemDescription,
   ItemMedia,
   ItemTitle,
-} from "@/styles/base-rhea/ui/item"
+} from "@/styles/radix-baseui/ui/item"
 
 export function AccountAccess() {
   return (
@@ -68,25 +68,27 @@ export function AccountAccess() {
           <HugeiconsIcon icon={SquareLock02Icon} strokeWidth={2} />
           Update Security
         </Button>
-        <Item variant="muted" render={<a href="#" />}>
-          <ItemMedia variant="icon">
+        <Item variant="muted" asChild>
+          <a href="#">
+            <ItemMedia variant="icon">
+              <HugeiconsIcon
+                icon={AlertCircleIcon}
+                className="text-destructive"
+                strokeWidth={2}
+              />
+            </ItemMedia>
+            <ItemContent>
+              <ItemTitle>Danger Zone</ItemTitle>
+              <ItemDescription className="line-clamp-1">
+                Archive account and remove catalog
+              </ItemDescription>
+            </ItemContent>
             <HugeiconsIcon
-              icon={AlertCircleIcon}
-              className="text-destructive"
+              icon={ArrowRight01Icon}
+              className="size-4"
               strokeWidth={2}
             />
-          </ItemMedia>
-          <ItemContent>
-            <ItemTitle>Danger Zone</ItemTitle>
-            <ItemDescription className="line-clamp-1">
-              Archive account and remove catalog
-            </ItemDescription>
-          </ItemContent>
-          <HugeiconsIcon
-            icon={ArrowRight01Icon}
-            className="size-4"
-            strokeWidth={2}
-          />
+          </a>
         </Item>
       </CardFooter>
     </Card>

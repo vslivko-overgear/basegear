@@ -7,13 +7,13 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/styles/radix-rhea/ui/dialog"
+} from "@/styles/radix-baseui/ui/dialog"
 import {
   Trace,
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/radix-rhea/ui/trace"
+} from "@/styles/radix-baseui/ui/trace"
 
 const results = [
   {

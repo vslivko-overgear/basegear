@@ -3,7 +3,7 @@
 import * as React from "react"
 
 import { Icons } from "@/components/icons"
-import { Button } from "@/styles/base-nova/ui/button"
+import { Button } from "@/styles/radix-baseui/ui/button"
 import {
   Dialog,
   DialogClose,
@@ -12,7 +12,7 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from "@/styles/base-nova/ui/dialog"
+} from "@/styles/radix-baseui/ui/dialog"
 
 const STORAGE_KEY = "shadcn-create-welcome-dialog"
 
@@ -58,8 +58,8 @@ export function WelcomeDialog() {
           </DialogDescription>
         </DialogHeader>
         <DialogFooter className="m-0">
-          <DialogClose render={<Button className="w-full" />}>
-            Get Started
+          <DialogClose asChild>
+            <Button className="w-full">Get Started</Button>
           </DialogClose>
         </DialogFooter>
       </DialogContent>

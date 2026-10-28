@@ -1,6 +1,6 @@
-import { Badge } from "@/styles/radix-nova/ui/badge"
-import { Field, FieldLabel } from "@/styles/radix-nova/ui/field"
-import { Input } from "@/styles/radix-nova/ui/input"
+import { Badge } from "@/styles/radix-baseui/ui/badge"
+import { Field, FieldLabel } from "@/styles/radix-baseui/ui/field"
+import { Input } from "@/styles/radix-baseui/ui/input"
 
 export function InputBadge() {
   return (

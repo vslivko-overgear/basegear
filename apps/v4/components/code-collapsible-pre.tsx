@@ -3,7 +3,7 @@
 import * as React from "react"
 import { cn } from "cn"
 
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/styles/radix-baseui/ui/button"
 
 // Renders siblings of the pre, not a positioned wrapper, so the copy button
 // and the controls stay anchored to the figure.

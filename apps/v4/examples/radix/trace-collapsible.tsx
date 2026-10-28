@@ -1,6 +1,9 @@
 import { TerminalIcon } from "lucide-react"
 
-import { CodeBlock, CodeBlockContent } from "@/styles/radix-rhea/ui/code-block"
+import {
+  CodeBlock,
+  CodeBlockContent,
+} from "@/styles/radix-baseui/ui/code-block"
 import {
   TraceCollapsible,
   TraceCollapsibleContent,
@@ -8,7 +11,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/radix-rhea/ui/trace"
+} from "@/styles/radix-baseui/ui/trace"
 
 export function TraceCollapsibleDemo() {
   return (

@@ -149,7 +149,7 @@ describe("runRegistryMonitor", () => {
 
   it.each([
     ["docs/expert", "expert"],
-    ["c-aspect-ratio/base-nova", "c-aspect-ratio"],
+    ["c-aspect-ratio/radix-baseui", "c-aspect-ratio"],
     ["button", "button"],
   ])(
     "accepts schema-valid path item %s with payload name %s",
@@ -1018,7 +1018,7 @@ describe("runRegistryMonitor", () => {
     })
 
     expect(fetchJson).toHaveBeenCalledWith(
-      "https://acme.example.com/r/radix-vega/button.json"
+      "https://acme.example.com/r/radix-baseui/button.json"
     )
   })
 })

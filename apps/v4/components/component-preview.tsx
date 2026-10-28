@@ -13,7 +13,7 @@ export function ComponentPreview({
   align = "center",
   hideCode = false,
   chromeLessOnMobile = false,
-  styleName = "base-nova",
+  styleName = "radix-baseui",
   direction = "ltr",
   caption,
   ...props

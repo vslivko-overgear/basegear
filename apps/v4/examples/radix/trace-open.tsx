@@ -3,8 +3,11 @@
 import * as React from "react"
 import { TerminalIcon } from "lucide-react"
 
-import { Button } from "@/styles/radix-rhea/ui/button"
-import { CodeBlock, CodeBlockContent } from "@/styles/radix-rhea/ui/code-block"
+import { Button } from "@/styles/radix-baseui/ui/button"
+import {
+  CodeBlock,
+  CodeBlockContent,
+} from "@/styles/radix-baseui/ui/code-block"
 import {
   TraceCollapsible,
   TraceCollapsibleContent,
@@ -12,7 +15,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/radix-rhea/ui/trace"
+} from "@/styles/radix-baseui/ui/trace"
 
 export function TraceOpen() {
   const [open, setOpen] = React.useState(false)

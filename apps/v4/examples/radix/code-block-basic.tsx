@@ -1,4 +1,7 @@
-import { CodeBlock, CodeBlockContent } from "@/styles/radix-rhea/ui/code-block"
+import {
+  CodeBlock,
+  CodeBlockContent,
+} from "@/styles/radix-baseui/ui/code-block"
 
 const output = `$ pnpm build
 > next build

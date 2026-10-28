@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation"
 import { cn } from "cn"
 
 import { PAGES_NEW } from "@/lib/docs"
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/styles/radix-baseui/ui/button"
 
 export function MainNav({
   items,

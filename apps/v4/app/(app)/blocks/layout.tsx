@@ -10,7 +10,7 @@ import {
   PageHeaderHeading,
 } from "@/components/page-header"
 import { PageNav } from "@/components/page-nav"
-import { Button } from "@/styles/radix-luma/ui/button"
+import { Button } from "@/styles/radix-baseui/ui/button"
 
 const title = "Building Blocks for the Web"
 const description =

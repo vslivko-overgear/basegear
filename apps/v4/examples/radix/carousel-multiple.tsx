@@ -1,11 +1,11 @@
-import { Card, CardContent } from "@/styles/radix-nova/ui/card"
+import { Card, CardContent } from "@/styles/radix-baseui/ui/card"
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/styles/radix-nova/ui/carousel"
+} from "@/styles/radix-baseui/ui/carousel"
 
 export function CarouselMultiple() {
   return (

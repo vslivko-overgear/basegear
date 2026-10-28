@@ -17,10 +17,10 @@ function getStyleFromSlug(slug: string[] | undefined, fallbackStyle: string) {
     slug[1]
   ) {
     if (slug[1] === "base") {
-      return "base-nova"
+      return "radix-baseui"
     }
     if (slug[1] === "aria") {
-      return "aria-nova"
+      return "radix-baseui"
     }
     if (slug[1] === "radix") {
       return "new-york-v4"
@@ -42,7 +42,7 @@ export async function GET(
   }
 
   // Default to the base style. Legacy content pins new-york-v4 per tag.
-  const effectiveStyle = getStyleFromSlug(slug, "base-nova")
+  const effectiveStyle = getStyleFromSlug(slug, "radix-baseui")
 
   const processedContent = processMdxForLLMs(
     await page.data.getText("raw"),

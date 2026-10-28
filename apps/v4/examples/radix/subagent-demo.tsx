@@ -10,10 +10,13 @@ import {
 } from "lucide-react"
 
 import { createChat, getMessageText } from "@/lib/ai"
-import { Bubble, BubbleContent } from "@/styles/radix-rhea/ui/bubble"
-import { Button } from "@/styles/radix-rhea/ui/button"
-import { CodeBlock, CodeBlockContent } from "@/styles/radix-rhea/ui/code-block"
-import { Message, MessageContent } from "@/styles/radix-rhea/ui/message"
+import { Bubble, BubbleContent } from "@/styles/radix-baseui/ui/bubble"
+import { Button } from "@/styles/radix-baseui/ui/button"
+import {
+  CodeBlock,
+  CodeBlockContent,
+} from "@/styles/radix-baseui/ui/code-block"
+import { Message, MessageContent } from "@/styles/radix-baseui/ui/message"
 import {
   Trace,
   TraceCollapsible,
@@ -22,7 +25,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/radix-rhea/ui/trace"
+} from "@/styles/radix-baseui/ui/trace"
 
 type SubagentMessage = UIMessage<
   unknown,

@@ -12,7 +12,7 @@ import { InfoIcon } from "lucide-react"
   component.
 </Callout>
 
-<ComponentPreview styleName="radix-nova" name="native-select-demo" />
+<ComponentPreview styleName="radix-baseui" name="native-select-demo" />
 
 ## Installation
 
@@ -39,7 +39,7 @@ npx shadcn@latest add native-select
 <ComponentSource
   name="native-select"
   title="components/ui/native-select.tsx"
-  styleName="radix-nova"
+  styleName="radix-baseui"
 />
 
 <Step>Update the import paths to match your project setup.</Step>
@@ -102,34 +102,25 @@ NativeSelect
 
 Use `NativeSelectOptGroup` to organize options into categories.
 
-<ComponentPreview styleName="radix-nova" name="native-select-groups" />
+<ComponentPreview styleName="radix-baseui" name="native-select-groups" />
 
 ## Disabled
 
 Add the `disabled` prop to the `NativeSelect` component to disable the select.
 
-<ComponentPreview styleName="radix-nova" name="native-select-disabled" />
+<ComponentPreview styleName="radix-baseui" name="native-select-disabled" />
 
 ## Invalid
 
 Use `aria-invalid` to show validation errors and the `data-invalid` attribute to the `Field` component for styling.
 
-<ComponentPreview styleName="radix-nova" name="native-select-invalid" />
+<ComponentPreview styleName="radix-baseui" name="native-select-invalid" />
 
 ## Native Select vs Select
 
 - Use `NativeSelect` for native browser behavior, better performance, or mobile-optimized dropdowns.
 - Use `Select` for custom styling, animations, or complex interactions.
 
-## RTL
-
-To enable RTL support in shadcn/ui, see the [RTL configuration guide](/docs/rtl).
-
-<ComponentPreview
-  styleName="radix-nova"
-  name="native-select-rtl"
-  direction="rtl"
-/>
 
 ## API Reference
 

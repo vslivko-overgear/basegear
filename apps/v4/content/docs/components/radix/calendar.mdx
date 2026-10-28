@@ -8,7 +8,7 @@ links:
 ---
 
 <ComponentPreview
-  styleName="radix-nova"
+  styleName="radix-baseui"
   name="calendar-demo"
   previewClassName="h-96"
 />
@@ -48,7 +48,7 @@ The `Calendar` component uses the `Button` component. Make sure you have it inst
 <ComponentSource
   name="calendar"
   title="components/ui/calendar.tsx"
-  styleName="radix-nova"
+  styleName="radix-baseui"
 />
 
 <Step>Update the import paths to match your project setup.</Step>
@@ -98,7 +98,7 @@ To use the Persian calendar, edit `components/ui/calendar.tsx` and replace `reac
 ```
 
 <ComponentPreview
-  styleName="radix-nova"
+  styleName="radix-baseui"
   name="calendar-hijri"
   title="Persian / Hijri / Jalali Calendar"
   description="A Persian calendar."
@@ -138,7 +138,7 @@ export function CalendarWithTimezone() {
 A basic calendar component. We used `className="rounded-lg border"` to style the calendar.
 
 <ComponentPreview
-  styleName="radix-nova"
+  styleName="radix-baseui"
   name="calendar-basic"
   previewClassName="h-96"
 />
@@ -148,7 +148,7 @@ A basic calendar component. We used `className="rounded-lg border"` to style the
 Use the `mode="range"` prop to enable range selection.
 
 <ComponentPreview
-  styleName="radix-nova"
+  styleName="radix-baseui"
   name="calendar-range"
   previewClassName="h-[36rem] md:h-96"
 />
@@ -158,7 +158,7 @@ Use the `mode="range"` prop to enable range selection.
 Use `captionLayout="dropdown"` to show month and year dropdowns.
 
 <ComponentPreview
-  styleName="radix-nova"
+  styleName="radix-baseui"
   name="calendar-caption"
   previewClassName="h-96"
 />
@@ -166,7 +166,7 @@ Use `captionLayout="dropdown"` to show month and year dropdowns.
 ## Presets
 
 <ComponentPreview
-  styleName="radix-nova"
+  styleName="radix-baseui"
   name="calendar-presets"
   previewClassName="h-[650px]"
 />
@@ -174,7 +174,7 @@ Use `captionLayout="dropdown"` to show month and year dropdowns.
 ## Date and Time Picker
 
 <ComponentPreview
-  styleName="radix-nova"
+  styleName="radix-baseui"
   name="calendar-time"
   previewClassName="h-[600px]"
 />
@@ -182,7 +182,7 @@ Use `captionLayout="dropdown"` to show month and year dropdowns.
 ## Booked dates
 
 <ComponentPreview
-  styleName="radix-nova"
+  styleName="radix-baseui"
   name="calendar-booked-dates"
   previewClassName="h-96"
 />
@@ -190,7 +190,7 @@ Use `captionLayout="dropdown"` to show month and year dropdowns.
 ## Custom Cell Size
 
 <ComponentPreview
-  styleName="radix-nova"
+  styleName="radix-baseui"
   name="calendar-custom-days"
   title="Custom Cell Size"
   description="A calendar with custom cell size that's responsive."
@@ -224,37 +224,11 @@ Or use fixed values:
 Use `showWeekNumber` to show week numbers.
 
 <ComponentPreview
-  styleName="radix-nova"
+  styleName="radix-baseui"
   name="calendar-week-numbers"
   previewClassName="h-96"
 />
 
-## RTL
-
-To enable RTL support in shadcn/ui, see the [RTL configuration guide](/docs/rtl).
-
-See also the [Hijri Guide](#persian--hijri--jalali-calendar) for enabling the Persian / Hijri / Jalali calendar.
-
-<ComponentPreview
-  styleName="radix-nova"
-  name="calendar-rtl"
-  direction="rtl"
-  previewClassName="h-96"
-/>
-
-When using RTL, import the locale from `react-day-picker/locale` and pass both the `locale` and `dir` props to the Calendar component:
-
-```tsx showLineNumbers
-import { arSA } from "react-day-picker/locale"
-
-;<Calendar
-  mode="single"
-  selected={date}
-  onSelect={setDate}
-  locale={arSA}
-  dir="rtl"
-/>
-```
 
 ## API Reference
 

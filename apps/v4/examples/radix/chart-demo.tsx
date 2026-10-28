@@ -9,13 +9,13 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york-v4/ui/card"
+} from "@/styles/radix-baseui/ui/card"
 import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
   type ChartConfig,
-} from "@/registry/new-york-v4/ui/chart"
+} from "@/styles/radix-baseui/ui/chart"
 
 export const description = "An interactive bar chart"
 

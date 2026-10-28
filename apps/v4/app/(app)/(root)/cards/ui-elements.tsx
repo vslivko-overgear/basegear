@@ -17,12 +17,12 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@/styles/base-rhea/ui/alert-dialog"
-import { Badge } from "@/styles/base-rhea/ui/badge"
-import { Button } from "@/styles/base-rhea/ui/button"
-import { ButtonGroup } from "@/styles/base-rhea/ui/button-group"
-import { Card, CardContent } from "@/styles/base-rhea/ui/card"
-import { Checkbox } from "@/styles/base-rhea/ui/checkbox"
+} from "@/styles/radix-baseui/ui/alert-dialog"
+import { Badge } from "@/styles/radix-baseui/ui/badge"
+import { Button } from "@/styles/radix-baseui/ui/button"
+import { ButtonGroup } from "@/styles/radix-baseui/ui/button-group"
+import { Card, CardContent } from "@/styles/radix-baseui/ui/card"
+import { Checkbox } from "@/styles/radix-baseui/ui/checkbox"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -31,23 +31,26 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/styles/base-rhea/ui/dropdown-menu"
-import { Field, FieldGroup } from "@/styles/base-rhea/ui/field"
+} from "@/styles/radix-baseui/ui/dropdown-menu"
+import { Field, FieldGroup } from "@/styles/radix-baseui/ui/field"
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
   InputGroupText,
-} from "@/styles/base-rhea/ui/input-group"
-import { RadioGroup, RadioGroupItem } from "@/styles/base-rhea/ui/radio-group"
-import { Switch } from "@/styles/base-rhea/ui/switch"
+} from "@/styles/radix-baseui/ui/input-group"
+import {
+  RadioGroup,
+  RadioGroupItem,
+} from "@/styles/radix-baseui/ui/radio-group"
+import { Switch } from "@/styles/radix-baseui/ui/switch"
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/styles/base-rhea/ui/tabs"
-import { Textarea } from "@/styles/base-rhea/ui/textarea"
+} from "@/styles/radix-baseui/ui/tabs"
+import { Textarea } from "@/styles/radix-baseui/ui/textarea"
 
 export function UIElements() {
   return (
@@ -111,11 +114,15 @@ export function UIElements() {
         </div>
         <div className="flex items-center gap-4">
           <AlertDialog>
-            <AlertDialogTrigger render={<Button variant="outline" />}>
-              <span className="hidden md:flex style-sera:md:hidden">
-                Alert Dialog
-              </span>
-              <span className="flex md:hidden style-sera:md:flex">Dialog</span>
+            <AlertDialogTrigger asChild>
+              <Button variant="outline">
+                <span className="style-sera:md:hidden hidden md:flex">
+                  Alert Dialog
+                </span>
+                <span className="style-sera:md:flex flex md:hidden">
+                  Dialog
+                </span>
+              </Button>
             </AlertDialogTrigger>
             <AlertDialogContent size="sm" className="theme-neutral">
               <AlertDialogHeader>
@@ -134,19 +141,17 @@ export function UIElements() {
           <ButtonGroup className="ml-auto">
             <Button variant="outline">
               <span className="style-sera:hidden">Button Group</span>
-              <span className="hidden style-sera:block">Group</span>
+              <span className="style-sera:block hidden">Group</span>
             </Button>
             <DropdownMenu>
-              <DropdownMenuTrigger
-                render={
-                  <Button
-                    variant="outline"
-                    size="icon"
-                    aria-label="Open quick actions"
-                  />
-                }
-              >
-                <HugeiconsIcon icon={ArrowUp01Icon} strokeWidth={2} />
+              <DropdownMenuTrigger asChild>
+                <Button
+                  variant="outline"
+                  size="icon"
+                  aria-label="Open quick actions"
+                >
+                  <HugeiconsIcon icon={ArrowUp01Icon} strokeWidth={2} />
+                </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" side="top" className="w-40">
                 <DropdownMenuGroup>

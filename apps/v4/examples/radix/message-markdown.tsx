@@ -1,6 +1,6 @@
 import { Markdown } from "@/components/markdown"
-import { Bubble, BubbleContent } from "@/styles/radix-rhea/ui/bubble"
-import { Message, MessageContent } from "@/styles/radix-rhea/ui/message"
+import { Bubble, BubbleContent } from "@/styles/radix-baseui/ui/bubble"
+import { Message, MessageContent } from "@/styles/radix-baseui/ui/message"
 
 const response = `Here's how to render markdown in a message:
 

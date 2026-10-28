@@ -3,7 +3,7 @@ import {
   PaginationContent,
   PaginationItem,
   PaginationLink,
-} from "@/styles/radix-nova/ui/pagination"
+} from "@/styles/radix-baseui/ui/pagination"
 
 export function PaginationSimple() {
   return (

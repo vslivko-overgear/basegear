@@ -17,7 +17,8 @@ import { type source } from "@/lib/source"
 import { useConfig } from "@/hooks/use-config"
 import { useMutationObserver } from "@/hooks/use-mutation-observer"
 import { copyToClipboardWithMeta } from "@/components/copy-button"
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { STYLES } from "@/registry/styles"
+import { Button } from "@/styles/radix-baseui/ui/button"
 import {
   Command,
   CommandEmpty,
@@ -25,7 +26,7 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/new-york-v4/ui/command"
+} from "@/styles/radix-baseui/ui/command"
 import {
   Dialog,
   DialogDescription,
@@ -34,10 +35,9 @@ import {
   DialogPortal,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/new-york-v4/ui/dialog"
-import { Separator } from "@/registry/new-york-v4/ui/separator"
-import { Spinner } from "@/registry/new-york-v4/ui/spinner"
-import { STYLES } from "@/registry/styles"
+} from "@/styles/radix-baseui/ui/dialog"
+import { Separator } from "@/styles/radix-baseui/ui/separator"
+import { Spinner } from "@/styles/radix-baseui/ui/spinner"
 
 export function CommandMenu({
   tree,

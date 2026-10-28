@@ -1,6 +1,6 @@
 import { CircleCheckIcon } from "lucide-react"
 
-import { Badge } from "@/styles/radix-rhea/ui/badge"
+import { Badge } from "@/styles/radix-baseui/ui/badge"
 import {
   Trace,
   TraceCollapsible,
@@ -10,7 +10,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/radix-rhea/ui/trace"
+} from "@/styles/radix-baseui/ui/trace"
 
 export function SubagentDetails() {
   return (

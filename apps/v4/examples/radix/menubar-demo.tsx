@@ -13,7 +13,7 @@ import {
   MenubarSubContent,
   MenubarSubTrigger,
   MenubarTrigger,
-} from "@/styles/radix-nova/ui/menubar"
+} from "@/styles/radix-baseui/ui/menubar"
 
 export default function MenubarDemo() {
   return (

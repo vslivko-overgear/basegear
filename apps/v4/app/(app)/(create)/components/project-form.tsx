@@ -19,14 +19,14 @@ import {
   type BaseName,
   type DesignSystemConfig,
 } from "@/registry/config"
-import { Button } from "@/styles/base-nova/ui/button"
+import { Button } from "@/styles/radix-baseui/ui/button"
 import {
   Dialog,
   DialogContent,
   DialogFooter,
   DialogHeader,
   DialogTrigger,
-} from "@/styles/base-nova/ui/dialog"
+} from "@/styles/radix-baseui/ui/dialog"
 import {
   Field,
   FieldContent,
@@ -37,19 +37,22 @@ import {
   FieldSeparator,
   FieldSet,
   FieldTitle,
-} from "@/styles/base-nova/ui/field"
-import { RadioGroup, RadioGroupItem } from "@/styles/base-nova/ui/radio-group"
-import { Switch } from "@/styles/base-nova/ui/switch"
+} from "@/styles/radix-baseui/ui/field"
+import {
+  RadioGroup,
+  RadioGroupItem,
+} from "@/styles/radix-baseui/ui/radio-group"
+import { Switch } from "@/styles/radix-baseui/ui/switch"
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/styles/base-nova/ui/tabs"
+} from "@/styles/radix-baseui/ui/tabs"
 import {
   ToggleGroup,
   ToggleGroupItem,
-} from "@/styles/base-nova/ui/toggle-group"
+} from "@/styles/radix-baseui/ui/toggle-group"
 import { usePresetCode } from "@/app/(app)/(create)/hooks/use-design-system"
 import {
   useDesignSystemSearchParams,
@@ -207,7 +210,7 @@ export function ProjectForm({
 
   const applyCommand = applyCommands[packageManager]
   const themeConfig = React.useMemo<DesignSystemConfig>(() => {
-    const isRadiusLocked = params.style === "lyra" || params.style === "sera"
+    const isRadiusLocked = false
 
     return {
       ...DEFAULT_CONFIG,
@@ -300,20 +303,21 @@ export function ProjectForm({
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger render={<Button className={cn(className)} />}>
-        Get Code
+      <DialogTrigger asChild>
+        <Button className={cn(className)}>Get Code</Button>
       </DialogTrigger>
       <DialogContent className="dark top-[64px] no-scrollbar flex max-h-[calc(100svh-2rem)] translate-y-0 flex-col rounded-2xl p-0 shadow-xl **:data-[slot=dialog-close]:top-4.5 **:data-[slot=dialog-close]:right-4 **:data-[slot=field-separator]:h-2 sm:max-w-md">
         <div className="flex min-w-0 flex-1 flex-col gap-0 overflow-hidden rounded-2xl">
           <DialogHeader className="border-b px-6 py-5">
             <ToggleGroup
-              value={[activeTab]}
-              onValueChange={(values) =>
-                setActiveTab((values[0] as typeof activeTab) ?? "new-project")
+              type="single"
+              value={activeTab}
+              onValueChange={(value) =>
+                value && setActiveTab(value as typeof activeTab)
               }
               aria-label="Project type"
               spacing={2}
-              className="**:data-[slot=toggle-group-item]:data-pressed:bg-neutral-700/70"
+              className="**:data-[slot=toggle-group-item]:data-[state=on]:bg-neutral-700/70"
             >
               <ToggleGroupItem value="new-project">New Project</ToggleGroupItem>
               <ToggleGroupItem value="existing-project">

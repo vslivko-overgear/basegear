@@ -1,5 +1,5 @@
-import { Field, FieldLabel } from "@/styles/radix-nova/ui/field"
-import { NumberInput } from "@/styles/radix-nova/ui/number-input"
+import { Field, FieldLabel } from "@/styles/radix-baseui/ui/field"
+import { NumberInput } from "@/styles/radix-baseui/ui/number-input"
 
 export function NumberInputDemo() {
   return (

@@ -18,12 +18,7 @@ export async function BlockDisplay({
   name: string
   styleName: Style["name"]
 }) {
-  // Blocks that exist only in the base registries (no legacy new-york-v4 copy) render with base-nova.
-  const legacyItem = await getCachedRegistryItem(name, styleName)
-  const resolvedStyleName = legacyItem?.files ? styleName : "base-nova"
-  const item = legacyItem?.files
-    ? legacyItem
-    : await getCachedRegistryItem(name, resolvedStyleName)
+  const item = await getCachedRegistryItem(name, styleName)
 
   if (!item?.files) {
     return null
@@ -39,11 +34,11 @@ export async function BlockDisplay({
       item={item}
       tree={tree}
       highlightedFiles={highlightedFiles}
-      styleName={resolvedStyleName}
+      styleName={styleName}
     >
       <ComponentPreview
         name={item.name}
-        styleName={resolvedStyleName}
+        styleName={styleName}
         hideCode
         className={cn(
           "my-0 **:[.preview]:h-auto **:[.preview]:p-4 **:[.preview>.p-6]:p-0",

@@ -3,15 +3,15 @@
 import * as React from "react"
 import { ArrowUpIcon, PlusIcon } from "lucide-react"
 
-import { Bubble, BubbleContent } from "@/styles/radix-rhea/ui/bubble"
-import { Button } from "@/styles/radix-rhea/ui/button"
+import { Bubble, BubbleContent } from "@/styles/radix-baseui/ui/bubble"
+import { Button } from "@/styles/radix-baseui/ui/button"
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
   InputGroupTextarea,
-} from "@/styles/radix-rhea/ui/input-group"
-import { Message, MessageContent } from "@/styles/radix-rhea/ui/message"
+} from "@/styles/radix-baseui/ui/input-group"
+import { Message, MessageContent } from "@/styles/radix-baseui/ui/message"
 
 const suggestions = [
   "Add a dark mode toggle",

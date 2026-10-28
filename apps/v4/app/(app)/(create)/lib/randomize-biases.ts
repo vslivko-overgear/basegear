@@ -62,27 +62,8 @@ export const RANDOMIZE_BIASES: RandomizeBiases = {
   baseColors: (baseColors) => {
     return baseColors.filter((c) => c.name !== "gray")
   },
-  fonts: (fonts, context) => {
-    // When style is lyra, only use mono fonts.
-    if (context.style === "lyra") {
-      return fonts.filter((font) => font.value === "jetbrains-mono")
-    }
-
-    return fonts
-  },
-  radius: (radii, context) => {
-    // When style is lyra, always use "none" radius.
-    if (context.style === "lyra") {
-      return radii.filter((radius) => radius.name === "none")
-    }
-
-    // Rhea does not support the "large" radius.
-    if (context.style === "rhea") {
-      return radii.filter((radius) => radius.name !== "large")
-    }
-
-    return radii
-  },
+  fonts: (fonts) => fonts,
+  radius: (radii) => radii,
   chartColors: (chartColors, context) => {
     // When theme has a pairing, restrict chart colors to the paired values.
     const pairing = context.theme ? CHART_COLOR_PAIRINGS[context.theme] : null

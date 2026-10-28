@@ -4,7 +4,6 @@ import * as React from "react"
 import Link from "next/link"
 import { IconAlertCircle } from "@tabler/icons-react"
 import { cn } from "cn"
-import { I18nProvider } from "react-aria-components"
 
 import {
   LanguageProvider,
@@ -13,15 +12,14 @@ import {
   useTranslation,
   type Translations,
 } from "@/components/language-selector"
-import { DirectionProvider as BaseDirectionProvider } from "@/registry/bases/base/ui/direction"
 import { DirectionProvider as RadixDirectionProvider } from "@/registry/bases/radix/ui/direction"
-import { Button } from "@/registry/new-york-v4/ui/button"
-import { Separator } from "@/registry/new-york-v4/ui/separator"
+import { Button } from "@/styles/radix-baseui/ui/button"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/styles/base-nova/ui/popover"
+} from "@/styles/radix-baseui/ui/popover"
+import { Separator } from "@/styles/radix-baseui/ui/separator"
 
 export function ComponentPreviewTabs({
   className,
@@ -64,18 +62,16 @@ export function ComponentPreviewTabs({
           <div className="flex h-16 items-center border-b px-4">
             <RtlLanguageSelector />
             <Popover>
-              <PopoverTrigger
-                render={
-                  <Button
-                    variant="ghost"
-                    size="icon-sm"
-                    className="ml-auto size-7"
-                  >
-                    <IconAlertCircle />
-                    <span className="sr-only">Toggle</span>
-                  </Button>
-                }
-              ></PopoverTrigger>
+              <PopoverTrigger asChild>
+                <Button
+                  variant="ghost"
+                  size="icon-sm"
+                  className="ml-auto size-7"
+                >
+                  <IconAlertCircle />
+                  <span className="sr-only">Toggle</span>
+                </Button>
+              </PopoverTrigger>
               <PopoverContent
                 side="bottom"
                 align="end"
@@ -258,26 +254,6 @@ function DirectionProviderWrapper({
   // It will fall back to local state with defaultLanguage.
   const translation = useTranslation(directionTranslations, "ar")
   const dir = explicitDir ?? translation.dir
-
-  if (base === "base") {
-    return (
-      <BaseDirectionProvider direction={dir}>{children}</BaseDirectionProvider>
-    )
-  }
-
-  if (base === "aria") {
-    return (
-      <I18nProvider
-        locale={
-          explicitDir === "ltr"
-            ? "en"
-            : (translation.locale ?? translation.language)
-        }
-      >
-        {children}
-      </I18nProvider>
-    )
-  }
 
   return <RadixDirectionProvider dir={dir}>{children}</RadixDirectionProvider>
 }

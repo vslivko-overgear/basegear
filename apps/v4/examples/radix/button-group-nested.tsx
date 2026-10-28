@@ -1,18 +1,18 @@
 import { AudioLinesIcon, PlusIcon } from "lucide-react"
 
-import { Button } from "@/styles/radix-nova/ui/button"
-import { ButtonGroup } from "@/styles/radix-nova/ui/button-group"
-import { Input } from "@/styles/radix-nova/ui/input"
+import { Button } from "@/styles/radix-baseui/ui/button"
+import { ButtonGroup } from "@/styles/radix-baseui/ui/button-group"
+import { Input } from "@/styles/radix-baseui/ui/input"
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@/styles/radix-nova/ui/input-group"
+} from "@/styles/radix-baseui/ui/input-group"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/styles/radix-nova/ui/tooltip"
+} from "@/styles/radix-baseui/ui/tooltip"
 
 export function ButtonGroupNested() {
   return (

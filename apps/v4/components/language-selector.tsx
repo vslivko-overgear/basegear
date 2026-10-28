@@ -10,7 +10,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/styles/base-nova/ui/select"
+} from "@/styles/radix-baseui/ui/select"
 
 export type Language = "en" | "ar" | "he"
 
@@ -94,7 +94,6 @@ export function LanguageSelector({
 }) {
   return (
     <Select
-      items={languageOptions}
       value={value}
       onValueChange={(value) => onValueChange(value as Language)}
     >

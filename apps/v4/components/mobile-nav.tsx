@@ -9,22 +9,18 @@ import { PAGES_NEW } from "@/lib/docs"
 import { showMcpDocs } from "@/lib/flags"
 import { getCurrentBase, getPagesFromFolder } from "@/lib/page-tree"
 import { type source } from "@/lib/source"
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/styles/radix-baseui/ui/button"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/new-york-v4/ui/popover"
+} from "@/styles/radix-baseui/ui/popover"
 
 const TOP_LEVEL_SECTIONS = [
   { name: "Introduction", href: "/docs" },
   {
     name: "Components",
     href: "/docs/components",
-  },
-  {
-    name: "AI Elements",
-    href: "/docs/ai-elements",
   },
   {
     name: "Installation",
@@ -39,10 +35,6 @@ const TOP_LEVEL_SECTIONS = [
     href: "/docs/cli",
   },
   {
-    name: "RTL",
-    href: "/docs/rtl",
-  },
-  {
     name: "Skills",
     href: "/docs/skills",
   },
@@ -53,14 +45,6 @@ const TOP_LEVEL_SECTIONS = [
   {
     name: "Registry",
     href: "/docs/registry",
-  },
-  {
-    name: "Forms",
-    href: "/docs/forms",
-  },
-  {
-    name: "Changelog",
-    href: "/docs/changelog",
   },
 ]
 

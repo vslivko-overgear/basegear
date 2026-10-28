@@ -8,7 +8,7 @@ import {
   type ExtraProps,
 } from "streamdown"
 
-import { useHighlightedCode } from "@/registry/bases/base/hooks/use-highlighted-code"
+import { useHighlightedCode } from "@/registry/bases/radix/hooks/use-highlighted-code"
 import {
   CodeBlock,
   CodeBlockActions,
@@ -17,7 +17,7 @@ import {
   CodeBlockHeader,
   CodeBlockLine,
   CodeBlockTitle,
-} from "@/styles/base-rhea/ui/code-block"
+} from "@/styles/radix-baseui/ui/code-block"
 
 function MarkdownCodeBlock({
   code,

@@ -6,7 +6,7 @@ component: true
 ---
 
 <ComponentPreview
-  styleName="radix-nova"
+  styleName="radix-baseui"
   name="textarea-demo"
   previewClassName="*:max-w-xs"
 />
@@ -36,7 +36,7 @@ npx shadcn@latest add textarea
 <ComponentSource
   name="textarea"
   title="components/ui/textarea.tsx"
-  styleName="radix-nova"
+  styleName="radix-baseui"
 />
 
 <Step>Update the import paths to match your project setup.</Step>
@@ -62,7 +62,7 @@ import { Textarea } from "@/components/ui/textarea"
 Use `Field`, `FieldLabel`, and `FieldDescription` to create a textarea with a label and description.
 
 <ComponentPreview
-  styleName="radix-nova"
+  styleName="radix-baseui"
   name="textarea-field"
   previewClassName="*:max-w-xs"
 />
@@ -72,7 +72,7 @@ Use `Field`, `FieldLabel`, and `FieldDescription` to create a textarea with a la
 Use the `disabled` prop to disable the textarea. To style the disabled state, add the `data-disabled` attribute to the `Field` component.
 
 <ComponentPreview
-  styleName="radix-nova"
+  styleName="radix-baseui"
   name="textarea-disabled"
   previewClassName="*:max-w-xs"
 />
@@ -82,7 +82,7 @@ Use the `disabled` prop to disable the textarea. To style the disabled state, ad
 Use the `aria-invalid` prop to mark the textarea as invalid. To style the invalid state, add the `data-invalid` attribute to the `Field` component.
 
 <ComponentPreview
-  styleName="radix-nova"
+  styleName="radix-baseui"
   name="textarea-invalid"
   previewClassName="*:max-w-xs"
 />
@@ -92,13 +92,8 @@ Use the `aria-invalid` prop to mark the textarea as invalid. To style the invali
 Pair with `Button` to create a textarea with a submit button.
 
 <ComponentPreview
-  styleName="radix-nova"
+  styleName="radix-baseui"
   name="textarea-button"
   previewClassName="*:max-w-xs"
 />
 
-## RTL
-
-To enable RTL support in shadcn/ui, see the [RTL configuration guide](/docs/rtl).
-
-<ComponentPreview styleName="radix-nova" name="textarea-rtl" direction="rtl" />

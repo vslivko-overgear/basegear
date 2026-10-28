@@ -11,7 +11,7 @@ import {
 import { getDefaultClassNames, type DayButton } from "react-day-picker"
 import { DayPicker } from "react-day-picker/persian"
 
-import { Button, buttonVariants } from "@/styles/radix-nova/ui/button"
+import { Button, buttonVariants } from "@/styles/radix-baseui/ui/button"
 
 const vazirmatn = Vazirmatn({ subsets: ["arabic"] })
 

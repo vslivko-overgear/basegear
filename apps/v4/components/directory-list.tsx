@@ -14,7 +14,7 @@ import {
   DirectoryAddButton,
   DirectoryAddProvider,
 } from "@/components/directory-add-button"
-import { Button, buttonVariants } from "@/styles/base-nova/ui/button"
+import { Button, buttonVariants } from "@/styles/radix-baseui/ui/button"
 import {
   Item,
   ItemActions,
@@ -25,14 +25,14 @@ import {
   ItemMedia,
   ItemSeparator,
   ItemTitle,
-} from "@/styles/base-nova/ui/item"
+} from "@/styles/radix-baseui/ui/item"
 import {
   Pagination,
   PaginationContent,
   PaginationEllipsis,
   PaginationItem,
-} from "@/styles/base-nova/ui/pagination"
-import { Skeleton } from "@/styles/base-nova/ui/skeleton"
+} from "@/styles/radix-baseui/ui/pagination"
+import { Skeleton } from "@/styles/radix-baseui/ui/skeleton"
 
 import { SearchDirectory } from "./directory-search"
 

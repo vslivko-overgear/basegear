@@ -10,8 +10,8 @@ import {
 import { CircleCheckIcon, LoaderCircleIcon, TerminalIcon } from "lucide-react"
 
 import { createChat, getMessageText } from "@/lib/ai"
-import { Bubble, BubbleContent } from "@/styles/radix-rhea/ui/bubble"
-import { Button } from "@/styles/radix-rhea/ui/button"
+import { Bubble, BubbleContent } from "@/styles/radix-baseui/ui/bubble"
+import { Button } from "@/styles/radix-baseui/ui/button"
 import {
   Item,
   ItemActions,
@@ -19,8 +19,8 @@ import {
   ItemDescription,
   ItemMedia,
   ItemTitle,
-} from "@/styles/radix-rhea/ui/item"
-import { Message, MessageContent } from "@/styles/radix-rhea/ui/message"
+} from "@/styles/radix-baseui/ui/item"
+import { Message, MessageContent } from "@/styles/radix-baseui/ui/message"
 import {
   Trace,
   TraceCollapsible,
@@ -29,7 +29,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/radix-rhea/ui/trace"
+} from "@/styles/radix-baseui/ui/trace"
 
 type ChatMessage = UIMessage<
   unknown,

@@ -8,7 +8,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/radix-rhea/ui/trace"
+} from "@/styles/radix-baseui/ui/trace"
 
 const STACK = `TypeError: Cannot read properties of undefined (reading 'total')
     at formatInvoice (app/lib/billing.ts:42:31)

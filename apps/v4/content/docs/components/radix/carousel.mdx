@@ -9,7 +9,7 @@ links:
 ---
 
 <ComponentPreview
-  styleName="radix-nova"
+  styleName="radix-baseui"
   name="carousel-demo"
   previewClassName="h-80 sm:h-[32rem]"
 />
@@ -50,7 +50,7 @@ npm install embla-carousel-react
 <ComponentSource
   name="carousel"
   title="components/ui/carousel.tsx"
-  styleName="radix-nova"
+  styleName="radix-baseui"
 />
 
 <Step>Update the import paths to match your project setup.</Step>
@@ -102,7 +102,7 @@ Carousel
 
 To set the size of the items, you can use the `basis` utility class on the `<CarouselItem />`.
 
-<ComponentPreview styleName="radix-nova" name="carousel-size" />
+<ComponentPreview styleName="radix-baseui" name="carousel-size" />
 
 ```tsx showLineNumbers {4-6}
 // 33% of the carousel width.
@@ -130,7 +130,7 @@ To set the size of the items, you can use the `basis` utility class on the `<Car
 
 To set the spacing between the items, we use a `pl-[VALUE]` utility on the `<CarouselItem />` and a negative `-ml-[VALUE]` on the `<CarouselContent />`.
 
-<ComponentPreview styleName="radix-nova" name="carousel-spacing" />
+<ComponentPreview styleName="radix-baseui" name="carousel-spacing" />
 
 ```tsx showLineNumbers /-ml-4/ /pl-4/
 <Carousel>
@@ -157,7 +157,7 @@ To set the spacing between the items, we use a `pl-[VALUE]` utility on the `<Car
 Use the `orientation` prop to set the orientation of the carousel.
 
 <ComponentPreview
-  styleName="radix-nova"
+  styleName="radix-baseui"
   name="carousel-orientation"
   previewClassName="h-[32rem]"
 />
@@ -196,7 +196,7 @@ You can pass options to the carousel using the `opts` prop. See the [Embla Carou
 Use a state and the `setApi` props to get an instance of the carousel API.
 
 <ComponentPreview
-  styleName="radix-nova"
+  styleName="radix-baseui"
   name="carousel-api"
   previewClassName="sm:h-[32rem]"
 />
@@ -291,42 +291,11 @@ export function Example() {
 ```
 
 <ComponentPreview
-  styleName="radix-nova"
+  styleName="radix-baseui"
   name="carousel-plugin"
   previewClassName="sm:h-[32rem]"
 />
 
-## RTL
-
-To enable RTL support in shadcn/ui, see the [RTL configuration guide](/docs/rtl).
-
-<ComponentPreview
-  styleName="radix-nova"
-  name="carousel-rtl"
-  direction="rtl"
-  previewClassName="h-80 sm:h-[32rem]"
-/>
-
-When localizing the carousel for RTL languages, you need to set the `direction` option in the `opts` prop to match the text direction. This ensures the carousel scrolls in the correct direction.
-
-```tsx showLineNumbers {2-5}
-<Carousel
-  dir={dir}
-  opts={{
-    direction: dir,
-  }}
->
-  <CarouselContent>
-    <CarouselItem>...</CarouselItem>
-    <CarouselItem>...</CarouselItem>
-    <CarouselItem>...</CarouselItem>
-  </CarouselContent>
-  <CarouselPrevious className="rtl:rotate-180" />
-  <CarouselNext className="rtl:rotate-180" />
-</Carousel>
-```
-
-The `direction` option accepts `"ltr"` or `"rtl"` and should match the `dir` prop value. You may also want to rotate the navigation buttons using the `rtl:rotate-180` class to ensure they point in the correct direction.
 
 ## API Reference
 

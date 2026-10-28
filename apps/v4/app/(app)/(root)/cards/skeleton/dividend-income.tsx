@@ -3,8 +3,8 @@ import {
   CardAction,
   CardContent,
   CardHeader,
-} from "@/styles/base-rhea/ui/card"
-import { Skeleton } from "@/styles/base-rhea/ui/skeleton"
+} from "@/styles/radix-baseui/ui/card"
+import { Skeleton } from "@/styles/radix-baseui/ui/skeleton"
 
 const rows = [0, 1, 2, 3]
 const miniBars = [40, 60, 80, 50]

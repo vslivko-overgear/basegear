@@ -5,15 +5,15 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/styles/base-rhea/ui/card"
+} from "@/styles/radix-baseui/ui/card"
 import {
   Item,
   ItemContent,
   ItemDescription,
   ItemFooter,
   ItemGroup,
-} from "@/styles/base-rhea/ui/item"
-import { Progress } from "@/styles/base-rhea/ui/progress"
+} from "@/styles/radix-baseui/ui/item"
+import { Progress } from "@/styles/radix-baseui/ui/progress"
 
 export function SavingsTargets() {
   return (

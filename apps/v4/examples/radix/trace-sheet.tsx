@@ -7,13 +7,13 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/styles/radix-rhea/ui/sheet"
+} from "@/styles/radix-baseui/ui/sheet"
 import {
   Trace,
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@/styles/radix-rhea/ui/trace"
+} from "@/styles/radix-baseui/ui/trace"
 
 export function TraceSheet() {
   return (

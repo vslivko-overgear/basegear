@@ -1,13 +1,13 @@
 import { InboxIcon } from "lucide-react"
 
-import { Button } from "@/styles/radix-nova/ui/button"
+import { Button } from "@/styles/radix-baseui/ui/button"
 import {
   Status,
   StatusActions,
   StatusDescription,
   StatusMedia,
   StatusTitle,
-} from "@/styles/radix-nova/ui/status"
+} from "@/styles/radix-baseui/ui/status"
 
 export function StatusDemo() {
   return (

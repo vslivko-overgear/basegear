@@ -1,4 +1,4 @@
-import { Center, Grid, Section, Stack } from "@/styles/radix-nova/ui/layout"
+import { Center, Grid, Section, Stack } from "@/styles/radix-baseui/ui/layout"
 
 function Box({ children }: { children: React.ReactNode }) {
   return (

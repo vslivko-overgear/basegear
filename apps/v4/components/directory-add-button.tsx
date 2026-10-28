@@ -6,7 +6,7 @@ import { IconCheck, IconCopy, IconPlus } from "@tabler/icons-react"
 import { useConfig } from "@/hooks/use-config"
 import { useIsMobile } from "@/hooks/use-mobile"
 import { copyToClipboardWithMeta } from "@/components/copy-button"
-import { Button } from "@/styles/base-nova/ui/button"
+import { Button } from "@/styles/radix-baseui/ui/button"
 import {
   Dialog,
   DialogClose,
@@ -15,7 +15,7 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from "@/styles/base-nova/ui/dialog"
+} from "@/styles/radix-baseui/ui/dialog"
 import {
   Drawer,
   DrawerClose,
@@ -24,18 +24,18 @@ import {
   DrawerFooter,
   DrawerHeader,
   DrawerTitle,
-} from "@/styles/base-nova/ui/drawer"
+} from "@/styles/radix-baseui/ui/drawer"
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/styles/base-nova/ui/tabs"
+} from "@/styles/radix-baseui/ui/tabs"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/styles/base-nova/ui/tooltip"
+} from "@/styles/radix-baseui/ui/tooltip"
 
 const DirectoryAddContext = React.createContext<{
   open: (registry: { name: string }) => void
@@ -140,18 +140,16 @@ export function DirectoryAddProvider({
           <TabsTrigger value="bun">bun</TabsTrigger>
         </TabsList>
         <Tooltip>
-          <TooltipTrigger
-            render={
-              <Button
-                size="icon-sm"
-                variant="ghost"
-                className="ml-auto"
-                onClick={handleCopy}
-              />
-            }
-          >
-            {hasCopied ? <IconCheck /> : <IconCopy />}
-            <span className="sr-only">Copy command</span>
+          <TooltipTrigger asChild>
+            <Button
+              size="icon-sm"
+              variant="ghost"
+              className="ml-auto"
+              onClick={handleCopy}
+            >
+              {hasCopied ? <IconCheck /> : <IconCopy />}
+              <span className="sr-only">Copy command</span>
+            </Button>
           </TooltipTrigger>
           <TooltipContent>
             {hasCopied ? "Copied!" : "Copy command"}
@@ -185,7 +183,9 @@ export function DirectoryAddProvider({
             </DrawerHeader>
             <div className="px-4">{Content}</div>
             <DrawerFooter>
-              <DrawerClose render={<Button size="sm" />}>Done</DrawerClose>
+              <DrawerClose asChild>
+                <Button size="sm">Done</Button>
+              </DrawerClose>
             </DrawerFooter>
           </DrawerContent>
         </Drawer>
@@ -201,8 +201,10 @@ export function DirectoryAddProvider({
             </DialogHeader>
             {Content}
             <DialogFooter>
-              <DialogClose render={<Button size="sm" variant="outline" />}>
-                Done
+              <DialogClose asChild>
+                <Button size="sm" variant="outline">
+                  Done
+                </Button>
               </DialogClose>
             </DialogFooter>
           </DialogContent>

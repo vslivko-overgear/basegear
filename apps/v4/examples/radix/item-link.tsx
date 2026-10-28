@@ -6,7 +6,7 @@ import {
   ItemContent,
   ItemDescription,
   ItemTitle,
-} from "@/styles/radix-nova/ui/item"
+} from "@/styles/radix-baseui/ui/item"
 
 export function ItemLink() {
   return (

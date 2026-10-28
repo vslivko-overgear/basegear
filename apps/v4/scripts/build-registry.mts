@@ -38,7 +38,7 @@ import { STYLES } from "@/registry/styles"
  * - registry/__index__.tsx
  * - examples/__index__.tsx
  * - styles/<base-style>/ui/*
- * - styles/<base-style>/ui-rtl/* for base-nova and radix-nova only
+ * - styles/<base-style>/ui-rtl/* for radix-baseui and radix-baseui only
  * - public/r/*
  *
  * Temporary outputs:
@@ -53,7 +53,7 @@ import { STYLES } from "@/registry/styles"
  * 4. Build examples/__index__.tsx from authored demos.
  * 5. Export public/r/* for every style through the shadcn CLI.
  * 6. Copy compiled ui/* from the temporary registries into styles/<style>/ui.
- * 7. Build styles/<style>/ui-rtl for base-nova and radix-nova only.
+ * 7. Build styles/<style>/ui-rtl for radix-baseui and radix-baseui only.
  * 8. Format the generated persistent outputs.
  * 9. Clean up the temporary registry/<base-style> trees and registry-*.json.
  *
@@ -162,8 +162,8 @@ Run with no options for a full registry build, or target a single artifact:
   --style <style|all>     Rebuild local generated style files under styles/<style>/ui.
   --registry <style|all>  Rebuild installable registry JSON under public/r/styles/<style>.
 
-<style> must be "all" or a known final style id (e.g. base-nova, radix-nova, base-sera, new-york-v4).
-Flags can be combined, e.g. --style base-nova --registry base-nova.`
+<style> must be "all" or a known final style id (e.g. radix-baseui, radix-baseui, radix-baseui, new-york-v4).
+Flags can be combined, e.g. --style radix-baseui --registry radix-baseui.`
 
 function getKnownStyleNames() {
   return new Set(getStylesToBuild().map((style) => style.name))
@@ -373,9 +373,9 @@ function normalizeRegistryFiles(item: RegistryItem): Array<{
 
 function shouldGenerateRtlStyles(styleName: string) {
   return (
-    styleName === "base-nova" ||
-    styleName === "radix-nova" ||
-    styleName === "aria-nova"
+    styleName === "radix-baseui" ||
+    styleName === "radix-baseui" ||
+    styleName === "radix-baseui"
   )
 }
 
@@ -960,7 +960,7 @@ export const Index: Record<string, Record<string, any>> = {`
 
 async function buildBases(bases: Base[], targetStyleNames?: Set<string>) {
   // For targeted builds, only load bases that contribute a requested
-  // combination. Otherwise a single-base target (e.g. --style base-nova) would
+  // combination. Otherwise a single-base target (e.g. --style radix-baseui) would
   // still import and read every source file for the other base.
   const basesToBuild = targetStyleNames
     ? bases.filter((base) =>

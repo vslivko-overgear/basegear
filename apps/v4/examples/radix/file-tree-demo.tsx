@@ -3,12 +3,12 @@
 import * as React from "react"
 import { ChevronRightIcon, FileIcon, FolderIcon } from "lucide-react"
 
-import { Button } from "@/styles/radix-rhea/ui/button"
+import { Button } from "@/styles/radix-baseui/ui/button"
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/styles/radix-rhea/ui/collapsible"
+} from "@/styles/radix-baseui/ui/collapsible"
 
 type FileNode =
   | { type: "file"; name: string; path: string }

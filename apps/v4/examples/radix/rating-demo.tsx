@@ -2,7 +2,7 @@
 
 import * as React from "react"
 
-import { Rating } from "@/styles/radix-nova/ui/rating"
+import { Rating } from "@/styles/radix-baseui/ui/rating"
 
 export function RatingDemo() {
   const [value, setValue] = React.useState(4)

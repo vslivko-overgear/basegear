@@ -5,13 +5,13 @@ import {
   ThumbsUpIcon,
 } from "lucide-react"
 
-import { Bubble, BubbleContent } from "@/styles/radix-rhea/ui/bubble"
-import { Button } from "@/styles/radix-rhea/ui/button"
+import { Bubble, BubbleContent } from "@/styles/radix-baseui/ui/bubble"
+import { Button } from "@/styles/radix-baseui/ui/button"
 import {
   Message,
   MessageContent,
   MessageFooter,
-} from "@/styles/radix-rhea/ui/message"
+} from "@/styles/radix-baseui/ui/message"
 
 export function MessageActionsDemo() {
   return (

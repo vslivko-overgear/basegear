@@ -5,7 +5,7 @@ import {
   AvatarBadge,
   AvatarFallback,
   AvatarImage,
-} from "@/styles/radix-nova/ui/avatar"
+} from "@/styles/radix-baseui/ui/avatar"
 
 export function AvatarBadgeIconExample() {
   return (

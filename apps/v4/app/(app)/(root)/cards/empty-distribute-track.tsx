@@ -1,8 +1,8 @@
 import { Add01Icon } from "@hugeicons/core-free-icons"
 import { HugeiconsIcon } from "@hugeicons/react"
 
-import { Button } from "@/styles/base-rhea/ui/button"
-import { Card, CardContent } from "@/styles/base-rhea/ui/card"
+import { Button } from "@/styles/radix-baseui/ui/button"
+import { Card, CardContent } from "@/styles/radix-baseui/ui/card"
 import {
   Empty,
   EmptyContent,
@@ -10,7 +10,7 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@/styles/base-rhea/ui/empty"
+} from "@/styles/radix-baseui/ui/empty"
 
 export function EmptyDistributeTrack() {
   return (

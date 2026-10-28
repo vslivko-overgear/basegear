@@ -18,17 +18,13 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@/registry/new-york-v4/ui/sidebar"
+} from "@/styles/radix-baseui/ui/sidebar"
 
 const TOP_LEVEL_SECTIONS = [
   { name: "Introduction", href: "/docs" },
   {
     name: "Components",
     href: "/docs/components",
-  },
-  {
-    name: "AI Elements",
-    href: "/docs/ai-elements",
   },
   {
     name: "Installation",
@@ -43,20 +39,12 @@ const TOP_LEVEL_SECTIONS = [
     href: "/docs/cli",
   },
   {
-    name: "Typeset",
-    href: "/docs/typeset",
-  },
-  {
     name: "Skills",
     href: "/docs/skills",
   },
   {
     name: "Registry",
     href: "/docs/registry",
-  },
-  {
-    name: "Changelog",
-    href: "/docs/changelog",
   },
 ]
 const EXCLUDED_SECTIONS = ["installation", "dark-mode", "changelog", "rtl"]

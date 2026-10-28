@@ -1,4 +1,4 @@
-import { Field, FieldError, FieldLabel } from "@/styles/radix-nova/ui/field"
+import { Field, FieldError, FieldLabel } from "@/styles/radix-baseui/ui/field"
 import {
   Select,
   SelectContent,
@@ -6,7 +6,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/styles/radix-nova/ui/select"
+} from "@/styles/radix-baseui/ui/select"
 
 export function SelectInvalid() {
   return (

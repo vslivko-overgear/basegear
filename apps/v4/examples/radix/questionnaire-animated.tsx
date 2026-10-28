@@ -16,7 +16,7 @@ import {
   QuestionnaireProgress,
   QuestionnaireSubmit,
   QuestionnaireTitle,
-} from "@/styles/radix-nova/ui/questionnaire"
+} from "@/styles/radix-baseui/ui/questionnaire"
 
 const items = [
   { name: "task", required: true },

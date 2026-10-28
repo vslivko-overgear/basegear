@@ -5,7 +5,7 @@ import Script from "next/script"
 import { cn } from "cn"
 
 import { useIsMobile } from "@/hooks/use-mobile"
-import { Button } from "@/styles/base-nova/ui/button"
+import { Button } from "@/styles/radix-baseui/ui/button"
 import {
   Dialog,
   DialogClose,
@@ -15,7 +15,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/styles/base-nova/ui/dialog"
+} from "@/styles/radix-baseui/ui/dialog"
 import {
   Drawer,
   DrawerClose,
@@ -25,9 +25,9 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/styles/base-nova/ui/drawer"
-import { Field, FieldContent, FieldLabel } from "@/styles/base-nova/ui/field"
-import { Input } from "@/styles/base-nova/ui/input"
+} from "@/styles/radix-baseui/ui/drawer"
+import { Field, FieldContent, FieldLabel } from "@/styles/radix-baseui/ui/field"
+import { Input } from "@/styles/radix-baseui/ui/input"
 import {
   OPEN_PRESET_FORWARD_TYPE,
   useOpenPreset,
@@ -83,10 +83,6 @@ export function OpenPreset({
     className
   )
 
-  const desktopTrigger = (
-    <Button variant="outline" className={triggerClassName} />
-  )
-
   const fields = (
     <Field data-invalid={isInvalid || undefined}>
       <FieldLabel htmlFor="preset-code" className="sr-only">
@@ -111,10 +107,10 @@ export function OpenPreset({
   if (isMobile) {
     return (
       <Drawer open={open} onOpenChange={handleOpenChange}>
-        <DrawerTrigger
-          render={<Button variant="outline" className={triggerClassName} />}
-        >
-          {label}
+        <DrawerTrigger asChild>
+          <Button variant="outline" className={triggerClassName}>
+            {label}
+          </Button>
         </DrawerTrigger>
 
         <DrawerContent className="dark rounded-t-2xl!">
@@ -128,12 +124,10 @@ export function OpenPreset({
               <Button type="submit" className="h-10" disabled={!nextPreset}>
                 Open
               </Button>
-              <DrawerClose
-                render={
-                  <Button variant="outline" type="button" className="h-10" />
-                }
-              >
-                Cancel
+              <DrawerClose asChild>
+                <Button variant="outline" type="button" className="h-10">
+                  Cancel
+                </Button>
               </DrawerClose>
             </DrawerFooter>
           </form>
@@ -144,7 +138,11 @@ export function OpenPreset({
 
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>
-      <DialogTrigger render={desktopTrigger}>{label}</DialogTrigger>
+      <DialogTrigger asChild>
+        <Button variant="outline" className={triggerClassName}>
+          {label}
+        </Button>
+      </DialogTrigger>
       <DialogContent className="dark">
         <form onSubmit={handleSubmit}>
           <DialogHeader>
@@ -153,8 +151,10 @@ export function OpenPreset({
           </DialogHeader>
           <div className="py-4">{fields}</div>
           <DialogFooter>
-            <DialogClose render={<Button variant="outline" type="button" />}>
-              Cancel
+            <DialogClose asChild>
+              <Button variant="outline" type="button">
+                Cancel
+              </Button>
             </DialogClose>
             <Button type="submit" disabled={!nextPreset}>
               Open

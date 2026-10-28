@@ -5,7 +5,7 @@ import { IconCheck, IconCopy } from "@tabler/icons-react"
 import { cn } from "cn"
 
 import { trackEvent, type Event } from "@/lib/events"
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/styles/radix-baseui/ui/button"
 
 function legacyCopyToClipboard(value: string) {
   const textArea = document.createElement("textarea")

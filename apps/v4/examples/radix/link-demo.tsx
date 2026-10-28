@@ -1,6 +1,6 @@
 import { ExternalLinkIcon } from "lucide-react"
 
-import { Link } from "@/styles/radix-nova/ui/link"
+import { Link } from "@/styles/radix-baseui/ui/link"
 
 export function LinkDemo() {
   return (

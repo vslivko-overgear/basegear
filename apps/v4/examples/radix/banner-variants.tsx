@@ -9,7 +9,7 @@ import {
   Banner,
   BannerDescription,
   BannerTitle,
-} from "@/styles/radix-nova/ui/banner"
+} from "@/styles/radix-baseui/ui/banner"
 
 export function BannerVariants() {
   return (

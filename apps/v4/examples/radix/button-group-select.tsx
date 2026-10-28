@@ -3,16 +3,16 @@
 import * as React from "react"
 import { ArrowRightIcon } from "lucide-react"
 
-import { Button } from "@/styles/radix-nova/ui/button"
-import { ButtonGroup } from "@/styles/radix-nova/ui/button-group"
-import { Input } from "@/styles/radix-nova/ui/input"
+import { Button } from "@/styles/radix-baseui/ui/button"
+import { ButtonGroup } from "@/styles/radix-baseui/ui/button-group"
+import { Input } from "@/styles/radix-baseui/ui/input"
 import {
   Select,
   SelectContent,
   SelectGroup,
   SelectItem,
   SelectTrigger,
-} from "@/styles/radix-nova/ui/select"
+} from "@/styles/radix-baseui/ui/select"
 
 const CURRENCIES = [
   {

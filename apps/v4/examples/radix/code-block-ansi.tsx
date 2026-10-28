@@ -11,7 +11,7 @@ import {
   CodeBlockHeader,
   CodeBlockLine,
   CodeBlockTitle,
-} from "@/styles/radix-rhea/ui/code-block"
+} from "@/styles/radix-baseui/ui/code-block"
 
 const output = `$ pnpm test
 \x1b[32m✓\x1b[39m src/format.test.ts \x1b[2m(4 tests)\x1b[22m

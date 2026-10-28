@@ -1,11 +1,11 @@
 "use client"
 
-import { Button } from "@/styles/radix-rhea/ui/button"
+import { Button } from "@/styles/radix-baseui/ui/button"
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/styles/radix-rhea/ui/hover-card"
+} from "@/styles/radix-baseui/ui/hover-card"
 
 type Source = {
   url: string

@@ -1,20 +1,20 @@
 "use client"
 
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/styles/radix-baseui/ui/button"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york-v4/ui/card"
+} from "@/styles/radix-baseui/ui/card"
 import {
   Field,
   FieldContent,
   FieldDescription,
   FieldLabel,
-} from "@/registry/new-york-v4/ui/field"
-import { Switch } from "@/registry/new-york-v4/ui/switch"
+} from "@/styles/radix-baseui/ui/field"
+import { Switch } from "@/styles/radix-baseui/ui/switch"
 
 export function CardsCookieSettings() {
   return (

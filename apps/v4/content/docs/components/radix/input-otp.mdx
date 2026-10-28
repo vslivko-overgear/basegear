@@ -7,7 +7,7 @@ links:
   doc: https://input-otp.rodz.dev
 ---
 
-<ComponentPreview styleName="radix-nova" name="input-otp-demo" />
+<ComponentPreview styleName="radix-baseui" name="input-otp-demo" />
 
 ## About
 
@@ -44,7 +44,7 @@ npm install input-otp
 <ComponentSource
   name="input-otp"
   title="components/ui/input-otp.tsx"
-  styleName="radix-nova"
+  styleName="radix-baseui"
 />
 
 <Step>Update the import paths to match your project setup.</Step>
@@ -115,57 +115,52 @@ import { REGEXP_ONLY_DIGITS_AND_CHARS } from "input-otp"
 </InputOTP>
 ```
 
-<ComponentPreview styleName="radix-nova" name="input-otp-pattern" />
+<ComponentPreview styleName="radix-baseui" name="input-otp-pattern" />
 
 ## Separator
 
 Use the `<InputOTPSeparator />` component to add a separator between input groups.
 
-<ComponentPreview styleName="radix-nova" name="input-otp-separator" />
+<ComponentPreview styleName="radix-baseui" name="input-otp-separator" />
 
 ## Disabled
 
 Use the `disabled` prop to disable the input.
 
-<ComponentPreview styleName="radix-nova" name="input-otp-disabled" />
+<ComponentPreview styleName="radix-baseui" name="input-otp-disabled" />
 
 ## Controlled
 
 Use the `value` and `onChange` props to control the input value.
 
-<ComponentPreview styleName="radix-nova" name="input-otp-controlled" />
+<ComponentPreview styleName="radix-baseui" name="input-otp-controlled" />
 
 ## Invalid
 
 Use `aria-invalid` on the slots to show an error state.
 
-<ComponentPreview styleName="radix-nova" name="input-otp-invalid" />
+<ComponentPreview styleName="radix-baseui" name="input-otp-invalid" />
 
 ## Four Digits
 
 A common pattern for PIN codes. This uses the `pattern={REGEXP_ONLY_DIGITS}` prop.
 
-<ComponentPreview styleName="radix-nova" name="input-otp-four-digits" />
+<ComponentPreview styleName="radix-baseui" name="input-otp-four-digits" />
 
 ## Alphanumeric
 
 Use `REGEXP_ONLY_DIGITS_AND_CHARS` to accept both letters and numbers.
 
-<ComponentPreview styleName="radix-nova" name="input-otp-alphanumeric" />
+<ComponentPreview styleName="radix-baseui" name="input-otp-alphanumeric" />
 
 ## Form
 
 <ComponentPreview
-  styleName="radix-nova"
+  styleName="radix-baseui"
   name="input-otp-form"
   previewClassName="h-[30rem]"
 />
 
-## RTL
-
-To enable RTL support in shadcn/ui, see the [RTL configuration guide](/docs/rtl).
-
-<ComponentPreview styleName="radix-nova" name="input-otp-rtl" direction="rtl" />
 
 ## API Reference
 
